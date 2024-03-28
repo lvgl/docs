@@ -292,7 +292,7 @@ API
 
 :ref:`lv_refr`
 
-:ref:`lv_display`
-
 :ref:`lv_types`
+
+:ref:`lv_display`
 

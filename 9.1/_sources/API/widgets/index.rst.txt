@@ -1,0 +1,41 @@
+=======
+widgets
+=======
+
+
+.. toctree::
+    :maxdepth: 2
+
+    list/index
+    tileview/index
+    menu/index
+    bar/index
+    tabview/index
+    buttonmatrix/index
+    table/index
+    label/index
+    imagebutton/index
+    objx_templ/index
+    arc/index
+    spinbox/index
+    image/index
+    slider/index
+    msgbox/index
+    keyboard/index
+    calendar/index
+    span/index
+    led/index
+    textarea/index
+    button/index
+    animimage/index
+    switch/index
+    spinner/index
+    dropdown/index
+    checkbox/index
+    line/index
+    win/index
+    chart/index
+    canvas/index
+    roller/index
+    scale/index
+

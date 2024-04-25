@@ -9,17 +9,17 @@ lvgl/CMakeFiles/lvgl.dir/src/libs/tiny_ttf/lv_tiny_ttf.c.o: \
   /home/runner/work/lvgl/lvgl/emscripten_builder/lv_conf.h \
   /home/runner/work/lvgl/lvgl/emscripten_builder/lvgl/src/libs/tiny_ttf/../../misc/lv_types.h \
   /home/runner/work/lvgl/lvgl/emscripten_builder/lvgl/src/libs/tiny_ttf/../../misc/../lv_conf_internal.h \
-  /home/runner/work/_temp/9b492101-31ec-49be-b040-453dbfd804ae/emsdk-main/upstream/emscripten/system/include/libc/stdint.h \
-  /home/runner/work/_temp/9b492101-31ec-49be-b040-453dbfd804ae/emsdk-main/upstream/emscripten/system/lib/libc/musl/arch/emscripten/bits/alltypes.h \
-  /home/runner/work/_temp/9b492101-31ec-49be-b040-453dbfd804ae/emsdk-main/upstream/emscripten/system/lib/libc/musl/arch/emscripten/bits/stdint.h \
-  /home/runner/work/_temp/9b492101-31ec-49be-b040-453dbfd804ae/emsdk-main/upstream/emscripten/system/include/libc/stddef.h \
-  /home/runner/work/_temp/9b492101-31ec-49be-b040-453dbfd804ae/emsdk-main/upstream/emscripten/system/include/libc/stdbool.h \
-  /home/runner/work/_temp/9b492101-31ec-49be-b040-453dbfd804ae/emsdk-main/upstream/emscripten/system/include/libc/inttypes.h \
-  /home/runner/work/_temp/9b492101-31ec-49be-b040-453dbfd804ae/emsdk-main/upstream/emscripten/system/include/libc/features.h \
-  /home/runner/work/_temp/9b492101-31ec-49be-b040-453dbfd804ae/emsdk-main/upstream/emscripten/system/include/libc/limits.h \
-  /home/runner/work/_temp/9b492101-31ec-49be-b040-453dbfd804ae/emsdk-main/upstream/emscripten/system/lib/libc/musl/arch/emscripten/bits/limits.h \
-  /home/runner/work/_temp/9b492101-31ec-49be-b040-453dbfd804ae/emsdk-main/upstream/emscripten/system/include/compat/stdarg.h \
-  /home/runner/work/_temp/9b492101-31ec-49be-b040-453dbfd804ae/emsdk-main/upstream/emscripten/system/include/libc/stdarg.h \
+  /home/runner/work/lvgl/lvgl/emsdk-cache/emsdk-main/upstream/emscripten/system/include/libc/stdint.h \
+  /home/runner/work/lvgl/lvgl/emsdk-cache/emsdk-main/upstream/emscripten/system/lib/libc/musl/arch/emscripten/bits/alltypes.h \
+  /home/runner/work/lvgl/lvgl/emsdk-cache/emsdk-main/upstream/emscripten/system/lib/libc/musl/arch/emscripten/bits/stdint.h \
+  /home/runner/work/lvgl/lvgl/emsdk-cache/emsdk-main/upstream/emscripten/system/include/libc/stddef.h \
+  /home/runner/work/lvgl/lvgl/emsdk-cache/emsdk-main/upstream/emscripten/system/include/libc/stdbool.h \
+  /home/runner/work/lvgl/lvgl/emsdk-cache/emsdk-main/upstream/emscripten/system/include/libc/inttypes.h \
+  /home/runner/work/lvgl/lvgl/emsdk-cache/emsdk-main/upstream/emscripten/system/include/libc/features.h \
+  /home/runner/work/lvgl/lvgl/emsdk-cache/emsdk-main/upstream/emscripten/system/include/libc/limits.h \
+  /home/runner/work/lvgl/lvgl/emsdk-cache/emsdk-main/upstream/emscripten/system/lib/libc/musl/arch/emscripten/bits/limits.h \
+  /home/runner/work/lvgl/lvgl/emsdk-cache/emsdk-main/upstream/emscripten/system/include/compat/stdarg.h \
+  /home/runner/work/lvgl/lvgl/emsdk-cache/emsdk-main/upstream/emscripten/system/include/libc/stdarg.h \
   /home/runner/work/lvgl/lvgl/emscripten_builder/lvgl/src/stdlib/lv_mem.h \
   /home/runner/work/lvgl/lvgl/emscripten_builder/lvgl/src/stdlib/../lv_conf_internal.h \
   /home/runner/work/lvgl/lvgl/emscripten_builder/lvgl/src/stdlib/lv_string.h \
@@ -373,13 +373,13 @@ lvgl/CMakeFiles/lvgl.dir/src/libs/tiny_ttf/lv_tiny_ttf.c.o: \
   /home/runner/work/lvgl/lvgl/emscripten_builder/lvgl/src/core/../layouts/lv_layout.h \
   /home/runner/work/lvgl/lvgl/emscripten_builder/lvgl/src/libs/tiny_ttf/../../core/lv_global.h \
   /home/runner/work/lvgl/lvgl/emscripten_builder/lvgl/src/libs/tiny_ttf/stb_rect_pack.h \
-  /home/runner/work/_temp/9b492101-31ec-49be-b040-453dbfd804ae/emsdk-main/upstream/emscripten/system/include/compat/stdlib.h \
-  /home/runner/work/_temp/9b492101-31ec-49be-b040-453dbfd804ae/emsdk-main/upstream/emscripten/system/include/libc/stdlib.h \
-  /home/runner/work/_temp/9b492101-31ec-49be-b040-453dbfd804ae/emsdk-main/upstream/emscripten/system/include/libc/alloca.h \
-  /home/runner/work/_temp/9b492101-31ec-49be-b040-453dbfd804ae/emsdk-main/upstream/emscripten/system/include/libc/assert.h \
+  /home/runner/work/lvgl/lvgl/emsdk-cache/emsdk-main/upstream/emscripten/system/include/compat/stdlib.h \
+  /home/runner/work/lvgl/lvgl/emsdk-cache/emsdk-main/upstream/emscripten/system/include/libc/stdlib.h \
+  /home/runner/work/lvgl/lvgl/emsdk-cache/emsdk-main/upstream/emscripten/system/include/libc/alloca.h \
+  /home/runner/work/lvgl/lvgl/emsdk-cache/emsdk-main/upstream/emscripten/system/include/libc/assert.h \
   /home/runner/work/lvgl/lvgl/emscripten_builder/lvgl/src/libs/tiny_ttf/stb_truetype_htcw.h \
-  /home/runner/work/_temp/9b492101-31ec-49be-b040-453dbfd804ae/emsdk-main/upstream/emscripten/system/include/compat/math.h \
-  /home/runner/work/_temp/9b492101-31ec-49be-b040-453dbfd804ae/emsdk-main/upstream/emscripten/system/include/libc/math.h \
-  /home/runner/work/_temp/9b492101-31ec-49be-b040-453dbfd804ae/emsdk-main/upstream/emscripten/system/include/compat/string.h \
-  /home/runner/work/_temp/9b492101-31ec-49be-b040-453dbfd804ae/emsdk-main/upstream/emscripten/system/include/libc/string.h \
-  /home/runner/work/_temp/9b492101-31ec-49be-b040-453dbfd804ae/emsdk-main/upstream/emscripten/system/include/libc/strings.h
+  /home/runner/work/lvgl/lvgl/emsdk-cache/emsdk-main/upstream/emscripten/system/include/compat/math.h \
+  /home/runner/work/lvgl/lvgl/emsdk-cache/emsdk-main/upstream/emscripten/system/include/libc/math.h \
+  /home/runner/work/lvgl/lvgl/emsdk-cache/emsdk-main/upstream/emscripten/system/include/compat/string.h \
+  /home/runner/work/lvgl/lvgl/emsdk-cache/emsdk-main/upstream/emscripten/system/include/libc/string.h \
+  /home/runner/work/lvgl/lvgl/emsdk-cache/emsdk-main/upstream/emscripten/system/include/libc/strings.h

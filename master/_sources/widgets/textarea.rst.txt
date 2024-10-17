@@ -199,7 +199,7 @@ API
 
 :ref:`lv_types_h`
 
-:ref:`lv_obj_property_names_h`
-
 :ref:`lv_textarea_h`
+
+:ref:`lv_obj_property_names_h`
 

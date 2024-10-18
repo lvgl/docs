@@ -426,7 +426,7 @@ lvgl/CMakeFiles/lvgl_demos.dir/demos/music/lv_demo_music_main.c.o: \
   /home/runner/work/lvgl/lvgl/emscripten_builder/lvgl/demos/render/lv_demo_render.h \
   /home/runner/work/lvgl/lvgl/emscripten_builder/lvgl/demos/render/../lv_demos.h \
   /home/runner/work/lvgl/lvgl/emscripten_builder/lvgl/demos/ebike/lv_demo_ebike.h \
-  /home/runner/work/lvgl/lvgl/emscripten_builder/lvgl/demos/ebike/../../../lvgl/lvgl.h \
+  /home/runner/work/lvgl/lvgl/emscripten_builder/lvgl/demos/ebike/../../lvgl.h \
   /home/runner/work/lvgl/lvgl/emscripten_builder/lvgl/demos/music/lv_demo_music_list.h \
   /home/runner/work/lvgl/lvgl/emscripten_builder/lvgl/demos/music/assets/spectrum_1.h \
   /home/runner/work/lvgl/lvgl/emscripten_builder/lvgl/demos/music/assets/spectrum_2.h \

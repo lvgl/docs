@@ -111,7 +111,7 @@ API
 
 :ref:`lv_observer_h`
 
-:ref:`lv_slider_h`
-
 :ref:`lv_types_h`
+
+:ref:`lv_slider_h`
 

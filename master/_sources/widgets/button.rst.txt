@@ -70,7 +70,7 @@ API
 
 :ref:`lv_button_h`
 
-:ref:`lv_api_map_v9_0_h`
-
 :ref:`lv_types_h`
+
+:ref:`lv_api_map_v9_0_h`
 

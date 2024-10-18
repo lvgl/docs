@@ -425,4 +425,4 @@ lvgl/CMakeFiles/lvgl_demos.dir/demos/keypad_encoder/lv_demo_keypad_encoder.c.o: 
   /home/runner/work/lvgl/lvgl/emscripten_builder/lvgl/demos/render/lv_demo_render.h \
   /home/runner/work/lvgl/lvgl/emscripten_builder/lvgl/demos/render/../lv_demos.h \
   /home/runner/work/lvgl/lvgl/emscripten_builder/lvgl/demos/ebike/lv_demo_ebike.h \
-  /home/runner/work/lvgl/lvgl/emscripten_builder/lvgl/demos/ebike/../../../lvgl/lvgl.h
+  /home/runner/work/lvgl/lvgl/emscripten_builder/lvgl/demos/ebike/../../lvgl.h

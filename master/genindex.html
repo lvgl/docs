@@ -989,6 +989,7 @@
 <li class="toctree-l3"><a class="reference internal" href="overview/renderers/nema_gfx.html">NemaGFX Acceleration (AKA NeoChrom)</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="overview/renderers/nema_gfx.html#get-started-with-the-riverdi-stm32u5-5-inch-display">Get Started with the Riverdi STM32U5 5-inch Display</a></li>
 <li class="toctree-l4"><a class="reference internal" href="overview/renderers/nema_gfx.html#usage-and-configuration">Usage and Configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="overview/renderers/nema_gfx.html#tsc-images">TSC Images</a></li>
 <li class="toctree-l4"><a class="reference internal" href="overview/renderers/nema_gfx.html#dma2d">DMA2D</a></li>
 <li class="toctree-l4"><a class="reference internal" href="overview/renderers/nema_gfx.html#api">API</a></li>
 </ul>
@@ -4786,7 +4787,7 @@
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
       <li class="breadcrumb-item active">Index</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/lvgl/lvgl/blob/a29c7dd44f9979e685a7061e8e6d24c75634a430/docs/genindex" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/lvgl/lvgl/blob/07854b1d0b6268b42fe54a054519fe8a4bad8112/docs/genindex" class="fa fa-github"> Edit on GitHub</a>
       </li>
   </ul>
   <hr/>
@@ -9264,9 +9265,25 @@
 </li>
       <li><a href="API/misc/lv_color.html#_CPPv4N17lv_color_format_t33LV_COLOR_FORMAT_NATIVE_WITH_ALPHAE">lv_color_format_t::LV_COLOR_FORMAT_NATIVE_WITH_ALPHA (C++ enumerator)</a>
 </li>
+      <li><a href="API/misc/lv_color.html#_CPPv4N17lv_color_format_t26LV_COLOR_FORMAT_NEMA_TSC12E">lv_color_format_t::LV_COLOR_FORMAT_NEMA_TSC12 (C++ enumerator)</a>
+</li>
+      <li><a href="API/misc/lv_color.html#_CPPv4N17lv_color_format_t27LV_COLOR_FORMAT_NEMA_TSC12AE">lv_color_format_t::LV_COLOR_FORMAT_NEMA_TSC12A (C++ enumerator)</a>
+</li>
+      <li><a href="API/misc/lv_color.html#_CPPv4N17lv_color_format_t25LV_COLOR_FORMAT_NEMA_TSC4E">lv_color_format_t::LV_COLOR_FORMAT_NEMA_TSC4 (C++ enumerator)</a>
+</li>
+      <li><a href="API/misc/lv_color.html#_CPPv4N17lv_color_format_t25LV_COLOR_FORMAT_NEMA_TSC6E">lv_color_format_t::LV_COLOR_FORMAT_NEMA_TSC6 (C++ enumerator)</a>
+</li>
+      <li><a href="API/misc/lv_color.html#_CPPv4N17lv_color_format_t26LV_COLOR_FORMAT_NEMA_TSC6AE">lv_color_format_t::LV_COLOR_FORMAT_NEMA_TSC6A (C++ enumerator)</a>
+</li>
+      <li><a href="API/misc/lv_color.html#_CPPv4N17lv_color_format_t28LV_COLOR_FORMAT_NEMA_TSC_ENDE">lv_color_format_t::LV_COLOR_FORMAT_NEMA_TSC_END (C++ enumerator)</a>
+</li>
+      <li><a href="API/misc/lv_color.html#_CPPv4N17lv_color_format_t30LV_COLOR_FORMAT_NEMA_TSC_STARTE">lv_color_format_t::LV_COLOR_FORMAT_NEMA_TSC_START (C++ enumerator)</a>
+</li>
       <li><a href="API/misc/lv_color.html#_CPPv4N17lv_color_format_t20LV_COLOR_FORMAT_NV12E">lv_color_format_t::LV_COLOR_FORMAT_NV12 (C++ enumerator)</a>
 </li>
       <li><a href="API/misc/lv_color.html#_CPPv4N17lv_color_format_t20LV_COLOR_FORMAT_NV21E">lv_color_format_t::LV_COLOR_FORMAT_NV21 (C++ enumerator)</a>
+</li>
+      <li><a href="API/misc/lv_color.html#_CPPv4N17lv_color_format_t33LV_COLOR_FORMAT_PROPRIETARY_STARTE">lv_color_format_t::LV_COLOR_FORMAT_PROPRIETARY_START (C++ enumerator)</a>
 </li>
       <li><a href="API/misc/lv_color.html#_CPPv4N17lv_color_format_t19LV_COLOR_FORMAT_RAWE">lv_color_format_t::LV_COLOR_FORMAT_RAW (C++ enumerator)</a>
 </li>
@@ -12454,6 +12471,8 @@
 </li>
       <li><a href="API/display/lv_display.html#_CPPv412lv_layer_topv">lv_layer_top (C++ function)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="API/core/lv_obj_draw.html#_CPPv415lv_layer_type_t">lv_layer_type_t (C++ enum)</a>
 </li>
       <li><a href="API/core/lv_obj_draw.html#_CPPv4N15lv_layer_type_t18LV_LAYER_TYPE_NONEE">lv_layer_type_t::LV_LAYER_TYPE_NONE (C++ enumerator)</a>
@@ -12462,8 +12481,6 @@
 </li>
       <li><a href="API/core/lv_obj_draw.html#_CPPv4N15lv_layer_type_t23LV_LAYER_TYPE_TRANSFORME">lv_layer_type_t::LV_LAYER_TYPE_TRANSFORM (C++ enumerator)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="API/layouts/lv_layout.html#_CPPv418lv_layout_register21lv_layout_update_cb_tPv">lv_layout_register (C++ function)</a>
 </li>
       <li><a href="API/layouts/lv_layout.html#_CPPv411lv_layout_t">lv_layout_t (C++ enum)</a>

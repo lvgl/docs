@@ -990,6 +990,7 @@
 <li class="toctree-l3 current"><a class="current reference internal" href="#">NemaGFX Acceleration (AKA NeoChrom)</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#get-started-with-the-riverdi-stm32u5-5-inch-display">Get Started with the Riverdi STM32U5 5-inch Display</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#usage-and-configuration">Usage and Configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tsc-images">TSC Images</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#dma2d">DMA2D</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#api">API</a></li>
 </ul>
@@ -4789,7 +4790,7 @@
           <li class="breadcrumb-item"><a href="index.html">Renderers and GPUs</a></li>
       <li class="breadcrumb-item active">NemaGFX Acceleration (AKA NeoChrom)</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/lvgl/lvgl/blob/a29c7dd44f9979e685a7061e8e6d24c75634a430/docs/overview/renderers/nema_gfx.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/lvgl/lvgl/blob/07854b1d0b6268b42fe54a054519fe8a4bad8112/docs/overview/renderers/nema_gfx.rst" class="fa fa-github"> Edit on GitHub</a>
       </li>
   </ul><div class="rst-breadcrumbs-buttons" role="navigation" aria-label="Sequential page navigation">
         <a href="arm2d.html" class="btn btn-neutral float-left" title="Arm-2D GPU" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
@@ -4845,6 +4846,25 @@ required by Nema to allocate memory and lock resources (in this implementation,
 no locking is done). It may conflict with existing definitions
 if you have an existing Nema HAL implementation. You may
 simply be able to remove yours.</p>
+</section>
+<section id="tsc-images">
+<h2>TSC Images<a class="headerlink" href="#tsc-images" title="Link to this heading"></a></h2>
+<p>TSC (ThinkSillicon Compression) images can be drawn by this renderer. The
+TSC 4/6/6A/12/12A color formats are part of <a class="reference internal" href="../../API/misc/lv_color.html#_CPPv417lv_color_format_t" title="lv_color_format_t"><code class="xref cpp cpp-type docutils literal notranslate"><span class="pre">lv_color_format_t</span></code></a>.
+All other renderers will ignore images with these color formats.
+Define an image descriptor variable with the corresponding
+TSC color format and the GPU will be able to draw it directly.
+Stride does not need to be specified because it will be computed by the
+renderer.</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">const</span><span class="w"> </span><span class="n">lv_image_dsc_t</span><span class="w"> </span><span class="n">img_demo_widgets_avatar_tsc6a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="p">.</span><span class="n">header</span><span class="p">.</span><span class="n">cf</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LV_COLOR_FORMAT_NEMA_TSC6A</span><span class="p">,</span>
+<span class="w">    </span><span class="p">.</span><span class="n">header</span><span class="p">.</span><span class="n">w</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">144</span><span class="p">,</span>
+<span class="w">    </span><span class="p">.</span><span class="n">header</span><span class="p">.</span><span class="n">h</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">144</span><span class="p">,</span>
+<span class="w">    </span><span class="p">.</span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">img_demo_widgets_avatar_tsc6a_map</span><span class="p">,</span>
+<span class="w">    </span><span class="p">.</span><span class="n">data_size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">img_demo_widgets_avatar_tsc6a_map</span><span class="p">),</span>
+<span class="p">};</span>
+</pre></div>
+</div>
 </section>
 <section id="dma2d">
 <h2>DMA2D<a class="headerlink" href="#dma2d" title="Link to this heading"></a></h2>

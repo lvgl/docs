@@ -125,7 +125,7 @@ API
 
 :ref:`lv_font_manager_utils_h`
 
-:ref:`lv_types_h`
-
 :ref:`lv_freetype_h`
+
+:ref:`lv_types_h`
 

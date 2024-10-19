@@ -541,15 +541,15 @@ API
 
 :ref:`lv_obj_style_h`
 
+:ref:`lv_style_h`
+
+:ref:`lv_obj_property_names_h`
+
 :ref:`lv_api_map_v8_h`
 
 :ref:`lv_obj_property_h`
 
-:ref:`lv_types_h`
-
 :ref:`lv_style_gen_h`
 
-:ref:`lv_obj_property_names_h`
-
-:ref:`lv_style_h`
+:ref:`lv_types_h`
 

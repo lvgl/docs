@@ -15,7 +15,7 @@ API
 
 :ref:`lv_sdl_keyboard_h`
 
-:ref:`lv_sdl_mousewheel_h`
-
 :ref:`lv_sdl_window_h`
+
+:ref:`lv_sdl_mousewheel_h`
 

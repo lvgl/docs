@@ -55,7 +55,7 @@ API
 
 :ref:`lv_svg_h`
 
-:ref:`lv_svg_render_h`
-
 :ref:`lv_svg_token_h`
+
+:ref:`lv_svg_render_h`
 

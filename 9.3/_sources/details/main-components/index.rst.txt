@@ -1,0 +1,20 @@
+:link_to_translation:`zh_CN:[中文]`	
+
+.. _main_components:
+
+===============
+Main Components
+===============
+
+.. toctree::
+    :maxdepth: 2
+
+    display
+    indev
+    color
+    font
+    image
+    timer
+    animation
+    fs
+    draw

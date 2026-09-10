@@ -1,0 +1,9 @@
+.. _misc/lv_fs_private.h:
+
+===============
+lv_fs_private.h
+===============
+
+.. doxygenfile:: lv_fs_private.h
+    :project: lvgl
+

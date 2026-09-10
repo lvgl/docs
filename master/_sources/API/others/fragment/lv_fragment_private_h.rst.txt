@@ -1,0 +1,9 @@
+.. _others/fragment/lv_fragment_private.h:
+
+=====================
+lv_fragment_private.h
+=====================
+
+.. doxygenfile:: lv_fragment_private.h
+    :project: lvgl
+

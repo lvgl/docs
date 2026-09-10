@@ -1,0 +1,9 @@
+.. _draw/lv_draw_triangle.h:
+
+==================
+lv_draw_triangle.h
+==================
+
+.. doxygenfile:: lv_draw_triangle.h
+    :project: lvgl
+

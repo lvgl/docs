@@ -1,0 +1,10 @@
+============
+buttonmatrix
+============
+
+.. toctree::
+    :maxdepth: 1
+    :class:    toctree-1-deep
+
+    lv_buttonmatrix
+    lv_buttonmatrix_private

@@ -1,0 +1,9 @@
+.. _widgets/keyboard/lv_keyboard_private.h:
+
+=====================
+lv_keyboard_private.h
+=====================
+
+.. doxygenfile:: lv_keyboard_private.h
+    :project: lvgl
+

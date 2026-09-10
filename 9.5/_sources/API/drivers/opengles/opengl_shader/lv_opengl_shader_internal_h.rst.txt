@@ -1,0 +1,9 @@
+.. _drivers/opengles/opengl_shader/lv_opengl_shader_internal.h:
+
+===========================
+lv_opengl_shader_internal.h
+===========================
+
+.. doxygenfile:: lv_opengl_shader_internal.h
+    :project: lvgl
+

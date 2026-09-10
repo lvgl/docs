@@ -1,0 +1,9 @@
+.. _draw/sw/lv_draw_sw_private.h:
+
+====================
+lv_draw_sw_private.h
+====================
+
+.. doxygenfile:: lv_draw_sw_private.h
+    :project: lvgl
+

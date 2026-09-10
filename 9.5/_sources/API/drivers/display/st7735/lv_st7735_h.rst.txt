@@ -1,0 +1,9 @@
+.. _drivers/display/st7735/lv_st7735.h:
+
+===========
+lv_st7735.h
+===========
+
+.. doxygenfile:: lv_st7735.h
+    :project: lvgl
+

@@ -1,0 +1,9 @@
+.. _draw/sw/blend/riscv_v/lv_blend_riscv_v_private.h:
+
+==========================
+lv_blend_riscv_v_private.h
+==========================
+
+.. doxygenfile:: lv_blend_riscv_v_private.h
+    :project: lvgl
+

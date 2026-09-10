@@ -1,0 +1,9 @@
+.. _widgets/spinner/lv_spinner_private.h:
+
+====================
+lv_spinner_private.h
+====================
+
+.. doxygenfile:: lv_spinner_private.h
+    :project: lvgl
+

@@ -1,0 +1,9 @@
+.. _widgets/slider/lv_slider_private.h:
+
+===================
+lv_slider_private.h
+===================
+
+.. doxygenfile:: lv_slider_private.h
+    :project: lvgl
+

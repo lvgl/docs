@@ -1,0 +1,9 @@
+.. _draw/sw/blend/helium/lv_blend_helium.h:
+
+=================
+lv_blend_helium.h
+=================
+
+.. doxygenfile:: lv_blend_helium.h
+    :project: lvgl
+

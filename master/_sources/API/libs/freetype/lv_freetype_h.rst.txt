@@ -1,0 +1,9 @@
+.. _libs/freetype/lv_freetype.h:
+
+=============
+lv_freetype.h
+=============
+
+.. doxygenfile:: lv_freetype.h
+    :project: lvgl
+

@@ -1,0 +1,9 @@
+.. _widgets/arc/lv_arc_private.h:
+
+================
+lv_arc_private.h
+================
+
+.. doxygenfile:: lv_arc_private.h
+    :project: lvgl
+

@@ -1,0 +1,26 @@
+lvgl/CMakeFiles/lvgl.dir/src/libs/frogfs/src/decomp_raw.c.o: \
+  /home/runner/work/lvgl/emscripten_builder/lvgl/src/libs/frogfs/src/decomp_raw.c \
+  /home/runner/work/lvgl/emscripten_builder/lvgl/src/libs/frogfs/src/../../../lv_conf_internal.h \
+  /home/runner/work/lvgl/emscripten_builder/lv_conf.h \
+  /home/runner/work/lvgl/emscripten_builder/lvgl/configs/ci/docs/lv_conf_docs.h \
+  /home/runner/work/lvgl/lvgl/emsdk-cache/emsdk-main/upstream/emscripten/system/include/libc/stddef.h \
+  /home/runner/work/lvgl/lvgl/emsdk-cache/emsdk-main/upstream/emscripten/system/lib/libc/musl/arch/emscripten/bits/alltypes.h \
+  /home/runner/work/lvgl/lvgl/emsdk-cache/emsdk-main/upstream/emscripten/system/include/libc/stdint.h \
+  /home/runner/work/lvgl/lvgl/emsdk-cache/emsdk-main/upstream/emscripten/system/lib/libc/musl/arch/emscripten/bits/stdint.h \
+  /home/runner/work/lvgl/emscripten_builder/lvgl/src/libs/frogfs/src/../../../stdlib/lv_string.h \
+  /home/runner/work/lvgl/emscripten_builder/lvgl/src/libs/frogfs/src/../../../stdlib/../lv_conf_internal.h \
+  /home/runner/work/lvgl/emscripten_builder/lvgl/src/libs/frogfs/src/../../../stdlib/../misc/lv_types.h \
+  /home/runner/work/lvgl/emscripten_builder/lvgl/src/libs/frogfs/src/../../../stdlib/../misc/../lv_conf_internal.h \
+  /home/runner/work/lvgl/lvgl/emsdk-cache/emsdk-main/upstream/emscripten/system/include/libc/stdbool.h \
+  /home/runner/work/lvgl/lvgl/emsdk-cache/emsdk-main/upstream/emscripten/system/include/libc/inttypes.h \
+  /home/runner/work/lvgl/lvgl/emsdk-cache/emsdk-main/upstream/emscripten/system/include/libc/features.h \
+  /home/runner/work/lvgl/lvgl/emsdk-cache/emsdk-main/upstream/emscripten/system/include/libc/limits.h \
+  /home/runner/work/lvgl/lvgl/emsdk-cache/emsdk-main/upstream/emscripten/system/lib/libc/musl/arch/emscripten/bits/limits.h \
+  /home/runner/work/lvgl/lvgl/emsdk-cache/emsdk-main/upstream/emscripten/system/include/compat/stdarg.h \
+  /home/runner/work/lvgl/lvgl/emsdk-cache/emsdk-main/upstream/emscripten/system/include/libc/stdarg.h \
+  /home/runner/work/lvgl/emscripten_builder/lvgl/src/libs/frogfs/src/../../../misc/lv_fs.h \
+  /home/runner/work/lvgl/emscripten_builder/lvgl/src/libs/frogfs/src/frogfs_priv.h \
+  /home/runner/work/lvgl/emscripten_builder/lvgl/src/libs/frogfs/src/../include/frogfs/frogfs_types.h \
+  /home/runner/work/lvgl/emscripten_builder/lvgl/src/libs/frogfs/src/../include/frogfs/../../../../lv_conf_internal.h \
+  /home/runner/work/lvgl/emscripten_builder/lvgl/src/libs/frogfs/src/../include/frogfs/frogfs.h \
+  /home/runner/work/lvgl/emscripten_builder/lvgl/src/libs/frogfs/src/frogfs_format.h

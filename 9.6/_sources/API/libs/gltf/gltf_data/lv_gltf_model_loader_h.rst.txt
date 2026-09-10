@@ -1,0 +1,9 @@
+.. _libs/gltf/gltf_data/lv_gltf_model_loader.h:
+
+======================
+lv_gltf_model_loader.h
+======================
+
+.. doxygenfile:: lv_gltf_model_loader.h
+    :project: lvgl
+

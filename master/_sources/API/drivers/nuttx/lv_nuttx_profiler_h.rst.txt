@@ -1,0 +1,9 @@
+.. _drivers/nuttx/lv_nuttx_profiler.h:
+
+===================
+lv_nuttx_profiler.h
+===================
+
+.. doxygenfile:: lv_nuttx_profiler.h
+    :project: lvgl
+

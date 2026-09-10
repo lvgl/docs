@@ -1,0 +1,9 @@
+.. _core/lv_obj_event.h:
+
+==============
+lv_obj_event.h
+==============
+
+.. doxygenfile:: lv_obj_event.h
+    :project: lvgl
+

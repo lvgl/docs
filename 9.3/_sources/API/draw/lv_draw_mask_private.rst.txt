@@ -1,0 +1,9 @@
+.. _lv_draw_mask_private_h:
+
+======================
+lv_draw_mask_private.h
+======================
+
+.. doxygenfile:: lv_draw_mask_private.h
+    :project: lvgl
+

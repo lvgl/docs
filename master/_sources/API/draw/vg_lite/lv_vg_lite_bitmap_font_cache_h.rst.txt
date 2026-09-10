@@ -1,0 +1,9 @@
+.. _draw/vg_lite/lv_vg_lite_bitmap_font_cache.h:
+
+==============================
+lv_vg_lite_bitmap_font_cache.h
+==============================
+
+.. doxygenfile:: lv_vg_lite_bitmap_font_cache.h
+    :project: lvgl
+

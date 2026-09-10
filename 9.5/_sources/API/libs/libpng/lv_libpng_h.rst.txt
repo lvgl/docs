@@ -1,0 +1,9 @@
+.. _libs/libpng/lv_libpng.h:
+
+===========
+lv_libpng.h
+===========
+
+.. doxygenfile:: lv_libpng.h
+    :project: lvgl
+

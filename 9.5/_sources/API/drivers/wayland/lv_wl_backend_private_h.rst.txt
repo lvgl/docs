@@ -1,0 +1,9 @@
+.. _drivers/wayland/lv_wl_backend_private.h:
+
+=======================
+lv_wl_backend_private.h
+=======================
+
+.. doxygenfile:: lv_wl_backend_private.h
+    :project: lvgl
+

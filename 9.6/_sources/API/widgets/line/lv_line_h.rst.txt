@@ -1,0 +1,9 @@
+.. _widgets/line/lv_line.h:
+
+=========
+lv_line.h
+=========
+
+.. doxygenfile:: lv_line.h
+    :project: lvgl
+

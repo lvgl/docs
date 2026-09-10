@@ -1,0 +1,9 @@
+.. _lv_spinbox_private_h:
+
+====================
+lv_spinbox_private.h
+====================
+
+.. doxygenfile:: lv_spinbox_private.h
+    :project: lvgl
+

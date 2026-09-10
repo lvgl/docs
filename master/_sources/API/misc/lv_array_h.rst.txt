@@ -1,0 +1,9 @@
+.. _misc/lv_array.h:
+
+==========
+lv_array.h
+==========
+
+.. doxygenfile:: lv_array.h
+    :project: lvgl
+

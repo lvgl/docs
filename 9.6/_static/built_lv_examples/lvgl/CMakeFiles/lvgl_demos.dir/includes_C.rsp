@@ -1,0 +1,1 @@
+-I/home/runner/work/lvgl/emscripten_builder -isystem /home/runner/work/lvgl/emscripten_builder/lvgl/configs/ci/docs -isystem /home/runner/work/lvgl/emscripten_builder/lvgl -isystem /home/runner/work/lvgl/emscripten_builder/lvgl/demos -isystem /home/runner/work/lvgl/emscripten_builder/cmbuild/lvgl -isystem /home/runner/work/lvgl/emscripten_builder/lvgl/examples

@@ -1,0 +1,9 @@
+.. _misc/lv_check_arg.h:
+
+==============
+lv_check_arg.h
+==============
+
+.. doxygenfile:: lv_check_arg.h
+    :project: lvgl
+

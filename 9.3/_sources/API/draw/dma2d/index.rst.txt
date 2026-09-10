@@ -1,0 +1,10 @@
+=====
+dma2d
+=====
+
+.. toctree::
+    :maxdepth: 1
+    :class:    toctree-1-deep
+
+    lv_draw_dma2d
+    lv_draw_dma2d_private

@@ -1,0 +1,9 @@
+==========
+objx_templ
+==========
+
+.. toctree::
+    :maxdepth: 1
+    :class:    toctree-1-deep
+
+    lv_objx_templ

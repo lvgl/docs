@@ -1,0 +1,9 @@
+.. _libs/svg/lv_svg_render.h:
+
+===============
+lv_svg_render.h
+===============
+
+.. doxygenfile:: lv_svg_render.h
+    :project: lvgl
+

@@ -1,0 +1,9 @@
+.. _drivers/wayland/lv_wl_keyboard.h:
+
+================
+lv_wl_keyboard.h
+================
+
+.. doxygenfile:: lv_wl_keyboard.h
+    :project: lvgl
+

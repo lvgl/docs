@@ -1,0 +1,13 @@
+===
+sdl
+===
+
+.. toctree::
+    :maxdepth: 1
+    :class:    toctree-1-deep
+
+    lv_sdl_keyboard_h
+    lv_sdl_mouse_h
+    lv_sdl_mousewheel_h
+    lv_sdl_private_h
+    lv_sdl_window_h

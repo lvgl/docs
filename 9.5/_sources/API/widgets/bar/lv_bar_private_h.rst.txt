@@ -1,0 +1,9 @@
+.. _widgets/bar/lv_bar_private.h:
+
+================
+lv_bar_private.h
+================
+
+.. doxygenfile:: lv_bar_private.h
+    :project: lvgl
+

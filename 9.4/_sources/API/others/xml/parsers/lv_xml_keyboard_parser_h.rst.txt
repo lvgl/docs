@@ -1,0 +1,9 @@
+.. _others/xml/parsers/lv_xml_keyboard_parser.h:
+
+========================
+lv_xml_keyboard_parser.h
+========================
+
+.. doxygenfile:: lv_xml_keyboard_parser.h
+    :project: lvgl
+

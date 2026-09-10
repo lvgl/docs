@@ -1,0 +1,10 @@
+=======
+spinbox
+=======
+
+.. toctree::
+    :maxdepth: 1
+    :class:    toctree-1-deep
+
+    lv_spinbox
+    lv_spinbox_private

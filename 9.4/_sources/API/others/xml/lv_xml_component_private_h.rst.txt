@@ -1,0 +1,9 @@
+.. _others/xml/lv_xml_component_private.h:
+
+==========================
+lv_xml_component_private.h
+==========================
+
+.. doxygenfile:: lv_xml_component_private.h
+    :project: lvgl
+

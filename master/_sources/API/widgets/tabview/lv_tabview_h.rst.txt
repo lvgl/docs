@@ -1,0 +1,9 @@
+.. _widgets/tabview/lv_tabview.h:
+
+============
+lv_tabview.h
+============
+
+.. doxygenfile:: lv_tabview.h
+    :project: lvgl
+

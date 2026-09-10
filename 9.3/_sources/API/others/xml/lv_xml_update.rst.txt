@@ -1,0 +1,9 @@
+.. _lv_xml_update_h:
+
+===============
+lv_xml_update.h
+===============
+
+.. doxygenfile:: lv_xml_update.h
+    :project: lvgl
+

@@ -1,0 +1,9 @@
+.. _drivers/windows/lv_windows_input.h:
+
+==================
+lv_windows_input.h
+==================
+
+.. doxygenfile:: lv_windows_input.h
+    :project: lvgl
+

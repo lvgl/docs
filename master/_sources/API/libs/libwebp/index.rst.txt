@@ -1,0 +1,9 @@
+=======
+libwebp
+=======
+
+.. toctree::
+    :maxdepth: 1
+    :class:    toctree-1-deep
+
+    lv_libwebp_h

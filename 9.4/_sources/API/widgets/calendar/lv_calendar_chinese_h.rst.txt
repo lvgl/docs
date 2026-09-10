@@ -1,0 +1,9 @@
+.. _widgets/calendar/lv_calendar_chinese.h:
+
+=====================
+lv_calendar_chinese.h
+=====================
+
+.. doxygenfile:: lv_calendar_chinese.h
+    :project: lvgl
+

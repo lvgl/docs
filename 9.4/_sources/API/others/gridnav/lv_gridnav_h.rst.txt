@@ -1,0 +1,9 @@
+.. _others/gridnav/lv_gridnav.h:
+
+============
+lv_gridnav.h
+============
+
+.. doxygenfile:: lv_gridnav.h
+    :project: lvgl
+

@@ -1,0 +1,9 @@
+.. _widgets/chart/lv_chart.h:
+
+==========
+lv_chart.h
+==========
+
+.. doxygenfile:: lv_chart.h
+    :project: lvgl
+

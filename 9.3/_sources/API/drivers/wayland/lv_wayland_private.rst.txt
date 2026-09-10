@@ -1,0 +1,9 @@
+.. _lv_wayland_private_h:
+
+====================
+lv_wayland_private.h
+====================
+
+.. doxygenfile:: lv_wayland_private.h
+    :project: lvgl
+

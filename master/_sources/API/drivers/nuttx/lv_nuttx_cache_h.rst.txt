@@ -1,0 +1,9 @@
+.. _drivers/nuttx/lv_nuttx_cache.h:
+
+================
+lv_nuttx_cache.h
+================
+
+.. doxygenfile:: lv_nuttx_cache.h
+    :project: lvgl
+

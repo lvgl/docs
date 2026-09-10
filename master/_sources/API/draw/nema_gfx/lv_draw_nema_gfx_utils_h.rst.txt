@@ -1,0 +1,9 @@
+.. _draw/nema_gfx/lv_draw_nema_gfx_utils.h:
+
+========================
+lv_draw_nema_gfx_utils.h
+========================
+
+.. doxygenfile:: lv_draw_nema_gfx_utils.h
+    :project: lvgl
+

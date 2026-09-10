@@ -1,0 +1,10 @@
+=========
+gstreamer
+=========
+
+.. toctree::
+    :maxdepth: 1
+    :class:    toctree-1-deep
+
+    lv_gstreamer_h
+    lv_gstreamer_internal_h

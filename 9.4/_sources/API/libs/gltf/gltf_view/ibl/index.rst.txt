@@ -1,0 +1,9 @@
+===
+ibl
+===
+
+.. toctree::
+    :maxdepth: 1
+    :class:    toctree-1-deep
+
+    lv_gltf_ibl_sampler_h

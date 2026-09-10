@@ -1,0 +1,9 @@
+.. _osal/lv_os_private.h:
+
+===============
+lv_os_private.h
+===============
+
+.. doxygenfile:: lv_os_private.h
+    :project: lvgl
+

@@ -1,0 +1,10 @@
+===========
+translation
+===========
+
+.. toctree::
+    :maxdepth: 1
+    :class:    toctree-1-deep
+
+    lv_translation_h
+    lv_translation_private_h

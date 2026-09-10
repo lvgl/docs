@@ -1,0 +1,9 @@
+.. _draw/vg_lite/lv_vg_lite_utils.h:
+
+==================
+lv_vg_lite_utils.h
+==================
+
+.. doxygenfile:: lv_vg_lite_utils.h
+    :project: lvgl
+

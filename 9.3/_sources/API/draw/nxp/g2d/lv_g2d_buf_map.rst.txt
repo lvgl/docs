@@ -1,0 +1,9 @@
+.. _lv_g2d_buf_map_h:
+
+================
+lv_g2d_buf_map.h
+================
+
+.. doxygenfile:: lv_g2d_buf_map.h
+    :project: lvgl
+

@@ -1,0 +1,9 @@
+.. _lv_wl_pointer_h:
+
+===============
+lv_wl_pointer.h
+===============
+
+.. doxygenfile:: lv_wl_pointer.h
+    :project: lvgl
+

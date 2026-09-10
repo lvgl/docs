@@ -1,0 +1,9 @@
+.. _widgets/menu/lv_menu_private.h:
+
+=================
+lv_menu_private.h
+=================
+
+.. doxygenfile:: lv_menu_private.h
+    :project: lvgl
+

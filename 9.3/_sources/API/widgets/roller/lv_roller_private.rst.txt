@@ -1,0 +1,9 @@
+.. _lv_roller_private_h:
+
+===================
+lv_roller_private.h
+===================
+
+.. doxygenfile:: lv_roller_private.h
+    :project: lvgl
+

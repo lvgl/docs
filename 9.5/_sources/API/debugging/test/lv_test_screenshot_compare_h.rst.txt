@@ -1,0 +1,9 @@
+.. _debugging/test/lv_test_screenshot_compare.h:
+
+============================
+lv_test_screenshot_compare.h
+============================
+
+.. doxygenfile:: lv_test_screenshot_compare.h
+    :project: lvgl
+

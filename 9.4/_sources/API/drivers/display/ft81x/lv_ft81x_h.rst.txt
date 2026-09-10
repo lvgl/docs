@@ -1,0 +1,9 @@
+.. _drivers/display/ft81x/lv_ft81x.h:
+
+==========
+lv_ft81x.h
+==========
+
+.. doxygenfile:: lv_ft81x.h
+    :project: lvgl
+

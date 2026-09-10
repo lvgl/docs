@@ -1,0 +1,9 @@
+.. _widgets/3dtexture/lv_3dtexture.h:
+
+==============
+lv_3dtexture.h
+==============
+
+.. doxygenfile:: lv_3dtexture.h
+    :project: lvgl
+

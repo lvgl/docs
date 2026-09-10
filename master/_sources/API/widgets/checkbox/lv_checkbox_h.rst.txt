@@ -1,0 +1,9 @@
+.. _widgets/checkbox/lv_checkbox.h:
+
+=============
+lv_checkbox.h
+=============
+
+.. doxygenfile:: lv_checkbox.h
+    :project: lvgl
+

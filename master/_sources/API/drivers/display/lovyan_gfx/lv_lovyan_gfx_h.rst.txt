@@ -1,0 +1,9 @@
+.. _drivers/display/lovyan_gfx/lv_lovyan_gfx.h:
+
+===============
+lv_lovyan_gfx.h
+===============
+
+.. doxygenfile:: lv_lovyan_gfx.h
+    :project: lvgl
+

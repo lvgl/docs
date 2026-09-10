@@ -1,0 +1,9 @@
+.. _debugging/test/lv_test_private.h:
+
+=================
+lv_test_private.h
+=================
+
+.. doxygenfile:: lv_test_private.h
+    :project: lvgl
+

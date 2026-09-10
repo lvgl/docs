@@ -1,0 +1,9 @@
+.. _lv_grad_h:
+
+=========
+lv_grad.h
+=========
+
+.. doxygenfile:: lv_grad.h
+    :project: lvgl
+

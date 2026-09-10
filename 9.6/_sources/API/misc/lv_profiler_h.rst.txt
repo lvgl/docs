@@ -1,0 +1,9 @@
+.. _misc/lv_profiler.h:
+
+=============
+lv_profiler.h
+=============
+
+.. doxygenfile:: lv_profiler.h
+    :project: lvgl
+

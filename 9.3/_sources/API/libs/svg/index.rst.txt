@@ -1,0 +1,13 @@
+===
+svg
+===
+
+.. toctree::
+    :maxdepth: 1
+    :class:    toctree-1-deep
+
+    lv_svg
+    lv_svg_decoder
+    lv_svg_parser
+    lv_svg_render
+    lv_svg_token

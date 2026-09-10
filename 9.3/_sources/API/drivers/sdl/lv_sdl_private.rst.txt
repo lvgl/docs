@@ -1,0 +1,9 @@
+.. _lv_sdl_private_h:
+
+================
+lv_sdl_private.h
+================
+
+.. doxygenfile:: lv_sdl_private.h
+    :project: lvgl
+

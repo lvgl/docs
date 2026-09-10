@@ -1,0 +1,9 @@
+.. _others/translation/lv_translation.h:
+
+================
+lv_translation.h
+================
+
+.. doxygenfile:: lv_translation.h
+    :project: lvgl
+

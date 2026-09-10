@@ -1,0 +1,9 @@
+.. _widgets/bar/lv_bar.h:
+
+========
+lv_bar.h
+========
+
+.. doxygenfile:: lv_bar.h
+    :project: lvgl
+

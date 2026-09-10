@@ -1,0 +1,16 @@
+=======
+wayland
+=======
+
+.. toctree::
+    :maxdepth: 1
+    :class:    toctree-1-deep
+
+    lv_wayland
+    lv_wayland_private
+    lv_wayland_smm
+    lv_wl_keyboard
+    lv_wl_pointer
+    lv_wl_pointer_axis
+    lv_wl_touch
+    lv_wl_window

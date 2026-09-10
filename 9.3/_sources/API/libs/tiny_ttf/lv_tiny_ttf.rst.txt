@@ -1,0 +1,9 @@
+.. _lv_tiny_ttf_h:
+
+=============
+lv_tiny_ttf.h
+=============
+
+.. doxygenfile:: lv_tiny_ttf.h
+    :project: lvgl
+

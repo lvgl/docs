@@ -1,0 +1,9 @@
+.. _draw/dma2d/lv_draw_dma2d_private.h:
+
+=======================
+lv_draw_dma2d_private.h
+=======================
+
+.. doxygenfile:: lv_draw_dma2d_private.h
+    :project: lvgl
+

@@ -1,0 +1,9 @@
+.. _draw/renesas/dave2d/lv_draw_dave2d.h:
+
+================
+lv_draw_dave2d.h
+================
+
+.. doxygenfile:: lv_draw_dave2d.h
+    :project: lvgl
+

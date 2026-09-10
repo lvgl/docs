@@ -1,0 +1,9 @@
+.. _widgets/3dtexture/lv_3dtexture_private.h:
+
+======================
+lv_3dtexture_private.h
+======================
+
+.. doxygenfile:: lv_3dtexture_private.h
+    :project: lvgl
+

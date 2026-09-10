@@ -1,0 +1,9 @@
+.. _font/imgfont/lv_imgfont.h:
+
+============
+lv_imgfont.h
+============
+
+.. doxygenfile:: lv_imgfont.h
+    :project: lvgl
+

@@ -1,0 +1,9 @@
+.. _libs/barcode/lv_barcode.h:
+
+============
+lv_barcode.h
+============
+
+.. doxygenfile:: lv_barcode.h
+    :project: lvgl
+

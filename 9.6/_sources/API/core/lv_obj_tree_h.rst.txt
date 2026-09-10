@@ -1,0 +1,9 @@
+.. _core/lv_obj_tree.h:
+
+=============
+lv_obj_tree.h
+=============
+
+.. doxygenfile:: lv_obj_tree.h
+    :project: lvgl
+

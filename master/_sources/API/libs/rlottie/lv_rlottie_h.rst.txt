@@ -1,0 +1,9 @@
+.. _libs/rlottie/lv_rlottie.h:
+
+============
+lv_rlottie.h
+============
+
+.. doxygenfile:: lv_rlottie.h
+    :project: lvgl
+

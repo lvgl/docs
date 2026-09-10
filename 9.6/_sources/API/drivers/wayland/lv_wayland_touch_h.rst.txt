@@ -1,0 +1,9 @@
+.. _drivers/wayland/lv_wayland_touch.h:
+
+==================
+lv_wayland_touch.h
+==================
+
+.. doxygenfile:: lv_wayland_touch.h
+    :project: lvgl
+

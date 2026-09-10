@@ -1,0 +1,9 @@
+.. _drivers/wayland/lv_wayland_smm.h:
+
+================
+lv_wayland_smm.h
+================
+
+.. doxygenfile:: lv_wayland_smm.h
+    :project: lvgl
+

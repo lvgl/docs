@@ -1,0 +1,9 @@
+.. _libs/gltf/math/lv_gltf_math.hpp:
+
+================
+lv_gltf_math.hpp
+================
+
+.. doxygenfile:: lv_gltf_math.hpp
+    :project: lvgl
+

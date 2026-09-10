@@ -1,0 +1,9 @@
+.. _drivers/uefi/lv_uefi_edk2.h:
+
+==============
+lv_uefi_edk2.h
+==============
+
+.. doxygenfile:: lv_uefi_edk2.h
+    :project: lvgl
+

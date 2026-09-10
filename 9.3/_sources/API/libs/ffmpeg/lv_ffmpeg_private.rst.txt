@@ -1,0 +1,9 @@
+.. _lv_ffmpeg_private_h:
+
+===================
+lv_ffmpeg_private.h
+===================
+
+.. doxygenfile:: lv_ffmpeg_private.h
+    :project: lvgl
+

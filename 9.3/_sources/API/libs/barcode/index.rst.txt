@@ -1,0 +1,10 @@
+=======
+barcode
+=======
+
+.. toctree::
+    :maxdepth: 1
+    :class:    toctree-1-deep
+
+    lv_barcode
+    lv_barcode_private

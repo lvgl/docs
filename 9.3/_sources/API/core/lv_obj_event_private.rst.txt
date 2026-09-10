@@ -1,0 +1,9 @@
+.. _lv_obj_event_private_h:
+
+======================
+lv_obj_event_private.h
+======================
+
+.. doxygenfile:: lv_obj_event_private.h
+    :project: lvgl
+

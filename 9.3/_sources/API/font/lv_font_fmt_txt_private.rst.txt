@@ -1,0 +1,9 @@
+.. _lv_font_fmt_txt_private_h:
+
+=========================
+lv_font_fmt_txt_private.h
+=========================
+
+.. doxygenfile:: lv_font_fmt_txt_private.h
+    :project: lvgl
+

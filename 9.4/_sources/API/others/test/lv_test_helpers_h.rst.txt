@@ -1,0 +1,9 @@
+.. _others/test/lv_test_helpers.h:
+
+=================
+lv_test_helpers.h
+=================
+
+.. doxygenfile:: lv_test_helpers.h
+    :project: lvgl
+

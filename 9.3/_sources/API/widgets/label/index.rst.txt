@@ -1,0 +1,10 @@
+=====
+label
+=====
+
+.. toctree::
+    :maxdepth: 1
+    :class:    toctree-1-deep
+
+    lv_label
+    lv_label_private

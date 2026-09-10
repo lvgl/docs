@@ -1,0 +1,9 @@
+.. _lv_dropdown_private_h:
+
+=====================
+lv_dropdown_private.h
+=====================
+
+.. doxygenfile:: lv_dropdown_private.h
+    :project: lvgl
+

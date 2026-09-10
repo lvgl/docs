@@ -1,0 +1,21 @@
+===
+xml
+===
+
+.. toctree::
+    :maxdepth: 1
+    :class:    toctree-1-deep
+
+    lv_xml
+    lv_xml_base_types
+    lv_xml_component
+    lv_xml_component_private
+    lv_xml_parser
+    lv_xml_private
+    lv_xml_style
+    lv_xml_test
+    lv_xml_translation
+    lv_xml_update
+    lv_xml_utils
+    lv_xml_widget
+    parsers/index

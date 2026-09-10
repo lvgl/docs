@@ -1,0 +1,9 @@
+.. _lv_led_h:
+
+========
+lv_led.h
+========
+
+.. doxygenfile:: lv_led.h
+    :project: lvgl
+

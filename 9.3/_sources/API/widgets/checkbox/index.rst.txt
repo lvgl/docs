@@ -1,0 +1,10 @@
+========
+checkbox
+========
+
+.. toctree::
+    :maxdepth: 1
+    :class:    toctree-1-deep
+
+    lv_checkbox
+    lv_checkbox_private

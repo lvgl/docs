@@ -1,0 +1,9 @@
+.. _draw/nanovg/lv_draw_nanovg.h:
+
+================
+lv_draw_nanovg.h
+================
+
+.. doxygenfile:: lv_draw_nanovg.h
+    :project: lvgl
+

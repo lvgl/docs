@@ -1,0 +1,9 @@
+.. _widgets/span/lv_span_private.h:
+
+=================
+lv_span_private.h
+=================
+
+.. doxygenfile:: lv_span_private.h
+    :project: lvgl
+

@@ -1,0 +1,9 @@
+.. _widgets/textarea/lv_textarea.h:
+
+=============
+lv_textarea.h
+=============
+
+.. doxygenfile:: lv_textarea.h
+    :project: lvgl
+

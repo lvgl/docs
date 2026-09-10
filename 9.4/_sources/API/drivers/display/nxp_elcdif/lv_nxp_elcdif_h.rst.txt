@@ -1,0 +1,9 @@
+.. _drivers/display/nxp_elcdif/lv_nxp_elcdif.h:
+
+===============
+lv_nxp_elcdif.h
+===============
+
+.. doxygenfile:: lv_nxp_elcdif.h
+    :project: lvgl
+

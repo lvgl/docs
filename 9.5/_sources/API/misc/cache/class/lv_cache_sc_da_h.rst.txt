@@ -1,0 +1,9 @@
+.. _misc/cache/class/lv_cache_sc_da.h:
+
+================
+lv_cache_sc_da.h
+================
+
+.. doxygenfile:: lv_cache_sc_da.h
+    :project: lvgl
+

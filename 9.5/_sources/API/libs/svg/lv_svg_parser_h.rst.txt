@@ -1,0 +1,9 @@
+.. _libs/svg/lv_svg_parser.h:
+
+===============
+lv_svg_parser.h
+===============
+
+.. doxygenfile:: lv_svg_parser.h
+    :project: lvgl
+

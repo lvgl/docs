@@ -1,0 +1,9 @@
+.. _misc/lv_async.h:
+
+==========
+lv_async.h
+==========
+
+.. doxygenfile:: lv_async.h
+    :project: lvgl
+

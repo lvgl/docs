@@ -1,0 +1,9 @@
+.. _drivers/qnx/lv_qnx.h:
+
+========
+lv_qnx.h
+========
+
+.. doxygenfile:: lv_qnx.h
+    :project: lvgl
+

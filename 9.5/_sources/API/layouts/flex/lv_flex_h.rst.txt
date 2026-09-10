@@ -1,0 +1,9 @@
+.. _layouts/flex/lv_flex.h:
+
+=========
+lv_flex.h
+=========
+
+.. doxygenfile:: lv_flex.h
+    :project: lvgl
+

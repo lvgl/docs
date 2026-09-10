@@ -1,0 +1,9 @@
+.. _widgets/animimage/lv_animimage_private.h:
+
+======================
+lv_animimage_private.h
+======================
+
+.. doxygenfile:: lv_animimage_private.h
+    :project: lvgl
+

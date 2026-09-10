@@ -1,0 +1,9 @@
+.. _widgets/list/lv_list.h:
+
+=========
+lv_list.h
+=========
+
+.. doxygenfile:: lv_list.h
+    :project: lvgl
+

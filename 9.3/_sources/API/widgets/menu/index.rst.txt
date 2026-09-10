@@ -1,0 +1,10 @@
+====
+menu
+====
+
+.. toctree::
+    :maxdepth: 1
+    :class:    toctree-1-deep
+
+    lv_menu
+    lv_menu_private

@@ -1,0 +1,10 @@
+===
+gif
+===
+
+.. toctree::
+    :maxdepth: 1
+    :class:    toctree-1-deep
+
+    lv_gif
+    lv_gif_private

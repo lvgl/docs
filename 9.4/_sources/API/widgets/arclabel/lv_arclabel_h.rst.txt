@@ -1,0 +1,9 @@
+.. _widgets/arclabel/lv_arclabel.h:
+
+=============
+lv_arclabel.h
+=============
+
+.. doxygenfile:: lv_arclabel.h
+    :project: lvgl
+

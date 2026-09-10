@@ -1,0 +1,39 @@
+====
+draw
+====
+
+.. toctree::
+    :maxdepth: 1
+    :class:    toctree-1-deep
+
+    lv_draw
+    lv_draw_3d
+    lv_draw_arc
+    lv_draw_buf
+    lv_draw_buf_private
+    lv_draw_image
+    lv_draw_image_private
+    lv_draw_label
+    lv_draw_label_private
+    lv_draw_line
+    lv_draw_mask
+    lv_draw_mask_private
+    lv_draw_private
+    lv_draw_rect
+    lv_draw_rect_private
+    lv_draw_triangle
+    lv_draw_triangle_private
+    lv_draw_vector
+    lv_draw_vector_private
+    lv_image_decoder
+    lv_image_decoder_private
+    lv_image_dsc
+    dma2d/index
+    espressif/index
+    nema_gfx/index
+    nxp/index
+    opengles/index
+    renesas/index
+    sdl/index
+    sw/index
+    vg_lite/index

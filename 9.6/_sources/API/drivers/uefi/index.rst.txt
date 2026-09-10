@@ -1,0 +1,16 @@
+====
+uefi
+====
+
+.. toctree::
+    :maxdepth: 1
+    :class:    toctree-1-deep
+
+    lv_uefi_h
+    lv_uefi_context_h
+    lv_uefi_display_h
+    lv_uefi_edk2_h
+    lv_uefi_gnu_efi_h
+    lv_uefi_indev_h
+    lv_uefi_private_h
+    lv_uefi_std_wrapper_h

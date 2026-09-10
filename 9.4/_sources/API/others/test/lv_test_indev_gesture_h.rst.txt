@@ -1,0 +1,9 @@
+.. _others/test/lv_test_indev_gesture.h:
+
+=======================
+lv_test_indev_gesture.h
+=======================
+
+.. doxygenfile:: lv_test_indev_gesture.h
+    :project: lvgl
+

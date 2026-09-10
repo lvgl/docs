@@ -1,0 +1,9 @@
+.. _drivers/sdl/lv_sdl_private.h:
+
+================
+lv_sdl_private.h
+================
+
+.. doxygenfile:: lv_sdl_private.h
+    :project: lvgl
+

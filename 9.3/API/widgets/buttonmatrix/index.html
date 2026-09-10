@@ -1,0 +1,1529 @@
+<!doctype html>
+<html class="no-js" lang="en" data-content_root="../../../">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" /><link rel="next" title="lv_buttonmatrix.h" href="lv_buttonmatrix.html" /><link rel="prev" title="lv_button_private.h" href="../button/lv_button_private.html" />
+        <link rel="canonical" href="https://docs.lvgl.io/master/API/widgets/buttonmatrix/index.html" />
+
+    <link rel="shortcut icon" href="../../../_static/favicon.png"/><!-- Generated with Sphinx 8.2.3 and Furo 2024.08.06 -->
+        <title>buttonmatrix - LVGL 9.3 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=51155216" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?v=354aac6f" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?v=302659d7" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/fontawesome.min.css?v=94ee33ea" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/solid.min.css?v=a6bcb990" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/brands.min.css?v=e8fdf07d" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/custom.css?v=cd7be28a" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #ffffff;
+  --color-code-foreground: #24292f;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #0d1117;
+  --color-code-foreground: #e6edf3;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #0d1117;
+  --color-code-foreground: #e6edf3;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+  <symbol id="svg-toc" width="20" height="20" viewBox="0 0 16 16">
+    <title>Contents</title>
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M9.5 14H4C2.89543 14 2 13.1046 2 12V4C2 2.89543 2.89543 2 4 2H9.5V14ZM12 2C13.1046 2 14 2.89543 14 4V12C14 13.1046 13.1046 14 12 14H10.5V2H12ZM7.30664 5.90137C7.01379 5.60882 6.53889 5.60884 6.24609 5.90137L4.40039 7.74805L4.34863 7.80566C4.10869 8.10016 4.12612 8.53408 4.40039 8.80859L6.24316 10.6533L6.30078 10.7051C6.59511 10.9451 7.02907 10.9283 7.30371 10.6543C7.57829 10.3799 7.59634 9.94504 7.35645 9.65039L7.30469 9.59277L5.99121 8.27832L7.30664 6.96289C7.59937 6.66997 7.59942 6.19418 7.30664 5.90137Z"
+        fill="currentColor" />
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" width="20" height="20" viewBox="0 0 16 16">
+    <title>Menu</title>
+    <svg
+      width="16"
+      height="16"
+      viewBox="0 0 16 16"
+      stroke="currentColor"
+      stroke-width="1.5"
+      stroke-linecap="round"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg">
+      <path d="M2.5 4H13.5" />
+      <path d="M2.5 8.5H13.5" />
+      <path d="M2.5 13H13.5" />
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" width="16" height="16" viewBox="0 0 16 16">
+    <title>Expand</title>
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M7.00001 11L9.99999 8L6.99999 5.00001"
+        stroke="currentColor"
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round" />
+    </svg>
+  </symbol>
+
+  <symbol id="svg-sun" width="20" height="20" viewBox="0 0 16 16">
+    <title>Light mode</title>
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="8" cy="8" r="3" />
+      <path
+        d="M7.25 1.75C7.25 1.33579 7.58579 1 8 1C8.41421 1 8.75 1.33579 8.75 1.75V3.25C8.75 3.66421 8.41421 4 8 4C7.58579 4 7.25 3.66421 7.25 3.25V1.75Z" />
+      <path
+        d="M7.25 12.75C7.25 12.3358 7.58579 12 8 12C8.41421 12 8.75 12.3358 8.75 12.75V14.25C8.75 14.6642 8.41421 15 8 15C7.58579 15 7.25 14.6642 7.25 14.25V12.75Z" />
+      <path
+        d="M1.75 8.75C1.33579 8.75 1 8.41421 1 8C1 7.58579 1.33579 7.25 1.75 7.25L3.25 7.25C3.66421 7.25 4 7.58579 4 8C4 8.41421 3.66421 8.75 3.25 8.75L1.75 8.75Z" />
+      <path
+        d="M12.75 8.75C12.3358 8.75 12 8.41421 12 8C12 7.58579 12.3358 7.25 12.75 7.25L14.25 7.25C14.6642 7.25 15 7.58579 15 8C15 8.41421 14.6642 8.75 14.25 8.75L12.75 8.75Z" />
+      <path
+        d="M3.05026 4.11091C2.75736 3.81802 2.75736 3.34314 3.05026 3.05025C3.34315 2.75736 3.81803 2.75736 4.11092 3.05025L5.17158 4.11091C5.46447 4.40381 5.46447 4.87868 5.17158 5.17157C4.87869 5.46447 4.40381 5.46447 4.11092 5.17157L3.05026 4.11091Z" />
+      <path
+        d="M10.8284 11.8891C10.5355 11.5962 10.5355 11.1213 10.8284 10.8284C11.1213 10.5355 11.5962 10.5355 11.8891 10.8284L12.9498 11.8891C13.2426 12.182 13.2426 12.6569 12.9498 12.9497C12.6569 13.2426 12.182 13.2426 11.8891 12.9497L10.8284 11.8891Z" />
+      <path
+        d="M11.8891 3.05024C12.182 2.75734 12.6568 2.75734 12.9497 3.05024C13.2426 3.34313 13.2426 3.818 12.9497 4.1109L11.8891 5.17156C11.5962 5.46445 11.1213 5.46445 10.8284 5.17156C10.5355 4.87866 10.5355 4.40379 10.8284 4.1109L11.8891 3.05024Z" />
+      <path
+        d="M4.11089 10.8284C4.40378 10.5355 4.87866 10.5355 5.17155 10.8284C5.46444 11.1213 5.46444 11.5962 5.17155 11.8891L4.11089 12.9497C3.818 13.2426 3.34312 13.2426 3.05023 12.9497C2.75734 12.6568 2.75734 12.182 3.05023 11.8891L4.11089 10.8284Z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" width="20" height="20" viewBox="0 0 16 16">
+    <title>Dark mode</title>
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M12.5446 11.9176C12.8733 11.5367 12.5031 11 12 11C8.68629 11 6 8.3137 6 4.99999C6 4.72807 6.01809 4.46037 6.05313 4.19803C6.16641 3.34993 5.44091 2.50445 4.72444 2.97218C3.08409 4.04303 2 5.89491 2 8C2 11.3137 4.68629 14 8 14C9.81644 14 11.4443 13.1928 12.5446 11.9176Z"
+        fill="currentColor" />
+    </svg>
+  </symbol>
+  <symbol id="svg-moon-with-sun" width="20" height="20" viewBox="0 0 16 16">
+    <title>System, in dark mode</title>
+    <svg
+      width="16"
+      height="16"
+      viewBox="0 0 16 16"
+      stroke="currentColor"
+      fill="currentColor"
+      xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M4.5 3.5H11.5C12.3283 3.5 13 4.17146 13 5V8C13 8.82843 12.3284 9.5 11.5 9.5H4.5C3.67157 9.5 3 8.82843 3 8V5C3 4.17145 3.6717 3.5 4.5 3.5Z" />
+      <path
+        d="M6.75 11.5H9.25C9.66409 11.5 10 11.8357 10 12.25C10 12.6642 9.66421 13 9.25 13H6.75C6.33579 13 6 12.6642 6 12.25C6 11.8357 6.33591 11.5 6.75 11.5Z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-with-moon" width="20" height="20" viewBox="0 0 16 16">
+    <title>System, in light mode</title>
+    <svg
+      width="16"
+      height="16"
+      viewBox="0 0 16 16"
+      stroke="currentColor"
+      fill="currentColor"
+      xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M4.5 3.5H11.5C12.3283 3.5 13 4.17146 13 5V8C13 8.82843 12.3284 9.5 11.5 9.5H4.5C3.67157 9.5 3 8.82843 3 8V5C3 4.17145 3.6717 3.5 4.5 3.5Z" />
+      <path
+        d="M6.75 11.5H9.25C9.66409 11.5 10 11.8357 10 12.25C10 12.6642 9.66421 13 9.25 13H6.75C6.33579 13 6 12.6642 6 12.25C6 11.8357 6.33591 11.5 6.75 11.5Z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-pencil" width="20" height="20" viewBox="0 0 24 24">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="1"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      class="icon-tabler-pencil-code">
+      <path d="M4 20h4l10.5 -10.5a2.828 2.828 0 1 0 -4 -4l-10.5 10.5v4" />
+      <path d="M13.5 6.5l4 4" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+  <symbol id="svg-eye" width="20" height="20">
+    <title>View documentation source on GitHub</title>
+    <svg width="20" height="20" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M8 1C4.1325 1 1 4.21174 1 8.17704C1 11.3529 3.00375 14.0354 5.78625 14.9863C6.13625 15.0491 6.2675 14.8338 6.2675 14.6454C6.2675 14.4749 6.25875 13.9098 6.25875 13.3087C4.5 13.6406 4.045 12.8691 3.905 12.4654C3.82625 12.259 3.485 11.6221 3.1875 11.4516C2.9425 11.317 2.5925 10.9851 3.17875 10.9761C3.73 10.9672 4.12375 11.4965 4.255 11.7118C4.885 12.7973 5.89125 12.4923 6.29375 12.3039C6.355 11.8374 6.53875 11.5234 6.74 11.3439C5.1825 11.1645 3.555 10.5455 3.555 7.80027C3.555 7.01976 3.82625 6.37383 4.2725 5.87143C4.2025 5.692 3.9575 4.95636 4.3425 3.96951C4.3425 3.96951 4.92875 3.78111 6.2675 4.70516C6.8275 4.54368 7.4225 4.46293 8.0175 4.46293C8.6125 4.46293 9.2075 4.54368 9.7675 4.70516C11.1062 3.77214 11.6925 3.96951 11.6925 3.96951C12.0775 4.95636 11.8325 5.692 11.7625 5.87143C12.2087 6.37383 12.48 7.01079 12.48 7.80027C12.48 10.5545 10.8438 11.1645 9.28625 11.3439C9.54 11.5682 9.75875 11.9988 9.75875 12.6717C9.75875 13.6316 9.75 14.4032 9.75 14.6454C9.75 14.8338 9.88125 15.0581 10.2312 14.9863C11.6209 14.5053 12.8284 13.5896 13.6839 12.3681C14.5393 11.1466 14.9996 9.68085 15 8.17704C15 4.21174 11.8675 1 8 1Z"
+        fill="currentColor" />
+    </svg>
+  </symbol>
+
+  <symbol id="svg-home-intro" width="32" height="32" viewBox="0 0 32 32">
+    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M26 2C28.2091 2 30 3.79086 30 6V26C30 28.2091 28.2091 30 26 30H6C3.79086 30 2 28.2091 2 26V6C2 3.79086 3.79086 2 6 2H26ZM8.00781 18.5C6.91797 18.5 6 19.1719 6 19.9336C6 20.2812 6.26562 20.5312 6.64062 20.5312C6.90234 20.5312 7.07422 20.4297 7.3125 20.1328C7.51953 19.875 7.6875 19.7812 7.92188 19.7812C8.22656 19.7812 8.4375 19.9766 8.4375 20.2656C8.4375 20.5234 8.25781 20.7734 7.85156 21.1562L6.65625 22.2812C6.17578 22.7305 6.00781 22.9883 6.00781 23.2773C6.00781 23.6602 6.30078 23.9219 6.73047 23.9219H9.45312C9.91406 23.9219 10.1875 23.6875 10.1875 23.293C10.1875 22.8984 9.90625 22.6562 9.45312 22.6562H8.14453V22.5938L9.06641 21.7734C9.6875 21.2227 9.99219 20.6758 9.99219 20.1016C9.99219 19.1836 9.14453 18.5 8.00781 18.5ZM13 20C12.4477 20 12 20.4477 12 21C12 21.5523 12.4477 22 13 22H24C24.5523 22 25 21.5523 25 21C25 20.4477 24.5523 20 24 20H13ZM13 15C12.4477 15 12 15.4477 12 16C12 16.5523 12.4477 17 13 17H24C24.5523 17 25 16.5523 25 16C25 15.4477 24.5523 15 24 15H13ZM8.23438 8.5C7.91016 8.5 7.55078 8.60938 7.21484 8.8125L6.66406 9.14453C6.39062 9.30859 6.25 9.51562 6.25 9.75391C6.25 10.0742 6.47656 10.3008 6.79688 10.3008C6.95312 10.3008 7.07812 10.2539 7.33594 10.1016L7.55469 9.97266H7.5625V13.0625C7.5625 13.6172 7.85547 13.9297 8.37891 13.9297C8.89844 13.9297 9.1875 13.6211 9.1875 13.0625V9.47656C9.1875 8.88281 8.8125 8.5 8.23438 8.5ZM13 10C12.4477 10 12 10.4477 12 11C12 11.5523 12.4477 12 13 12H24C24.5523 12 25 11.5523 25 11C25 10.4477 24.5523 10 24 10H13Z"
+        fill="currentColor" />
+    </svg>
+  </symbol>
+  <symbol id="svg-home-getting-started" width="32" height="32" viewBox="0 0 32 32">
+    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M24 2C26.2091 2 28 3.79086 28 6V20.4941C27.9999 21.4443 27.5615 22.3414 26.8115 22.9248C25.1702 24.2014 25.2396 26.7041 26.9492 27.8877L27.5947 28.335C28.3308 28.8451 27.97 29.9999 27.0742 30H8C5.79086 30 4 28.2091 4 26V6C4 3.79086 5.79086 2 8 2H24ZM8 23C6.89543 23 6 23.8954 6 25V26C6 27.1046 6.89543 28 8 28H23C23.5523 28 24 27.5523 24 27V24C24 23.4477 23.5523 23 23 23H8ZM8 5C7.44772 5 7 5.44772 7 6V19C7 19.5523 7.44772 20 8 20C8.55228 20 9 19.5523 9 19V6C9 5.44772 8.55228 5 8 5ZM17.5205 8.60059C16.5361 8.60059 16.0029 9.04492 15.6338 10.1523L13.5693 16.2021C13.4121 16.6602 13.3506 16.9199 13.3506 17.1455C13.3506 17.6924 13.7744 18.0752 14.3896 18.0752C14.9912 18.0752 15.3125 17.7676 15.5381 16.9746L15.9004 15.8604H19.0381L19.3936 16.9746C19.6191 17.7471 19.9678 18.0752 20.5693 18.0752C21.2188 18.0752 21.6426 17.6924 21.6426 17.0977C21.6426 16.8584 21.5811 16.585 21.458 16.2021L19.4004 10.1523C19.0244 9.03809 18.5049 8.60059 17.5205 8.60059ZM17.5342 10.6924L18.5801 14.2266H16.3652L17.4248 10.6924H17.5342Z"
+        fill="currentColor" />
+      <path
+        d="M6 25C6 23.8954 6.89543 23 8 23L23 23C23.5523 23 24 23.4477 24 24V27C24 27.5523 23.5523 28 23 28L8 28C6.89543 28 6 27.1046 6 26L6 25Z"
+        fill="currentColor"
+        fill-opacity="0.1" />
+      <path
+        d="M6 25C6 23.8954 6.89543 23 8 23L23 23C23.5523 23 24 23.4477 24 24V27C24 27.5523 23.5523 28 23 28L8 28C6.89543 28 6 27.1046 6 26L6 25Z"
+        fill="currentColor"
+        fill-opacity="0.1" />
+    </svg>
+  </symbol>
+  <symbol id="svg-home-play" width="32" height="32" viewBox="0 0 32 32">
+    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M16 31C24.2843 31 31 24.2843 31 16C31 7.71573 24.2843 1 16 1C7.71573 1 1 7.71573 1 16C1 24.2843 7.71573 31 16 31ZM14.5932 10.1739C13.9329 9.68743 13 10.1588 13 10.979V20.8889C13 21.7327 13.9806 22.1972 14.6335 21.6626L21.0041 16.4469C21.509 16.0335 21.4892 15.2552 20.9638 14.8681L14.5932 10.1739Z"
+        fill="currentColor" />
+    </svg>
+  </symbol>
+  <symbol id="svg-home-integration" width="32" height="32" viewBox="0 0 32 32">
+    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M10 5C10 5.55228 10.4477 6 11 6C11.5523 6 12 5.55228 12 5V4H15V5C15 5.55228 15.4477 6 16 6C16.5523 6 17 5.55228 17 5V4H20V5C20 5.55228 20.4477 6 21 6C21.5523 6 22 5.55228 22 5V4H23C25.7614 4 28 6.23858 28 9V10H27C26.4477 10 26 10.4477 26 11C26 11.5523 26.4477 12 27 12H28V15H27C26.4477 15 26 15.4477 26 16C26 16.5523 26.4477 17 27 17H28V20H27C26.4477 20 26 20.4477 26 21C26 21.5523 26.4477 22 27 22H28V23C28 25.7614 25.7614 28 23 28H22V27C22 26.4477 21.5523 26 21 26C20.4477 26 20 26.4477 20 27V28H17V27C17 26.4477 16.5523 26 16 26C15.4477 26 15 26.4477 15 27V28H12V27C12 26.4477 11.5523 26 11 26C10.4477 26 10 26.4477 10 27V28H9C6.23858 28 4 25.7614 4 23V22H5C5.55228 22 6 21.5523 6 21C6 20.4477 5.55228 20 5 20H4V17H5C5.55228 17 6 16.5523 6 16C6 15.4477 5.55228 15 5 15H4V12H5C5.55228 12 6 11.5523 6 11C6 10.4477 5.55228 10 5 10H4V9C4 6.23858 6.23858 4 9 4H10V5ZM13 10C11.3431 10 10 11.3431 10 13V19C10 20.6569 11.3431 22 13 22H19C20.6569 22 22 20.6569 22 19V13C22 11.3431 20.6569 10 19 10H13Z"
+        fill="currentColor" />
+      <rect opacity="0.2" x="10" y="10" width="12" height="12" rx="3" fill="currentColor" />
+      <g opacity="0.4">
+        <rect x="12" y="2" width="4" height="2" rx="1" transform="rotate(90 12 2)" fill="currentColor" />
+        <rect x="17" y="2" width="4" height="2" rx="1" transform="rotate(90 17 2)" fill="currentColor" />
+        <rect x="22" y="2" width="4" height="2" rx="1" transform="rotate(90 22 2)" fill="currentColor" />
+        <rect x="30" y="12" width="4" height="2" rx="1" transform="rotate(-180 30 12)" fill="currentColor" />
+        <rect x="30" y="17" width="4" height="2" rx="1" transform="rotate(-180 30 17)" fill="currentColor" />
+        <rect x="30" y="22" width="4" height="2" rx="1" transform="rotate(-180 30 22)" fill="currentColor" />
+        <rect x="20" y="30" width="4" height="2" rx="1" transform="rotate(-90 20 30)" fill="currentColor" />
+        <rect x="15" y="30" width="4" height="2" rx="1" transform="rotate(-90 15 30)" fill="currentColor" />
+        <rect x="10" y="30" width="4" height="2" rx="1" transform="rotate(-90 10 30)" fill="currentColor" />
+        <rect x="2" y="20" width="4" height="2" rx="1" fill="currentColor" />
+        <rect x="2" y="15" width="4" height="2" rx="1" fill="currentColor" />
+        <rect x="2" y="10" width="4" height="2" rx="1" fill="currentColor" />
+      </g>
+    </svg>
+  </symbol>
+  <symbol id="svg-home-widgets" width="32" height="32" viewBox="0 0 32 32">
+    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect opacity="0.2" x="2" y="17" width="13" height="13" rx="2" fill="currentColor" />
+      <path
+        d="M11.7266 21.2664C11.3622 20.9112 10.7713 20.9112 10.4067 21.2664L7.80008 23.8052L6.59332 22.63C6.22884 22.275 5.63783 22.275 5.27336 22.63C4.90888 22.985 4.90888 23.5606 5.27336 23.9156L7.14001 25.7338C7.5045 26.0888 8.09551 26.0888 8.45998 25.7338L11.7266 22.552C12.0911 22.1968 12.0911 21.6214 11.7266 21.2664Z"
+        fill="currentColor" />
+      <rect opacity="0.2" x="17" y="17" width="13" height="13" rx="6.5" fill="currentColor" />
+      <rect x="19.9375" y="19.9375" width="7" height="7" rx="3.5" fill="currentColor" />
+      <path
+        d="M28 2C29.1046 2 30 2.89543 30 4V13C30 14.1046 29.1046 15 28 15H4C2.89543 15 2 14.1046 2 13V4C2 2.89543 2.89543 2 4 2H28ZM8.5 5C6.567 5 5 6.567 5 8.5C5 10.433 6.567 12 8.5 12H14.5C16.433 12 18 10.433 18 8.5C18 6.567 16.433 5 14.5 5H8.5Z"
+        fill="currentColor" />
+    </svg>
+  </symbol>
+  <symbol id="svg-home-contributing" width="32" height="32" viewBox="0 0 32 32">
+    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <ellipse opacity="0.6" cx="9.889" cy="11.9469" rx="4.44442" ry="4.63131" fill="currentColor" />
+      <ellipse cx="21" cy="10.2102" rx="4.99997" ry="5.21023" fill="currentColor" />
+      <path
+        d="M30.9999 24.0309C30.9999 27.8304 28.647 26.8974 20.9999 26.8974C13.3529 26.8974 11 27.8304 11 24.0309C11 20.2315 15.4771 16.5781 20.9999 16.5781C26.5228 16.5781 30.9999 20.2315 30.9999 24.0309Z"
+        fill="currentColor" />
+      <path
+        opacity="0.6"
+        d="M9.88867 17.7363C10.7113 17.7363 11.5076 17.8294 12.2637 17.9971C10.118 19.6601 8.77832 21.9142 8.77832 24.1045C8.77837 25.4207 8.99363 26.3104 9.56055 26.9111C3.02414 26.9364 1.00012 27.6833 1 24.3613C1 20.9841 4.97958 17.7364 9.88867 17.7363Z"
+        fill="currentColor" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+<a class="skip-to-content muted-link" href="#furo-main-content">Skip to content</a>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../../../index.html"><div class="brand">LVGL 9.3 documentation</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+          <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../index.html">
+  
+  <div class="sidebar-logo-container">
+    <img class="sidebar-logo only-light" src="../../../_static/images/logo-light.svg" alt="Light Logo"/>
+    <img class="sidebar-logo only-dark" src="../../../_static/images/logo-dark.svg" alt="Dark Logo"/>
+  </div>
+  
+  
+</a><div class="version-selector">
+  <label for="version_dropdown">Select LVGL version</label>
+  <select name="version" id="version_dropdown"></select>
+</div><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
+  <input class="sidebar-search" placeholder="Search Documentation" name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../intro/introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../intro/getting_started.html">Getting Started</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../examples.html">Examples</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../details/integration/index.html">Integration and Drivers</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of Integration and Drivers</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../details/integration/adding-lvgl-to-your-project/index.html">Adding LVGL to Your Project</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle navigation of Adding LVGL to Your Project</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../details/integration/adding-lvgl-to-your-project/getting_lvgl.html">Getting LVGL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../details/integration/adding-lvgl-to-your-project/building_lvgl.html">Building LVGL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../details/integration/adding-lvgl-to-your-project/configuration.html">Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../details/integration/adding-lvgl-to-your-project/connecting_lvgl.html">Connecting LVGL to Your Hardware</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../details/integration/adding-lvgl-to-your-project/timer_handler.html">Timer Handler</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../details/integration/adding-lvgl-to-your-project/threading.html">Threading Considerations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../details/integration/adding-lvgl-to-your-project/other_platforms.html">Other Platforms and Tools</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../details/integration/bindings/index.html">Bindings</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle navigation of Bindings</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../details/integration/bindings/api_json.html">Output API as JSON Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../details/integration/bindings/cpp.html">Cpp</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../details/integration/bindings/javascript.html">JavaScript</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../details/integration/bindings/micropython.html">MicroPython</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../details/integration/bindings/pikascript.html">PikaScript</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../details/integration/building/index.html">Build Systems</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle navigation of Build Systems</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../details/integration/building/make.html">make</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../details/integration/building/cmake.html">CMake</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../details/integration/chip/index.html">Chip vendors</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle navigation of Chip vendors</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../details/integration/chip/alif.html">Alif</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../details/integration/chip/arm.html">Arm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../details/integration/chip/espressif.html">Espressif (ESP32 Chip Series)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../details/integration/chip/nxp.html">NXP</a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../details/integration/chip/renesas/index.html">Renesas</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle navigation of Renesas</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../details/integration/chip/renesas/built_in_drivers.html">Built-in Drivers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../details/integration/chip/renesas/ra_family.html">RA Family</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../details/integration/chip/renesas/rx_family.html">RX Family</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../details/integration/chip/renesas/rzg_family.html">RZ/G Family</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../details/integration/chip/renesas/rza_family.html">RZ/A Family</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../details/integration/chip/renesas/supported_boards.html">Supported Boards</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../details/integration/chip/stm32.html">STM32</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../details/integration/driver/index.html">Drivers</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle navigation of Drivers</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../details/integration/driver/display/index.html">Display</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle navigation of Display</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../details/integration/driver/display/fbdev.html">Linux Framebuffer Driver</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../details/integration/driver/display/ft81x.html">FT81x</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../details/integration/driver/display/gen_mipi.html">Generic MIPI DCS compatible LCD Controller driver</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../details/integration/driver/display/ili9341.html">ILI9341 LCD Controller driver</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../details/integration/driver/display/lcd_stm32_guide.html">Step-by-step Guide: How to use the LVGL v9 LCD drivers with STM32 devices</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../details/integration/driver/display/nxp_elcdif.html">NXP eLCDIF</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../details/integration/driver/display/renesas_glcdc.html">Renesas GLCDC</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../details/integration/driver/display/st_ltdc.html">STM32 LTDC Driver</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../details/integration/driver/display/st7735.html">ST7735 LCD Controller driver</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../details/integration/driver/display/st7789.html">ST7789 LCD Controller driver</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../details/integration/driver/display/st7796.html">ST7796 LCD Controller driver</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../details/integration/driver/libinput.html">Libinput Driver</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../details/integration/driver/opengles.html">OpenGL ES Display/Inputs Driver</a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../details/integration/driver/touchpad/index.html">Touchpad</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" role="switch" type="checkbox"/><label for="toctree-checkbox-9"><div class="visually-hidden">Toggle navigation of Touchpad</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../details/integration/driver/touchpad/evdev.html">Linux Evdev Driver</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../details/integration/driver/touchpad/ft6x36.html">FT6X36</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../details/integration/driver/wayland.html">Wayland Display/Inputs driver</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../details/integration/driver/windows.html">Windows Display/Inputs driver</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../details/integration/driver/X11.html">X11 Display/Inputs driver</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../details/integration/driver/uefi.html">UEFI Display/Inputs driver</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../details/integration/driver/sdl.html">SDL Driver</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../details/integration/renderers/index.html">Renderers and GPUs</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" role="switch" type="checkbox"/><label for="toctree-checkbox-10"><div class="visually-hidden">Toggle navigation of Renderers and GPUs</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../details/integration/renderers/sw.html">Software Renderer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../details/integration/renderers/arm2d.html">Arm-2D GPU</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../details/integration/renderers/espressif_ppa.html">Espressif Pixel Processing Accelerator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../details/integration/renderers/nema_gfx.html">NemaGFX Acceleration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../details/integration/renderers/nxp_pxp.html">NXP PXP GPU</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../details/integration/renderers/nxp_vglite_gpu.html">NXP VGLite GPU</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../details/integration/renderers/nxp_g2d.html">NXP G2D GPU</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../details/integration/renderers/sdl.html">SDL Renderer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../details/integration/renderers/stm32_dma2d.html">STM32 DMA2D GPU</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../details/integration/renderers/vg_lite.html">VG-Lite General GPU</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../details/integration/framework/index.html">Frameworks</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" role="switch" type="checkbox"/><label for="toctree-checkbox-11"><div class="visually-hidden">Toggle navigation of Frameworks</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../details/integration/framework/arduino.html">Arduino</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../details/integration/framework/platformio.html">PlatformIO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../details/integration/framework/tasmota-berry.html">Tasmota and berry</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../details/integration/ide/index.html">IDEs</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" role="switch" type="checkbox"/><label for="toctree-checkbox-12"><div class="visually-hidden">Toggle navigation of IDEs</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../details/integration/ide/mdk.html">MDK</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../details/integration/ide/pc-simulator.html">Simulator on PC</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../details/integration/os/index.html">(RT)OS</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" role="switch" type="checkbox"/><label for="toctree-checkbox-13"><div class="visually-hidden">Toggle navigation of (RT)OS</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../details/integration/os/buildroot/index.html">Buildroot</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" role="switch" type="checkbox"/><label for="toctree-checkbox-14"><div class="visually-hidden">Toggle navigation of Buildroot</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../details/integration/os/buildroot/quick_setup.html">Quick Setup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../details/integration/os/buildroot/image_generation.html">RPi4 custom image</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../details/integration/os/buildroot/lvgl_app.html">LVGL application</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../details/integration/os/freertos.html">FreeRTOS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../details/integration/os/mqx.html">MQX RTOS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../details/integration/os/nuttx.html">NuttX RTOS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../details/integration/os/px5.html">PX5 RTOS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../details/integration/os/qnx.html">QNX</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../details/integration/os/rt-thread.html">RT-Thread RTOS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../details/integration/os/torizon_os.html">Torizon OS</a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../details/integration/os/yocto/index.html">Yocto</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" role="switch" type="checkbox"/><label for="toctree-checkbox-15"><div class="visually-hidden">Toggle navigation of Yocto</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../details/integration/os/yocto/core_components.html">Yocto Project Core Components</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../details/integration/os/yocto/lvgl_recipe.html">LVGL in Yocto</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../details/integration/os/yocto/terms_and_variables.html">Yocto Project Terms</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../details/integration/os/zephyr.html">Zephyr</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../details/integration/boards/index.html">Boards</a><input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" role="switch" type="checkbox"/><label for="toctree-checkbox-16"><div class="visually-hidden">Toggle navigation of Boards</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../details/integration/boards/toradex.html">Toradex</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../details/integration/boards/riverdi.html">Riverdi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../details/integration/boards/viewe.html">Viewe</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../details/common-widget-features/index.html">Common Widget Features</a><input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" role="switch" type="checkbox"/><label for="toctree-checkbox-17"><div class="visually-hidden">Toggle navigation of Common Widget Features</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../details/common-widget-features/basics.html">Widget Basics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../details/common-widget-features/coordinates.html">Positions, Sizes and Layouts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../details/common-widget-features/layers.html">Layers</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../details/common-widget-features/styles/index.html">Styles</a><input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" role="switch" type="checkbox"/><label for="toctree-checkbox-18"><div class="visually-hidden">Toggle navigation of Styles</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../details/common-widget-features/styles/styles.html">Styles Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../details/common-widget-features/styles/style-properties.html">Style Properties</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../details/common-widget-features/events.html">Events</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../details/common-widget-features/layouts/index.html">Layouts</a><input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" role="switch" type="checkbox"/><label for="toctree-checkbox-19"><div class="visually-hidden">Toggle navigation of Layouts</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../details/common-widget-features/layouts/flex.html">Flex</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../details/common-widget-features/layouts/grid.html">Grid</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../details/common-widget-features/scrolling.html">Scrolling</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../details/widgets/index.html">All Widgets</a><input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" role="switch" type="checkbox"/><label for="toctree-checkbox-20"><div class="visually-hidden">Toggle navigation of All Widgets</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../details/widgets/base_widget.html">Base Widget (lv_obj)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../details/widgets/3dtexture.html">3D Texture (lv_3dtexture)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../details/widgets/animimg.html">Animation Image (lv_animimg)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../details/widgets/arc.html">Arc (lv_arc)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../details/widgets/arclabel.html">Arc Label (lv_arclabel)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../details/widgets/bar.html">Bar (lv_bar)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../details/widgets/button.html">Button (lv_button)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../details/widgets/buttonmatrix.html">Button Matrix (lv_buttonmatrix)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../details/widgets/calendar.html">Calendar (lv_calendar)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../details/widgets/canvas.html">Canvas (lv_canvas)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../details/widgets/chart.html">Chart (lv_chart)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../details/widgets/checkbox.html">Checkbox (lv_checkbox)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../details/widgets/dropdown.html">Drop-Down List (lv_dropdown)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../details/widgets/image.html">Image (lv_image)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../details/widgets/imagebutton.html">Image Button (lv_imagebutton)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../details/widgets/keyboard.html">Keyboard (lv_keyboard)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../details/widgets/label.html">Label (lv_label)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../details/widgets/led.html">LED (lv_led)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../details/widgets/line.html">Line (lv_line)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../details/widgets/list.html">List (lv_list)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../details/widgets/lottie.html">Lottie (lv_lottie)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../details/widgets/menu.html">Menu (lv_menu)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../details/widgets/msgbox.html">Message Box (lv_msgbox)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../details/widgets/roller.html">Roller (lv_roller)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../details/widgets/scale.html">Scale (lv_scale)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../details/widgets/slider.html">Slider (lv_slider)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../details/widgets/spangroup.html">Spangroup (lv_spangroup)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../details/widgets/spinbox.html">Spinbox (lv_spinbox)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../details/widgets/spinner.html">Spinner (lv_spinner)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../details/widgets/switch.html">Switch (lv_switch)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../details/widgets/table.html">Table (lv_table)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../details/widgets/tabview.html">Tab View (lv_tabview)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../details/widgets/textarea.html">Text Area (lv_textarea)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../details/widgets/tileview.html">Tile View (lv_tileview)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../details/widgets/win.html">Window (lv_win)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../details/widgets/new_widget.html">New Widget</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../details/main-modules/index.html">Main Modules</a><input class="toctree-checkbox" id="toctree-checkbox-21" name="toctree-checkbox-21" role="switch" type="checkbox"/><label for="toctree-checkbox-21"><div class="visually-hidden">Toggle navigation of Main Modules</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../details/main-modules/display/index.html">Display (lv_display)</a><input class="toctree-checkbox" id="toctree-checkbox-22" name="toctree-checkbox-22" role="switch" type="checkbox"/><label for="toctree-checkbox-22"><div class="visually-hidden">Toggle navigation of Display (lv_display)</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../details/main-modules/display/overview.html">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../details/main-modules/display/setup.html">Setting Up Your Display(s)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../details/main-modules/display/screen_layers.html">Screen Layers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../details/main-modules/display/color_format.html">Color Format</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../details/main-modules/display/refreshing.html">Refreshing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../details/main-modules/display/display_events.html">Events</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../details/main-modules/display/display_events.html#api">API</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../details/main-modules/display/resolution.html">Changing Resolution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../details/main-modules/display/inactivity.html">Inactivity Measurement</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../details/main-modules/display/rotation.html">Rotation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../details/main-modules/display/redraw_area.html">Constraints on Redrawn Area</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../details/main-modules/display/tiling.html">Tiled Rendering</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../details/main-modules/display/extending_combining.html">Extending/Combining Displays</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../details/main-modules/indev.html">Input Device (lv_indev)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../details/main-modules/color.html">Color (lv_color)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../details/main-modules/font.html">Font (lv_font)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../details/main-modules/image.html">Images (lv_image)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../details/main-modules/timer.html">Timer (lv_timer)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../details/main-modules/animation.html">Animation (lv_anim)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../details/main-modules/fs.html">File System (lv_fs_drv)</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../details/main-modules/draw/index.html">Drawing</a><input class="toctree-checkbox" id="toctree-checkbox-23" name="toctree-checkbox-23" role="switch" type="checkbox"/><label for="toctree-checkbox-23"><div class="visually-hidden">Toggle navigation of Drawing</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../details/main-modules/draw/draw_pipeline.html">Draw Pipeline</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../details/main-modules/draw/draw_api.html">Draw API</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../details/main-modules/draw/draw_layers.html">Draw Layers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../details/main-modules/draw/draw_descriptors.html">Draw Descriptors</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../details/auxiliary-modules/index.html">Auxiliary Modules</a><input class="toctree-checkbox" id="toctree-checkbox-24" name="toctree-checkbox-24" role="switch" type="checkbox"/><label for="toctree-checkbox-24"><div class="visually-hidden">Toggle navigation of Auxiliary Modules</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../details/auxiliary-modules/file_explorer.html">File Explorer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../details/auxiliary-modules/font_manager.html">Font Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../details/auxiliary-modules/fragment.html">Fragment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../details/auxiliary-modules/gridnav.html">Grid navigation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../details/auxiliary-modules/ime_pinyin.html">Pinyin IME</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../details/auxiliary-modules/imgfont.html">Image font</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../details/auxiliary-modules/monkey.html">Monkey</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../details/auxiliary-modules/obj_id.html">Widget ID</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../details/auxiliary-modules/obj_property.html">Widget Properties</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../details/auxiliary-modules/observer/index.html">Observer</a><input class="toctree-checkbox" id="toctree-checkbox-25" name="toctree-checkbox-25" role="switch" type="checkbox"/><label for="toctree-checkbox-25"><div class="visually-hidden">Toggle navigation of Observer</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../details/auxiliary-modules/observer/observer.html">How to Use</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../details/auxiliary-modules/observer/observer_examples.html">Examples</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../details/auxiliary-modules/snapshot.html">Snapshot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../details/auxiliary-modules/test.html">UI Testing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../details/auxiliary-modules/translation.html">Translation</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../details/auxiliary-modules/xml/index.html">XML - Declarative UI</a><input class="toctree-checkbox" id="toctree-checkbox-26" name="toctree-checkbox-26" role="switch" type="checkbox"/><label for="toctree-checkbox-26"><div class="visually-hidden">Toggle navigation of XML - Declarative UI</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../details/auxiliary-modules/xml/intro.html">Introduction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../details/auxiliary-modules/xml/component_library.html">Component Library</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../details/auxiliary-modules/xml/project.html">Project</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../details/auxiliary-modules/xml/syntax.html">Syntax</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../details/auxiliary-modules/xml/components.html">Components</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../details/auxiliary-modules/xml/screens.html">Screens</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../details/auxiliary-modules/xml/widgets.html">Widgets</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../details/auxiliary-modules/xml/preview.html">Preview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../details/auxiliary-modules/xml/api.html">API</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../details/auxiliary-modules/xml/styles.html">Styles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../details/auxiliary-modules/xml/consts.html">Constants</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../details/auxiliary-modules/xml/view.html">View</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../details/auxiliary-modules/xml/fonts.html">Fonts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../details/auxiliary-modules/xml/images.html">Images</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../details/auxiliary-modules/xml/events.html">Events</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../details/auxiliary-modules/xml/subjects.html">Subjects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../details/auxiliary-modules/xml/animations.html">Animations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../details/auxiliary-modules/xml/translation.html">Translations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../details/auxiliary-modules/xml/test.html">Test</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../details/auxiliary-modules/xml/license.html">License</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../details/libs/index.html">3rd-Party Libraries</a><input class="toctree-checkbox" id="toctree-checkbox-27" name="toctree-checkbox-27" role="switch" type="checkbox"/><label for="toctree-checkbox-27"><div class="visually-hidden">Toggle navigation of 3rd-Party Libraries</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../details/libs/arduino_esp_littlefs.html">Arduino ESP littlefs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../details/libs/arduino_sd.html">Arduino SD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../details/libs/barcode.html">Barcode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../details/libs/bmp.html">BMP Decoder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../details/libs/ffmpeg.html">FFmpeg Support</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../details/libs/freetype.html">FreeType Support</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../details/libs/fs.html">File System Interfaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../details/libs/gif.html">GIF Decoder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../details/libs/lfs.html">littlefs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../details/libs/libjpeg_turbo.html">libjpeg-turbo Decoder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../details/libs/libpng.html">libpng Decoder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../details/libs/lodepng.html">LodePNG Decoder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../details/libs/qrcode.html">QR Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../details/libs/rle.html">RLE Decompression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../details/libs/rlottie.html">Rlottie Player</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../details/libs/svg.html">SVG Support</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../details/libs/tiny_ttf.html">Tiny TTF font engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../details/libs/tjpgd.html">Tiny JPEG Decompressor (TJpgDec)</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../details/debugging/index.html">Debugging</a><input class="toctree-checkbox" id="toctree-checkbox-28" name="toctree-checkbox-28" role="switch" type="checkbox"/><label for="toctree-checkbox-28"><div class="visually-hidden">Toggle navigation of Debugging</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../details/debugging/gdb_plugin.html">GDB Plug-In</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../details/debugging/log.html">Logging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../details/debugging/profiler.html">Profiler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../details/debugging/vg_lite_tvg.html">VG-Lite Simulator</a></li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../contributing/index.html">Contributing</a><input class="toctree-checkbox" id="toctree-checkbox-29" name="toctree-checkbox-29" role="switch" type="checkbox"/><label for="toctree-checkbox-29"><div class="visually-hidden">Toggle navigation of Contributing</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../contributing/introduction.html">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../contributing/ways_to_contribute.html">Ways to Contribute</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../contributing/pull_requests.html">Pull Requests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../contributing/dco.html">Developer Certification of Origin (DCO)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../contributing/coding_style.html">Coding Style</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../CHANGELOG.html">Change Log</a></li>
+<li class="toctree-l1 current has-children"><a class="reference internal" href="../../index.html">API</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-30" name="toctree-checkbox-30" role="switch" type="checkbox"/><label for="toctree-checkbox-30"><div class="visually-hidden">Toggle navigation of API</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../lv_api_map_v8.html">lv_api_map_v8.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../lv_api_map_v9_0.html">lv_api_map_v9_0.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../lv_api_map_v9_1.html">lv_api_map_v9_1.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../lv_api_map_v9_2.html">lv_api_map_v9_2.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../lv_conf_internal.html">lv_conf_internal.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../lv_conf_kconfig.html">lv_conf_kconfig.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../lv_init.html">lv_init.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../lvgl.html">lvgl.h</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../lvgl_private.html">lvgl_private.h</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../core/index.html">core</a><input class="toctree-checkbox" id="toctree-checkbox-31" name="toctree-checkbox-31" role="switch" type="checkbox"/><label for="toctree-checkbox-31"><div class="visually-hidden">Toggle navigation of core</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../core/lv_global.html">lv_global.h</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../core/lv_group.html">lv_group.h</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../core/lv_group_private.html">lv_group_private.h</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../core/lv_obj.html">lv_obj.h</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../core/lv_obj_class.html">lv_obj_class.h</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../core/lv_obj_class_private.html">lv_obj_class_private.h</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../core/lv_obj_draw.html">lv_obj_draw.h</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../core/lv_obj_draw_private.html">lv_obj_draw_private.h</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../core/lv_obj_event.html">lv_obj_event.h</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../core/lv_obj_event_private.html">lv_obj_event_private.h</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../core/lv_obj_pos.html">lv_obj_pos.h</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../core/lv_obj_private.html">lv_obj_private.h</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../core/lv_obj_scroll.html">lv_obj_scroll.h</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../core/lv_obj_scroll_private.html">lv_obj_scroll_private.h</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../core/lv_obj_style.html">lv_obj_style.h</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../core/lv_obj_style_gen.html">lv_obj_style_gen.h</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../core/lv_obj_style_private.html">lv_obj_style_private.h</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../core/lv_obj_tree.html">lv_obj_tree.h</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../core/lv_refr.html">lv_refr.h</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../core/lv_refr_private.html">lv_refr_private.h</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../display/index.html">display</a><input class="toctree-checkbox" id="toctree-checkbox-32" name="toctree-checkbox-32" role="switch" type="checkbox"/><label for="toctree-checkbox-32"><div class="visually-hidden">Toggle navigation of display</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../display/lv_display.html">lv_display.h</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../display/lv_display_private.html">lv_display_private.h</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../draw/index.html">draw</a><input class="toctree-checkbox" id="toctree-checkbox-33" name="toctree-checkbox-33" role="switch" type="checkbox"/><label for="toctree-checkbox-33"><div class="visually-hidden">Toggle navigation of draw</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../draw/lv_draw.html">lv_draw.h</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../draw/lv_draw_3d.html">lv_draw_3d.h</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../draw/lv_draw_arc.html">lv_draw_arc.h</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../draw/lv_draw_buf.html">lv_draw_buf.h</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../draw/lv_draw_buf_private.html">lv_draw_buf_private.h</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../draw/lv_draw_image.html">lv_draw_image.h</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../draw/lv_draw_image_private.html">lv_draw_image_private.h</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../draw/lv_draw_label.html">lv_draw_label.h</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../draw/lv_draw_label_private.html">lv_draw_label_private.h</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../draw/lv_draw_line.html">lv_draw_line.h</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../draw/lv_draw_mask.html">lv_draw_mask.h</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../draw/lv_draw_mask_private.html">lv_draw_mask_private.h</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../draw/lv_draw_private.html">lv_draw_private.h</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../draw/lv_draw_rect.html">lv_draw_rect.h</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../draw/lv_draw_rect_private.html">lv_draw_rect_private.h</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../draw/lv_draw_triangle.html">lv_draw_triangle.h</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../draw/lv_draw_triangle_private.html">lv_draw_triangle_private.h</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../draw/lv_draw_vector.html">lv_draw_vector.h</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../draw/lv_draw_vector_private.html">lv_draw_vector_private.h</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../draw/lv_image_decoder.html">lv_image_decoder.h</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../draw/lv_image_decoder_private.html">lv_image_decoder_private.h</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../draw/lv_image_dsc.html">lv_image_dsc.h</a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../draw/dma2d/index.html">dma2d</a><input class="toctree-checkbox" id="toctree-checkbox-34" name="toctree-checkbox-34" role="switch" type="checkbox"/><label for="toctree-checkbox-34"><div class="visually-hidden">Toggle navigation of dma2d</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../draw/dma2d/lv_draw_dma2d.html">lv_draw_dma2d.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../draw/dma2d/lv_draw_dma2d_private.html">lv_draw_dma2d_private.h</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../draw/espressif/index.html">espressif</a><input class="toctree-checkbox" id="toctree-checkbox-35" name="toctree-checkbox-35" role="switch" type="checkbox"/><label for="toctree-checkbox-35"><div class="visually-hidden">Toggle navigation of espressif</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4 has-children"><a class="reference internal" href="../../draw/espressif/ppa/index.html">ppa</a><input class="toctree-checkbox" id="toctree-checkbox-36" name="toctree-checkbox-36" role="switch" type="checkbox"/><label for="toctree-checkbox-36"><div class="visually-hidden">Toggle navigation of ppa</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../draw/espressif/ppa/lv_draw_ppa.html">lv_draw_ppa.h</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../draw/espressif/ppa/lv_draw_ppa_private.html">lv_draw_ppa_private.h</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../draw/nema_gfx/index.html">nema_gfx</a><input class="toctree-checkbox" id="toctree-checkbox-37" name="toctree-checkbox-37" role="switch" type="checkbox"/><label for="toctree-checkbox-37"><div class="visually-hidden">Toggle navigation of nema_gfx</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../draw/nema_gfx/lv_draw_nema_gfx.html">lv_draw_nema_gfx.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../draw/nema_gfx/lv_draw_nema_gfx_utils.html">lv_draw_nema_gfx_utils.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../draw/nema_gfx/lv_nema_gfx_path.html">lv_nema_gfx_path.h</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../draw/nxp/index.html">nxp</a><input class="toctree-checkbox" id="toctree-checkbox-38" name="toctree-checkbox-38" role="switch" type="checkbox"/><label for="toctree-checkbox-38"><div class="visually-hidden">Toggle navigation of nxp</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4 has-children"><a class="reference internal" href="../../draw/nxp/g2d/index.html">g2d</a><input class="toctree-checkbox" id="toctree-checkbox-39" name="toctree-checkbox-39" role="switch" type="checkbox"/><label for="toctree-checkbox-39"><div class="visually-hidden">Toggle navigation of g2d</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../draw/nxp/g2d/lv_draw_g2d.html">lv_draw_g2d.h</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../draw/nxp/g2d/lv_g2d_buf_map.html">lv_g2d_buf_map.h</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../draw/nxp/g2d/lv_g2d_utils.html">lv_g2d_utils.h</a></li>
+</ul>
+</li>
+<li class="toctree-l4 has-children"><a class="reference internal" href="../../draw/nxp/pxp/index.html">pxp</a><input class="toctree-checkbox" id="toctree-checkbox-40" name="toctree-checkbox-40" role="switch" type="checkbox"/><label for="toctree-checkbox-40"><div class="visually-hidden">Toggle navigation of pxp</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../draw/nxp/pxp/lv_draw_pxp.html">lv_draw_pxp.h</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../draw/nxp/pxp/lv_pxp_cfg.html">lv_pxp_cfg.h</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../draw/nxp/pxp/lv_pxp_osa.html">lv_pxp_osa.h</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../draw/nxp/pxp/lv_pxp_utils.html">lv_pxp_utils.h</a></li>
+</ul>
+</li>
+<li class="toctree-l4 has-children"><a class="reference internal" href="../../draw/nxp/vglite/index.html">vglite</a><input class="toctree-checkbox" id="toctree-checkbox-41" name="toctree-checkbox-41" role="switch" type="checkbox"/><label for="toctree-checkbox-41"><div class="visually-hidden">Toggle navigation of vglite</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../draw/nxp/vglite/lv_draw_vglite.html">lv_draw_vglite.h</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../draw/nxp/vglite/lv_vglite_buf.html">lv_vglite_buf.h</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../draw/nxp/vglite/lv_vglite_matrix.html">lv_vglite_matrix.h</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../draw/nxp/vglite/lv_vglite_path.html">lv_vglite_path.h</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../draw/nxp/vglite/lv_vglite_utils.html">lv_vglite_utils.h</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../draw/opengles/index.html">opengles</a><input class="toctree-checkbox" id="toctree-checkbox-42" name="toctree-checkbox-42" role="switch" type="checkbox"/><label for="toctree-checkbox-42"><div class="visually-hidden">Toggle navigation of opengles</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../draw/opengles/lv_draw_opengles.html">lv_draw_opengles.h</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../draw/renesas/index.html">renesas</a><input class="toctree-checkbox" id="toctree-checkbox-43" name="toctree-checkbox-43" role="switch" type="checkbox"/><label for="toctree-checkbox-43"><div class="visually-hidden">Toggle navigation of renesas</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4 has-children"><a class="reference internal" href="../../draw/renesas/dave2d/index.html">dave2d</a><input class="toctree-checkbox" id="toctree-checkbox-44" name="toctree-checkbox-44" role="switch" type="checkbox"/><label for="toctree-checkbox-44"><div class="visually-hidden">Toggle navigation of dave2d</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../draw/renesas/dave2d/lv_draw_dave2d.html">lv_draw_dave2d.h</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../draw/renesas/dave2d/lv_draw_dave2d_utils.html">lv_draw_dave2d_utils.h</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../draw/sdl/index.html">sdl</a><input class="toctree-checkbox" id="toctree-checkbox-45" name="toctree-checkbox-45" role="switch" type="checkbox"/><label for="toctree-checkbox-45"><div class="visually-hidden">Toggle navigation of sdl</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../draw/sdl/lv_draw_sdl.html">lv_draw_sdl.h</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../draw/sw/index.html">sw</a><input class="toctree-checkbox" id="toctree-checkbox-46" name="toctree-checkbox-46" role="switch" type="checkbox"/><label for="toctree-checkbox-46"><div class="visually-hidden">Toggle navigation of sw</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../draw/sw/lv_draw_sw.html">lv_draw_sw.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../draw/sw/lv_draw_sw_grad.html">lv_draw_sw_grad.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../draw/sw/lv_draw_sw_mask.html">lv_draw_sw_mask.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../draw/sw/lv_draw_sw_mask_private.html">lv_draw_sw_mask_private.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../draw/sw/lv_draw_sw_private.html">lv_draw_sw_private.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../draw/sw/lv_draw_sw_utils.html">lv_draw_sw_utils.h</a></li>
+<li class="toctree-l4 has-children"><a class="reference internal" href="../../draw/sw/arm2d/index.html">arm2d</a><input class="toctree-checkbox" id="toctree-checkbox-47" name="toctree-checkbox-47" role="switch" type="checkbox"/><label for="toctree-checkbox-47"><div class="visually-hidden">Toggle navigation of arm2d</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../draw/sw/arm2d/lv_draw_sw_arm2d.html">lv_draw_sw_arm2d.h</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../draw/sw/arm2d/lv_draw_sw_helium.html">lv_draw_sw_helium.h</a></li>
+</ul>
+</li>
+<li class="toctree-l4 has-children"><a class="reference internal" href="../../draw/sw/blend/index.html">blend</a><input class="toctree-checkbox" id="toctree-checkbox-48" name="toctree-checkbox-48" role="switch" type="checkbox"/><label for="toctree-checkbox-48"><div class="visually-hidden">Toggle navigation of blend</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../draw/sw/blend/lv_draw_sw_blend.html">lv_draw_sw_blend.h</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../draw/sw/blend/lv_draw_sw_blend_private.html">lv_draw_sw_blend_private.h</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../draw/sw/blend/lv_draw_sw_blend_to_al88.html">lv_draw_sw_blend_to_al88.h</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../draw/sw/blend/lv_draw_sw_blend_to_argb8888.html">lv_draw_sw_blend_to_argb8888.h</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../draw/sw/blend/lv_draw_sw_blend_to_argb8888_premultiplied.html">lv_draw_sw_blend_to_argb8888_premultiplied.h</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../draw/sw/blend/lv_draw_sw_blend_to_i1.html">lv_draw_sw_blend_to_i1.h</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../draw/sw/blend/lv_draw_sw_blend_to_l8.html">lv_draw_sw_blend_to_l8.h</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../draw/sw/blend/lv_draw_sw_blend_to_rgb565.html">lv_draw_sw_blend_to_rgb565.h</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../draw/sw/blend/lv_draw_sw_blend_to_rgb565_swapped.html">lv_draw_sw_blend_to_rgb565_swapped.h</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../draw/sw/blend/lv_draw_sw_blend_to_rgb888.html">lv_draw_sw_blend_to_rgb888.h</a></li>
+<li class="toctree-l5 has-children"><a class="reference internal" href="../../draw/sw/blend/arm2d/index.html">arm2d</a><input class="toctree-checkbox" id="toctree-checkbox-49" name="toctree-checkbox-49" role="switch" type="checkbox"/><label for="toctree-checkbox-49"><div class="visually-hidden">Toggle navigation of arm2d</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l6"><a class="reference internal" href="../../draw/sw/blend/arm2d/lv_blend_arm2d.html">lv_blend_arm2d.h</a></li>
+</ul>
+</li>
+<li class="toctree-l5 has-children"><a class="reference internal" href="../../draw/sw/blend/helium/index.html">helium</a><input class="toctree-checkbox" id="toctree-checkbox-50" name="toctree-checkbox-50" role="switch" type="checkbox"/><label for="toctree-checkbox-50"><div class="visually-hidden">Toggle navigation of helium</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l6"><a class="reference internal" href="../../draw/sw/blend/helium/lv_blend_helium.html">lv_blend_helium.h</a></li>
+</ul>
+</li>
+<li class="toctree-l5 has-children"><a class="reference internal" href="../../draw/sw/blend/neon/index.html">neon</a><input class="toctree-checkbox" id="toctree-checkbox-51" name="toctree-checkbox-51" role="switch" type="checkbox"/><label for="toctree-checkbox-51"><div class="visually-hidden">Toggle navigation of neon</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l6"><a class="reference internal" href="../../draw/sw/blend/neon/lv_blend_neon.html">lv_blend_neon.h</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../draw/vg_lite/index.html">vg_lite</a><input class="toctree-checkbox" id="toctree-checkbox-52" name="toctree-checkbox-52" role="switch" type="checkbox"/><label for="toctree-checkbox-52"><div class="visually-hidden">Toggle navigation of vg_lite</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../draw/vg_lite/lv_draw_vg_lite.html">lv_draw_vg_lite.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../draw/vg_lite/lv_draw_vg_lite_type.html">lv_draw_vg_lite_type.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../draw/vg_lite/lv_vg_lite_decoder.html">lv_vg_lite_decoder.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../draw/vg_lite/lv_vg_lite_grad.html">lv_vg_lite_grad.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../draw/vg_lite/lv_vg_lite_math.html">lv_vg_lite_math.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../draw/vg_lite/lv_vg_lite_path.html">lv_vg_lite_path.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../draw/vg_lite/lv_vg_lite_pending.html">lv_vg_lite_pending.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../draw/vg_lite/lv_vg_lite_stroke.html">lv_vg_lite_stroke.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../draw/vg_lite/lv_vg_lite_utils.html">lv_vg_lite_utils.h</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../drivers/index.html">drivers</a><input class="toctree-checkbox" id="toctree-checkbox-53" name="toctree-checkbox-53" role="switch" type="checkbox"/><label for="toctree-checkbox-53"><div class="visually-hidden">Toggle navigation of drivers</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../drivers/lv_drivers.html">lv_drivers.h</a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../drivers/display/index.html">display</a><input class="toctree-checkbox" id="toctree-checkbox-54" name="toctree-checkbox-54" role="switch" type="checkbox"/><label for="toctree-checkbox-54"><div class="visually-hidden">Toggle navigation of display</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4 has-children"><a class="reference internal" href="../../drivers/display/drm/index.html">drm</a><input class="toctree-checkbox" id="toctree-checkbox-55" name="toctree-checkbox-55" role="switch" type="checkbox"/><label for="toctree-checkbox-55"><div class="visually-hidden">Toggle navigation of drm</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../drivers/display/drm/lv_linux_drm.html">lv_linux_drm.h</a></li>
+</ul>
+</li>
+<li class="toctree-l4 has-children"><a class="reference internal" href="../../drivers/display/fb/index.html">fb</a><input class="toctree-checkbox" id="toctree-checkbox-56" name="toctree-checkbox-56" role="switch" type="checkbox"/><label for="toctree-checkbox-56"><div class="visually-hidden">Toggle navigation of fb</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../drivers/display/fb/lv_linux_fbdev.html">lv_linux_fbdev.h</a></li>
+</ul>
+</li>
+<li class="toctree-l4 has-children"><a class="reference internal" href="../../drivers/display/ft81x/index.html">ft81x</a><input class="toctree-checkbox" id="toctree-checkbox-57" name="toctree-checkbox-57" role="switch" type="checkbox"/><label for="toctree-checkbox-57"><div class="visually-hidden">Toggle navigation of ft81x</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../drivers/display/ft81x/lv_ft81x.html">lv_ft81x.h</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../drivers/display/ft81x/lv_ft81x_defines.html">lv_ft81x_defines.h</a></li>
+</ul>
+</li>
+<li class="toctree-l4 has-children"><a class="reference internal" href="../../drivers/display/ili9341/index.html">ili9341</a><input class="toctree-checkbox" id="toctree-checkbox-58" name="toctree-checkbox-58" role="switch" type="checkbox"/><label for="toctree-checkbox-58"><div class="visually-hidden">Toggle navigation of ili9341</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../drivers/display/ili9341/lv_ili9341.html">lv_ili9341.h</a></li>
+</ul>
+</li>
+<li class="toctree-l4 has-children"><a class="reference internal" href="../../drivers/display/lcd/index.html">lcd</a><input class="toctree-checkbox" id="toctree-checkbox-59" name="toctree-checkbox-59" role="switch" type="checkbox"/><label for="toctree-checkbox-59"><div class="visually-hidden">Toggle navigation of lcd</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../drivers/display/lcd/lv_lcd_generic_mipi.html">lv_lcd_generic_mipi.h</a></li>
+</ul>
+</li>
+<li class="toctree-l4 has-children"><a class="reference internal" href="../../drivers/display/nxp_elcdif/index.html">nxp_elcdif</a><input class="toctree-checkbox" id="toctree-checkbox-60" name="toctree-checkbox-60" role="switch" type="checkbox"/><label for="toctree-checkbox-60"><div class="visually-hidden">Toggle navigation of nxp_elcdif</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../drivers/display/nxp_elcdif/lv_nxp_elcdif.html">lv_nxp_elcdif.h</a></li>
+</ul>
+</li>
+<li class="toctree-l4 has-children"><a class="reference internal" href="../../drivers/display/renesas_glcdc/index.html">renesas_glcdc</a><input class="toctree-checkbox" id="toctree-checkbox-61" name="toctree-checkbox-61" role="switch" type="checkbox"/><label for="toctree-checkbox-61"><div class="visually-hidden">Toggle navigation of renesas_glcdc</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../drivers/display/renesas_glcdc/lv_renesas_glcdc.html">lv_renesas_glcdc.h</a></li>
+</ul>
+</li>
+<li class="toctree-l4 has-children"><a class="reference internal" href="../../drivers/display/st7735/index.html">st7735</a><input class="toctree-checkbox" id="toctree-checkbox-62" name="toctree-checkbox-62" role="switch" type="checkbox"/><label for="toctree-checkbox-62"><div class="visually-hidden">Toggle navigation of st7735</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../drivers/display/st7735/lv_st7735.html">lv_st7735.h</a></li>
+</ul>
+</li>
+<li class="toctree-l4 has-children"><a class="reference internal" href="../../drivers/display/st7789/index.html">st7789</a><input class="toctree-checkbox" id="toctree-checkbox-63" name="toctree-checkbox-63" role="switch" type="checkbox"/><label for="toctree-checkbox-63"><div class="visually-hidden">Toggle navigation of st7789</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../drivers/display/st7789/lv_st7789.html">lv_st7789.h</a></li>
+</ul>
+</li>
+<li class="toctree-l4 has-children"><a class="reference internal" href="../../drivers/display/st7796/index.html">st7796</a><input class="toctree-checkbox" id="toctree-checkbox-64" name="toctree-checkbox-64" role="switch" type="checkbox"/><label for="toctree-checkbox-64"><div class="visually-hidden">Toggle navigation of st7796</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../drivers/display/st7796/lv_st7796.html">lv_st7796.h</a></li>
+</ul>
+</li>
+<li class="toctree-l4 has-children"><a class="reference internal" href="../../drivers/display/st_ltdc/index.html">st_ltdc</a><input class="toctree-checkbox" id="toctree-checkbox-65" name="toctree-checkbox-65" role="switch" type="checkbox"/><label for="toctree-checkbox-65"><div class="visually-hidden">Toggle navigation of st_ltdc</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../drivers/display/st_ltdc/lv_st_ltdc.html">lv_st_ltdc.h</a></li>
+</ul>
+</li>
+<li class="toctree-l4 has-children"><a class="reference internal" href="../../drivers/display/tft_espi/index.html">tft_espi</a><input class="toctree-checkbox" id="toctree-checkbox-66" name="toctree-checkbox-66" role="switch" type="checkbox"/><label for="toctree-checkbox-66"><div class="visually-hidden">Toggle navigation of tft_espi</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../drivers/display/tft_espi/lv_tft_espi.html">lv_tft_espi.h</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../drivers/evdev/index.html">evdev</a><input class="toctree-checkbox" id="toctree-checkbox-67" name="toctree-checkbox-67" role="switch" type="checkbox"/><label for="toctree-checkbox-67"><div class="visually-hidden">Toggle navigation of evdev</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../drivers/evdev/lv_evdev.html">lv_evdev.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../drivers/evdev/lv_evdev_private.html">lv_evdev_private.h</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../drivers/glfw/index.html">glfw</a><input class="toctree-checkbox" id="toctree-checkbox-68" name="toctree-checkbox-68" role="switch" type="checkbox"/><label for="toctree-checkbox-68"><div class="visually-hidden">Toggle navigation of glfw</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../drivers/glfw/lv_glfw_window.html">lv_glfw_window.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../drivers/glfw/lv_glfw_window_private.html">lv_glfw_window_private.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../drivers/glfw/lv_opengles_debug.html">lv_opengles_debug.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../drivers/glfw/lv_opengles_driver.html">lv_opengles_driver.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../drivers/glfw/lv_opengles_texture.html">lv_opengles_texture.h</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../drivers/libinput/index.html">libinput</a><input class="toctree-checkbox" id="toctree-checkbox-69" name="toctree-checkbox-69" role="switch" type="checkbox"/><label for="toctree-checkbox-69"><div class="visually-hidden">Toggle navigation of libinput</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../drivers/libinput/lv_libinput.html">lv_libinput.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../drivers/libinput/lv_libinput_private.html">lv_libinput_private.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../drivers/libinput/lv_xkb.html">lv_xkb.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../drivers/libinput/lv_xkb_private.html">lv_xkb_private.h</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../drivers/nuttx/index.html">nuttx</a><input class="toctree-checkbox" id="toctree-checkbox-70" name="toctree-checkbox-70" role="switch" type="checkbox"/><label for="toctree-checkbox-70"><div class="visually-hidden">Toggle navigation of nuttx</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../drivers/nuttx/lv_nuttx_cache.html">lv_nuttx_cache.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../drivers/nuttx/lv_nuttx_entry.html">lv_nuttx_entry.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../drivers/nuttx/lv_nuttx_fbdev.html">lv_nuttx_fbdev.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../drivers/nuttx/lv_nuttx_image_cache.html">lv_nuttx_image_cache.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../drivers/nuttx/lv_nuttx_lcd.html">lv_nuttx_lcd.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../drivers/nuttx/lv_nuttx_libuv.html">lv_nuttx_libuv.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../drivers/nuttx/lv_nuttx_profiler.html">lv_nuttx_profiler.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../drivers/nuttx/lv_nuttx_touchscreen.html">lv_nuttx_touchscreen.h</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../drivers/qnx/index.html">qnx</a><input class="toctree-checkbox" id="toctree-checkbox-71" name="toctree-checkbox-71" role="switch" type="checkbox"/><label for="toctree-checkbox-71"><div class="visually-hidden">Toggle navigation of qnx</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../drivers/qnx/lv_qnx.html">lv_qnx.h</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../drivers/sdl/index.html">sdl</a><input class="toctree-checkbox" id="toctree-checkbox-72" name="toctree-checkbox-72" role="switch" type="checkbox"/><label for="toctree-checkbox-72"><div class="visually-hidden">Toggle navigation of sdl</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../drivers/sdl/lv_sdl_keyboard.html">lv_sdl_keyboard.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../drivers/sdl/lv_sdl_mouse.html">lv_sdl_mouse.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../drivers/sdl/lv_sdl_mousewheel.html">lv_sdl_mousewheel.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../drivers/sdl/lv_sdl_private.html">lv_sdl_private.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../drivers/sdl/lv_sdl_window.html">lv_sdl_window.h</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../drivers/uefi/index.html">uefi</a><input class="toctree-checkbox" id="toctree-checkbox-73" name="toctree-checkbox-73" role="switch" type="checkbox"/><label for="toctree-checkbox-73"><div class="visually-hidden">Toggle navigation of uefi</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../drivers/uefi/lv_uefi.html">lv_uefi.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../drivers/uefi/lv_uefi_context.html">lv_uefi_context.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../drivers/uefi/lv_uefi_display.html">lv_uefi_display.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../drivers/uefi/lv_uefi_edk2.html">lv_uefi_edk2.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../drivers/uefi/lv_uefi_gnu_efi.html">lv_uefi_gnu_efi.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../drivers/uefi/lv_uefi_indev.html">lv_uefi_indev.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../drivers/uefi/lv_uefi_private.html">lv_uefi_private.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../drivers/uefi/lv_uefi_std_wrapper.html">lv_uefi_std_wrapper.h</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../drivers/wayland/index.html">wayland</a><input class="toctree-checkbox" id="toctree-checkbox-74" name="toctree-checkbox-74" role="switch" type="checkbox"/><label for="toctree-checkbox-74"><div class="visually-hidden">Toggle navigation of wayland</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../drivers/wayland/lv_wayland.html">lv_wayland.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../drivers/wayland/lv_wayland_private.html">lv_wayland_private.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../drivers/wayland/lv_wayland_smm.html">lv_wayland_smm.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../drivers/wayland/lv_wl_keyboard.html">lv_wl_keyboard.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../drivers/wayland/lv_wl_pointer.html">lv_wl_pointer.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../drivers/wayland/lv_wl_pointer_axis.html">lv_wl_pointer_axis.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../drivers/wayland/lv_wl_touch.html">lv_wl_touch.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../drivers/wayland/lv_wl_window.html">lv_wl_window.h</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../drivers/windows/index.html">windows</a><input class="toctree-checkbox" id="toctree-checkbox-75" name="toctree-checkbox-75" role="switch" type="checkbox"/><label for="toctree-checkbox-75"><div class="visually-hidden">Toggle navigation of windows</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../drivers/windows/lv_windows_context.html">lv_windows_context.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../drivers/windows/lv_windows_display.html">lv_windows_display.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../drivers/windows/lv_windows_input.html">lv_windows_input.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../drivers/windows/lv_windows_input_private.html">lv_windows_input_private.h</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../drivers/x11/index.html">x11</a><input class="toctree-checkbox" id="toctree-checkbox-76" name="toctree-checkbox-76" role="switch" type="checkbox"/><label for="toctree-checkbox-76"><div class="visually-hidden">Toggle navigation of x11</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../drivers/x11/lv_x11.html">lv_x11.h</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../font/index.html">font</a><input class="toctree-checkbox" id="toctree-checkbox-77" name="toctree-checkbox-77" role="switch" type="checkbox"/><label for="toctree-checkbox-77"><div class="visually-hidden">Toggle navigation of font</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../font/lv_binfont_loader.html">lv_binfont_loader.h</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../font/lv_font.html">lv_font.h</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../font/lv_font_fmt_txt.html">lv_font_fmt_txt.h</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../font/lv_font_fmt_txt_private.html">lv_font_fmt_txt_private.h</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../font/lv_symbol_def.html">lv_symbol_def.h</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../indev/index.html">indev</a><input class="toctree-checkbox" id="toctree-checkbox-78" name="toctree-checkbox-78" role="switch" type="checkbox"/><label for="toctree-checkbox-78"><div class="visually-hidden">Toggle navigation of indev</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../indev/lv_indev.html">lv_indev.h</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../indev/lv_indev_gesture.html">lv_indev_gesture.h</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../indev/lv_indev_gesture_private.html">lv_indev_gesture_private.h</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../indev/lv_indev_private.html">lv_indev_private.h</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../indev/lv_indev_scroll.html">lv_indev_scroll.h</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../layouts/index.html">layouts</a><input class="toctree-checkbox" id="toctree-checkbox-79" name="toctree-checkbox-79" role="switch" type="checkbox"/><label for="toctree-checkbox-79"><div class="visually-hidden">Toggle navigation of layouts</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../layouts/lv_layout.html">lv_layout.h</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../layouts/lv_layout_private.html">lv_layout_private.h</a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../layouts/flex/index.html">flex</a><input class="toctree-checkbox" id="toctree-checkbox-80" name="toctree-checkbox-80" role="switch" type="checkbox"/><label for="toctree-checkbox-80"><div class="visually-hidden">Toggle navigation of flex</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../layouts/flex/lv_flex.html">lv_flex.h</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../layouts/grid/index.html">grid</a><input class="toctree-checkbox" id="toctree-checkbox-81" name="toctree-checkbox-81" role="switch" type="checkbox"/><label for="toctree-checkbox-81"><div class="visually-hidden">Toggle navigation of grid</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../layouts/grid/lv_grid.html">lv_grid.h</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../libs/index.html">libs</a><input class="toctree-checkbox" id="toctree-checkbox-82" name="toctree-checkbox-82" role="switch" type="checkbox"/><label for="toctree-checkbox-82"><div class="visually-hidden">Toggle navigation of libs</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../libs/barcode/index.html">barcode</a><input class="toctree-checkbox" id="toctree-checkbox-83" name="toctree-checkbox-83" role="switch" type="checkbox"/><label for="toctree-checkbox-83"><div class="visually-hidden">Toggle navigation of barcode</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../libs/barcode/lv_barcode.html">lv_barcode.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../libs/barcode/lv_barcode_private.html">lv_barcode_private.h</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../libs/bin_decoder/index.html">bin_decoder</a><input class="toctree-checkbox" id="toctree-checkbox-84" name="toctree-checkbox-84" role="switch" type="checkbox"/><label for="toctree-checkbox-84"><div class="visually-hidden">Toggle navigation of bin_decoder</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../libs/bin_decoder/lv_bin_decoder.html">lv_bin_decoder.h</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../libs/bmp/index.html">bmp</a><input class="toctree-checkbox" id="toctree-checkbox-85" name="toctree-checkbox-85" role="switch" type="checkbox"/><label for="toctree-checkbox-85"><div class="visually-hidden">Toggle navigation of bmp</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../libs/bmp/lv_bmp.html">lv_bmp.h</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../libs/ffmpeg/index.html">ffmpeg</a><input class="toctree-checkbox" id="toctree-checkbox-86" name="toctree-checkbox-86" role="switch" type="checkbox"/><label for="toctree-checkbox-86"><div class="visually-hidden">Toggle navigation of ffmpeg</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../libs/ffmpeg/lv_ffmpeg.html">lv_ffmpeg.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../libs/ffmpeg/lv_ffmpeg_private.html">lv_ffmpeg_private.h</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../libs/freetype/index.html">freetype</a><input class="toctree-checkbox" id="toctree-checkbox-87" name="toctree-checkbox-87" role="switch" type="checkbox"/><label for="toctree-checkbox-87"><div class="visually-hidden">Toggle navigation of freetype</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../libs/freetype/lv_freetype.html">lv_freetype.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../libs/freetype/lv_freetype_private.html">lv_freetype_private.h</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../libs/fsdrv/index.html">fsdrv</a><input class="toctree-checkbox" id="toctree-checkbox-88" name="toctree-checkbox-88" role="switch" type="checkbox"/><label for="toctree-checkbox-88"><div class="visually-hidden">Toggle navigation of fsdrv</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../libs/fsdrv/lv_fsdrv.html">lv_fsdrv.h</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../libs/gif/index.html">gif</a><input class="toctree-checkbox" id="toctree-checkbox-89" name="toctree-checkbox-89" role="switch" type="checkbox"/><label for="toctree-checkbox-89"><div class="visually-hidden">Toggle navigation of gif</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../libs/gif/lv_gif.html">lv_gif.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../libs/gif/lv_gif_private.html">lv_gif_private.h</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../libs/libjpeg_turbo/index.html">libjpeg_turbo</a><input class="toctree-checkbox" id="toctree-checkbox-90" name="toctree-checkbox-90" role="switch" type="checkbox"/><label for="toctree-checkbox-90"><div class="visually-hidden">Toggle navigation of libjpeg_turbo</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../libs/libjpeg_turbo/lv_libjpeg_turbo.html">lv_libjpeg_turbo.h</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../libs/libpng/index.html">libpng</a><input class="toctree-checkbox" id="toctree-checkbox-91" name="toctree-checkbox-91" role="switch" type="checkbox"/><label for="toctree-checkbox-91"><div class="visually-hidden">Toggle navigation of libpng</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../libs/libpng/lv_libpng.html">lv_libpng.h</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../libs/lodepng/index.html">lodepng</a><input class="toctree-checkbox" id="toctree-checkbox-92" name="toctree-checkbox-92" role="switch" type="checkbox"/><label for="toctree-checkbox-92"><div class="visually-hidden">Toggle navigation of lodepng</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../libs/lodepng/lv_lodepng.html">lv_lodepng.h</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../libs/qrcode/index.html">qrcode</a><input class="toctree-checkbox" id="toctree-checkbox-93" name="toctree-checkbox-93" role="switch" type="checkbox"/><label for="toctree-checkbox-93"><div class="visually-hidden">Toggle navigation of qrcode</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../libs/qrcode/lv_qrcode.html">lv_qrcode.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../libs/qrcode/lv_qrcode_private.html">lv_qrcode_private.h</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../libs/rle/index.html">rle</a><input class="toctree-checkbox" id="toctree-checkbox-94" name="toctree-checkbox-94" role="switch" type="checkbox"/><label for="toctree-checkbox-94"><div class="visually-hidden">Toggle navigation of rle</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../libs/rle/lv_rle.html">lv_rle.h</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../libs/rlottie/index.html">rlottie</a><input class="toctree-checkbox" id="toctree-checkbox-95" name="toctree-checkbox-95" role="switch" type="checkbox"/><label for="toctree-checkbox-95"><div class="visually-hidden">Toggle navigation of rlottie</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../libs/rlottie/lv_rlottie.html">lv_rlottie.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../libs/rlottie/lv_rlottie_private.html">lv_rlottie_private.h</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../libs/svg/index.html">svg</a><input class="toctree-checkbox" id="toctree-checkbox-96" name="toctree-checkbox-96" role="switch" type="checkbox"/><label for="toctree-checkbox-96"><div class="visually-hidden">Toggle navigation of svg</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../libs/svg/lv_svg.html">lv_svg.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../libs/svg/lv_svg_decoder.html">lv_svg_decoder.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../libs/svg/lv_svg_parser.html">lv_svg_parser.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../libs/svg/lv_svg_render.html">lv_svg_render.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../libs/svg/lv_svg_token.html">lv_svg_token.h</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../libs/tiny_ttf/index.html">tiny_ttf</a><input class="toctree-checkbox" id="toctree-checkbox-97" name="toctree-checkbox-97" role="switch" type="checkbox"/><label for="toctree-checkbox-97"><div class="visually-hidden">Toggle navigation of tiny_ttf</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../libs/tiny_ttf/lv_tiny_ttf.html">lv_tiny_ttf.h</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../libs/tjpgd/index.html">tjpgd</a><input class="toctree-checkbox" id="toctree-checkbox-98" name="toctree-checkbox-98" role="switch" type="checkbox"/><label for="toctree-checkbox-98"><div class="visually-hidden">Toggle navigation of tjpgd</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../libs/tjpgd/lv_tjpgd.html">lv_tjpgd.h</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../misc/index.html">misc</a><input class="toctree-checkbox" id="toctree-checkbox-99" name="toctree-checkbox-99" role="switch" type="checkbox"/><label for="toctree-checkbox-99"><div class="visually-hidden">Toggle navigation of misc</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../misc/lv_anim.html">lv_anim.h</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../misc/lv_anim_private.html">lv_anim_private.h</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../misc/lv_anim_timeline.html">lv_anim_timeline.h</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../misc/lv_area.html">lv_area.h</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../misc/lv_area_private.html">lv_area_private.h</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../misc/lv_array.html">lv_array.h</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../misc/lv_assert.html">lv_assert.h</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../misc/lv_async.html">lv_async.h</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../misc/lv_bidi.html">lv_bidi.h</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../misc/lv_bidi_private.html">lv_bidi_private.h</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../misc/lv_circle_buf.html">lv_circle_buf.h</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../misc/lv_color.html">lv_color.h</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../misc/lv_color_op.html">lv_color_op.h</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../misc/lv_color_op_private.html">lv_color_op_private.h</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../misc/lv_event.html">lv_event.h</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../misc/lv_event_private.html">lv_event_private.h</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../misc/lv_fs.html">lv_fs.h</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../misc/lv_fs_private.html">lv_fs_private.h</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../misc/lv_grad.html">lv_grad.h</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../misc/lv_iter.html">lv_iter.h</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../misc/lv_ll.html">lv_ll.h</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../misc/lv_log.html">lv_log.h</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../misc/lv_lru.html">lv_lru.h</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../misc/lv_math.html">lv_math.h</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../misc/lv_matrix.html">lv_matrix.h</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../misc/lv_palette.html">lv_palette.h</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../misc/lv_profiler.html">lv_profiler.h</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../misc/lv_profiler_builtin.html">lv_profiler_builtin.h</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../misc/lv_profiler_builtin_private.html">lv_profiler_builtin_private.h</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../misc/lv_rb.html">lv_rb.h</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../misc/lv_rb_private.html">lv_rb_private.h</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../misc/lv_style.html">lv_style.h</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../misc/lv_style_gen.html">lv_style_gen.h</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../misc/lv_style_private.html">lv_style_private.h</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../misc/lv_templ.html">lv_templ.h</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../misc/lv_text.html">lv_text.h</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../misc/lv_text_ap.html">lv_text_ap.h</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../misc/lv_text_private.html">lv_text_private.h</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../misc/lv_timer.html">lv_timer.h</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../misc/lv_timer_private.html">lv_timer_private.h</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../misc/lv_tree.html">lv_tree.h</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../misc/lv_utils.html">lv_utils.h</a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../misc/cache/index.html">cache</a><input class="toctree-checkbox" id="toctree-checkbox-100" name="toctree-checkbox-100" role="switch" type="checkbox"/><label for="toctree-checkbox-100"><div class="visually-hidden">Toggle navigation of cache</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../misc/cache/lv_cache.html">lv_cache.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../misc/cache/lv_cache_entry.html">lv_cache_entry.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../misc/cache/lv_cache_entry_private.html">lv_cache_entry_private.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../misc/cache/lv_cache_private.html">lv_cache_private.h</a></li>
+<li class="toctree-l4 has-children"><a class="reference internal" href="../../misc/cache/class/index.html">class</a><input class="toctree-checkbox" id="toctree-checkbox-101" name="toctree-checkbox-101" role="switch" type="checkbox"/><label for="toctree-checkbox-101"><div class="visually-hidden">Toggle navigation of class</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../misc/cache/class/lv_cache_class.html">lv_cache_class.h</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../misc/cache/class/lv_cache_lru_ll.html">lv_cache_lru_ll.h</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../misc/cache/class/lv_cache_lru_rb.html">lv_cache_lru_rb.h</a></li>
+</ul>
+</li>
+<li class="toctree-l4 has-children"><a class="reference internal" href="../../misc/cache/instance/index.html">instance</a><input class="toctree-checkbox" id="toctree-checkbox-102" name="toctree-checkbox-102" role="switch" type="checkbox"/><label for="toctree-checkbox-102"><div class="visually-hidden">Toggle navigation of instance</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../misc/cache/instance/lv_cache_instance.html">lv_cache_instance.h</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../misc/cache/instance/lv_image_cache.html">lv_image_cache.h</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../misc/cache/instance/lv_image_header_cache.html">lv_image_header_cache.h</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../osal/index.html">osal</a><input class="toctree-checkbox" id="toctree-checkbox-103" name="toctree-checkbox-103" role="switch" type="checkbox"/><label for="toctree-checkbox-103"><div class="visually-hidden">Toggle navigation of osal</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../osal/lv_linux_private.html">lv_linux_private.h</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../osal/lv_os.html">lv_os.h</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../osal/lv_os_none.html">lv_os_none.h</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../osal/lv_os_private.html">lv_os_private.h</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../others/index.html">others</a><input class="toctree-checkbox" id="toctree-checkbox-104" name="toctree-checkbox-104" role="switch" type="checkbox"/><label for="toctree-checkbox-104"><div class="visually-hidden">Toggle navigation of others</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../others/file_explorer/index.html">file_explorer</a><input class="toctree-checkbox" id="toctree-checkbox-105" name="toctree-checkbox-105" role="switch" type="checkbox"/><label for="toctree-checkbox-105"><div class="visually-hidden">Toggle navigation of file_explorer</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../others/file_explorer/lv_file_explorer.html">lv_file_explorer.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../others/file_explorer/lv_file_explorer_private.html">lv_file_explorer_private.h</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../others/font_manager/index.html">font_manager</a><input class="toctree-checkbox" id="toctree-checkbox-106" name="toctree-checkbox-106" role="switch" type="checkbox"/><label for="toctree-checkbox-106"><div class="visually-hidden">Toggle navigation of font_manager</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../others/font_manager/lv_font_manager.html">lv_font_manager.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../others/font_manager/lv_font_manager_recycle.html">lv_font_manager_recycle.h</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../others/fragment/index.html">fragment</a><input class="toctree-checkbox" id="toctree-checkbox-107" name="toctree-checkbox-107" role="switch" type="checkbox"/><label for="toctree-checkbox-107"><div class="visually-hidden">Toggle navigation of fragment</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../others/fragment/lv_fragment.html">lv_fragment.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../others/fragment/lv_fragment_private.html">lv_fragment_private.h</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../others/gridnav/index.html">gridnav</a><input class="toctree-checkbox" id="toctree-checkbox-108" name="toctree-checkbox-108" role="switch" type="checkbox"/><label for="toctree-checkbox-108"><div class="visually-hidden">Toggle navigation of gridnav</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../others/gridnav/lv_gridnav.html">lv_gridnav.h</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../others/ime/index.html">ime</a><input class="toctree-checkbox" id="toctree-checkbox-109" name="toctree-checkbox-109" role="switch" type="checkbox"/><label for="toctree-checkbox-109"><div class="visually-hidden">Toggle navigation of ime</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../others/ime/lv_ime_pinyin.html">lv_ime_pinyin.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../others/ime/lv_ime_pinyin_private.html">lv_ime_pinyin_private.h</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../others/imgfont/index.html">imgfont</a><input class="toctree-checkbox" id="toctree-checkbox-110" name="toctree-checkbox-110" role="switch" type="checkbox"/><label for="toctree-checkbox-110"><div class="visually-hidden">Toggle navigation of imgfont</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../others/imgfont/lv_imgfont.html">lv_imgfont.h</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../others/monkey/index.html">monkey</a><input class="toctree-checkbox" id="toctree-checkbox-111" name="toctree-checkbox-111" role="switch" type="checkbox"/><label for="toctree-checkbox-111"><div class="visually-hidden">Toggle navigation of monkey</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../others/monkey/lv_monkey.html">lv_monkey.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../others/monkey/lv_monkey_private.html">lv_monkey_private.h</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../others/observer/index.html">observer</a><input class="toctree-checkbox" id="toctree-checkbox-112" name="toctree-checkbox-112" role="switch" type="checkbox"/><label for="toctree-checkbox-112"><div class="visually-hidden">Toggle navigation of observer</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../others/observer/lv_observer.html">lv_observer.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../others/observer/lv_observer_private.html">lv_observer_private.h</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../others/snapshot/index.html">snapshot</a><input class="toctree-checkbox" id="toctree-checkbox-113" name="toctree-checkbox-113" role="switch" type="checkbox"/><label for="toctree-checkbox-113"><div class="visually-hidden">Toggle navigation of snapshot</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../others/snapshot/lv_snapshot.html">lv_snapshot.h</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../others/sysmon/index.html">sysmon</a><input class="toctree-checkbox" id="toctree-checkbox-114" name="toctree-checkbox-114" role="switch" type="checkbox"/><label for="toctree-checkbox-114"><div class="visually-hidden">Toggle navigation of sysmon</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../others/sysmon/lv_sysmon.html">lv_sysmon.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../others/sysmon/lv_sysmon_private.html">lv_sysmon_private.h</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../others/test/index.html">test</a><input class="toctree-checkbox" id="toctree-checkbox-115" name="toctree-checkbox-115" role="switch" type="checkbox"/><label for="toctree-checkbox-115"><div class="visually-hidden">Toggle navigation of test</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../others/test/lv_test.html">lv_test.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../others/test/lv_test_display.html">lv_test_display.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../others/test/lv_test_helpers.html">lv_test_helpers.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../others/test/lv_test_indev.html">lv_test_indev.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../others/test/lv_test_indev_gesture.html">lv_test_indev_gesture.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../others/test/lv_test_private.html">lv_test_private.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../others/test/lv_test_screenshot_compare.html">lv_test_screenshot_compare.h</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../others/translation/index.html">translation</a><input class="toctree-checkbox" id="toctree-checkbox-116" name="toctree-checkbox-116" role="switch" type="checkbox"/><label for="toctree-checkbox-116"><div class="visually-hidden">Toggle navigation of translation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../others/translation/lv_translation.html">lv_translation.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../others/translation/lv_translation_private.html">lv_translation_private.h</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../others/xml/index.html">xml</a><input class="toctree-checkbox" id="toctree-checkbox-117" name="toctree-checkbox-117" role="switch" type="checkbox"/><label for="toctree-checkbox-117"><div class="visually-hidden">Toggle navigation of xml</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../others/xml/lv_xml.html">lv_xml.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../others/xml/lv_xml_base_types.html">lv_xml_base_types.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../others/xml/lv_xml_component.html">lv_xml_component.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../others/xml/lv_xml_component_private.html">lv_xml_component_private.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../others/xml/lv_xml_parser.html">lv_xml_parser.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../others/xml/lv_xml_private.html">lv_xml_private.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../others/xml/lv_xml_style.html">lv_xml_style.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../others/xml/lv_xml_test.html">lv_xml_test.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../others/xml/lv_xml_translation.html">lv_xml_translation.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../others/xml/lv_xml_update.html">lv_xml_update.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../others/xml/lv_xml_utils.html">lv_xml_utils.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../others/xml/lv_xml_widget.html">lv_xml_widget.h</a></li>
+<li class="toctree-l4 has-children"><a class="reference internal" href="../../others/xml/parsers/index.html">parsers</a><input class="toctree-checkbox" id="toctree-checkbox-118" name="toctree-checkbox-118" role="switch" type="checkbox"/><label for="toctree-checkbox-118"><div class="visually-hidden">Toggle navigation of parsers</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l5"><a class="reference internal" href="../../others/xml/parsers/lv_xml_arc_parser.html">lv_xml_arc_parser.h</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../others/xml/parsers/lv_xml_bar_parser.html">lv_xml_bar_parser.h</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../others/xml/parsers/lv_xml_button_parser.html">lv_xml_button_parser.h</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../others/xml/parsers/lv_xml_buttonmatrix_parser.html">lv_xml_buttonmatrix_parser.h</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../others/xml/parsers/lv_xml_calendar_parser.html">lv_xml_calendar_parser.h</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../others/xml/parsers/lv_xml_canvas_parser.html">lv_xml_canvas_parser.h</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../others/xml/parsers/lv_xml_chart_parser.html">lv_xml_chart_parser.h</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../others/xml/parsers/lv_xml_checkbox_parser.html">lv_xml_checkbox_parser.h</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../others/xml/parsers/lv_xml_dropdown_parser.html">lv_xml_dropdown_parser.h</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../others/xml/parsers/lv_xml_image_parser.html">lv_xml_image_parser.h</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../others/xml/parsers/lv_xml_keyboard_parser.html">lv_xml_keyboard_parser.h</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../others/xml/parsers/lv_xml_label_parser.html">lv_xml_label_parser.h</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../others/xml/parsers/lv_xml_obj_parser.html">lv_xml_obj_parser.h</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../others/xml/parsers/lv_xml_roller_parser.html">lv_xml_roller_parser.h</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../others/xml/parsers/lv_xml_scale_parser.html">lv_xml_scale_parser.h</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../others/xml/parsers/lv_xml_slider_parser.html">lv_xml_slider_parser.h</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../others/xml/parsers/lv_xml_spangroup_parser.html">lv_xml_spangroup_parser.h</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../others/xml/parsers/lv_xml_table_parser.html">lv_xml_table_parser.h</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../others/xml/parsers/lv_xml_tabview_parser.html">lv_xml_tabview_parser.h</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../../others/xml/parsers/lv_xml_textarea_parser.html">lv_xml_textarea_parser.h</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../stdlib/index.html">stdlib</a><input class="toctree-checkbox" id="toctree-checkbox-119" name="toctree-checkbox-119" role="switch" type="checkbox"/><label for="toctree-checkbox-119"><div class="visually-hidden">Toggle navigation of stdlib</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../stdlib/lv_mem.html">lv_mem.h</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../stdlib/lv_mem_private.html">lv_mem_private.h</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../stdlib/lv_sprintf.html">lv_sprintf.h</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../stdlib/lv_string.html">lv_string.h</a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../stdlib/builtin/index.html">builtin</a><input class="toctree-checkbox" id="toctree-checkbox-120" name="toctree-checkbox-120" role="switch" type="checkbox"/><label for="toctree-checkbox-120"><div class="visually-hidden">Toggle navigation of builtin</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../stdlib/builtin/lv_tlsf.html">lv_tlsf.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../stdlib/builtin/lv_tlsf_private.html">lv_tlsf_private.h</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../themes/index.html">themes</a><input class="toctree-checkbox" id="toctree-checkbox-121" name="toctree-checkbox-121" role="switch" type="checkbox"/><label for="toctree-checkbox-121"><div class="visually-hidden">Toggle navigation of themes</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../themes/lv_theme.html">lv_theme.h</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../themes/lv_theme_private.html">lv_theme_private.h</a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../themes/default/index.html">default</a><input class="toctree-checkbox" id="toctree-checkbox-122" name="toctree-checkbox-122" role="switch" type="checkbox"/><label for="toctree-checkbox-122"><div class="visually-hidden">Toggle navigation of default</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../themes/default/lv_theme_default.html">lv_theme_default.h</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../themes/mono/index.html">mono</a><input class="toctree-checkbox" id="toctree-checkbox-123" name="toctree-checkbox-123" role="switch" type="checkbox"/><label for="toctree-checkbox-123"><div class="visually-hidden">Toggle navigation of mono</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../themes/mono/lv_theme_mono.html">lv_theme_mono.h</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../themes/simple/index.html">simple</a><input class="toctree-checkbox" id="toctree-checkbox-124" name="toctree-checkbox-124" role="switch" type="checkbox"/><label for="toctree-checkbox-124"><div class="visually-hidden">Toggle navigation of simple</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../themes/simple/lv_theme_simple.html">lv_theme_simple.h</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../tick/index.html">tick</a><input class="toctree-checkbox" id="toctree-checkbox-125" name="toctree-checkbox-125" role="switch" type="checkbox"/><label for="toctree-checkbox-125"><div class="visually-hidden">Toggle navigation of tick</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../tick/lv_tick.html">lv_tick.h</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tick/lv_tick_private.html">lv_tick_private.h</a></li>
+</ul>
+</li>
+<li class="toctree-l2 current has-children"><a class="reference internal" href="../index.html">widgets</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-126" name="toctree-checkbox-126" role="switch" type="checkbox"/><label for="toctree-checkbox-126"><div class="visually-hidden">Toggle navigation of widgets</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l3 has-children"><a class="reference internal" href="../3dtexture/index.html">3dtexture</a><input class="toctree-checkbox" id="toctree-checkbox-127" name="toctree-checkbox-127" role="switch" type="checkbox"/><label for="toctree-checkbox-127"><div class="visually-hidden">Toggle navigation of 3dtexture</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../3dtexture/lv_3dtexture.html">lv_3dtexture.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../3dtexture/lv_3dtexture_private.html">lv_3dtexture_private.h</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../animimage/index.html">animimage</a><input class="toctree-checkbox" id="toctree-checkbox-128" name="toctree-checkbox-128" role="switch" type="checkbox"/><label for="toctree-checkbox-128"><div class="visually-hidden">Toggle navigation of animimage</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../animimage/lv_animimage.html">lv_animimage.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../animimage/lv_animimage_private.html">lv_animimage_private.h</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../arc/index.html">arc</a><input class="toctree-checkbox" id="toctree-checkbox-129" name="toctree-checkbox-129" role="switch" type="checkbox"/><label for="toctree-checkbox-129"><div class="visually-hidden">Toggle navigation of arc</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../arc/lv_arc.html">lv_arc.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../arc/lv_arc_private.html">lv_arc_private.h</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../arclabel/index.html">arclabel</a><input class="toctree-checkbox" id="toctree-checkbox-130" name="toctree-checkbox-130" role="switch" type="checkbox"/><label for="toctree-checkbox-130"><div class="visually-hidden">Toggle navigation of arclabel</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../arclabel/lv_arclabel.html">lv_arclabel.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../arclabel/lv_arclabel_private.html">lv_arclabel_private.h</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../bar/index.html">bar</a><input class="toctree-checkbox" id="toctree-checkbox-131" name="toctree-checkbox-131" role="switch" type="checkbox"/><label for="toctree-checkbox-131"><div class="visually-hidden">Toggle navigation of bar</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../bar/lv_bar.html">lv_bar.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../bar/lv_bar_private.html">lv_bar_private.h</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../button/index.html">button</a><input class="toctree-checkbox" id="toctree-checkbox-132" name="toctree-checkbox-132" role="switch" type="checkbox"/><label for="toctree-checkbox-132"><div class="visually-hidden">Toggle navigation of button</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../button/lv_button.html">lv_button.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../button/lv_button_private.html">lv_button_private.h</a></li>
+</ul>
+</li>
+<li class="toctree-l3 current has-children current-page"><a class="current reference internal" href="#">buttonmatrix</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-133" name="toctree-checkbox-133" role="switch" type="checkbox"/><label for="toctree-checkbox-133"><div class="visually-hidden">Toggle navigation of buttonmatrix</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="lv_buttonmatrix.html">lv_buttonmatrix.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="lv_buttonmatrix_private.html">lv_buttonmatrix_private.h</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../calendar/index.html">calendar</a><input class="toctree-checkbox" id="toctree-checkbox-134" name="toctree-checkbox-134" role="switch" type="checkbox"/><label for="toctree-checkbox-134"><div class="visually-hidden">Toggle navigation of calendar</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../calendar/lv_calendar.html">lv_calendar.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../calendar/lv_calendar_chinese.html">lv_calendar_chinese.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../calendar/lv_calendar_header_arrow.html">lv_calendar_header_arrow.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../calendar/lv_calendar_header_dropdown.html">lv_calendar_header_dropdown.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../calendar/lv_calendar_private.html">lv_calendar_private.h</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../canvas/index.html">canvas</a><input class="toctree-checkbox" id="toctree-checkbox-135" name="toctree-checkbox-135" role="switch" type="checkbox"/><label for="toctree-checkbox-135"><div class="visually-hidden">Toggle navigation of canvas</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../canvas/lv_canvas.html">lv_canvas.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../canvas/lv_canvas_private.html">lv_canvas_private.h</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../chart/index.html">chart</a><input class="toctree-checkbox" id="toctree-checkbox-136" name="toctree-checkbox-136" role="switch" type="checkbox"/><label for="toctree-checkbox-136"><div class="visually-hidden">Toggle navigation of chart</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../chart/lv_chart.html">lv_chart.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../chart/lv_chart_private.html">lv_chart_private.h</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../checkbox/index.html">checkbox</a><input class="toctree-checkbox" id="toctree-checkbox-137" name="toctree-checkbox-137" role="switch" type="checkbox"/><label for="toctree-checkbox-137"><div class="visually-hidden">Toggle navigation of checkbox</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../checkbox/lv_checkbox.html">lv_checkbox.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../checkbox/lv_checkbox_private.html">lv_checkbox_private.h</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../dropdown/index.html">dropdown</a><input class="toctree-checkbox" id="toctree-checkbox-138" name="toctree-checkbox-138" role="switch" type="checkbox"/><label for="toctree-checkbox-138"><div class="visually-hidden">Toggle navigation of dropdown</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../dropdown/lv_dropdown.html">lv_dropdown.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../dropdown/lv_dropdown_private.html">lv_dropdown_private.h</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../image/index.html">image</a><input class="toctree-checkbox" id="toctree-checkbox-139" name="toctree-checkbox-139" role="switch" type="checkbox"/><label for="toctree-checkbox-139"><div class="visually-hidden">Toggle navigation of image</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../image/lv_image.html">lv_image.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../image/lv_image_private.html">lv_image_private.h</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../imagebutton/index.html">imagebutton</a><input class="toctree-checkbox" id="toctree-checkbox-140" name="toctree-checkbox-140" role="switch" type="checkbox"/><label for="toctree-checkbox-140"><div class="visually-hidden">Toggle navigation of imagebutton</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../imagebutton/lv_imagebutton.html">lv_imagebutton.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../imagebutton/lv_imagebutton_private.html">lv_imagebutton_private.h</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../keyboard/index.html">keyboard</a><input class="toctree-checkbox" id="toctree-checkbox-141" name="toctree-checkbox-141" role="switch" type="checkbox"/><label for="toctree-checkbox-141"><div class="visually-hidden">Toggle navigation of keyboard</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../keyboard/lv_keyboard.html">lv_keyboard.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../keyboard/lv_keyboard_private.html">lv_keyboard_private.h</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../label/index.html">label</a><input class="toctree-checkbox" id="toctree-checkbox-142" name="toctree-checkbox-142" role="switch" type="checkbox"/><label for="toctree-checkbox-142"><div class="visually-hidden">Toggle navigation of label</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../label/lv_label.html">lv_label.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../label/lv_label_private.html">lv_label_private.h</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../led/index.html">led</a><input class="toctree-checkbox" id="toctree-checkbox-143" name="toctree-checkbox-143" role="switch" type="checkbox"/><label for="toctree-checkbox-143"><div class="visually-hidden">Toggle navigation of led</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../led/lv_led.html">lv_led.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../led/lv_led_private.html">lv_led_private.h</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../line/index.html">line</a><input class="toctree-checkbox" id="toctree-checkbox-144" name="toctree-checkbox-144" role="switch" type="checkbox"/><label for="toctree-checkbox-144"><div class="visually-hidden">Toggle navigation of line</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../line/lv_line.html">lv_line.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../line/lv_line_private.html">lv_line_private.h</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../list/index.html">list</a><input class="toctree-checkbox" id="toctree-checkbox-145" name="toctree-checkbox-145" role="switch" type="checkbox"/><label for="toctree-checkbox-145"><div class="visually-hidden">Toggle navigation of list</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../list/lv_list.html">lv_list.h</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../lottie/index.html">lottie</a><input class="toctree-checkbox" id="toctree-checkbox-146" name="toctree-checkbox-146" role="switch" type="checkbox"/><label for="toctree-checkbox-146"><div class="visually-hidden">Toggle navigation of lottie</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../lottie/lv_lottie.html">lv_lottie.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../lottie/lv_lottie_private.html">lv_lottie_private.h</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../menu/index.html">menu</a><input class="toctree-checkbox" id="toctree-checkbox-147" name="toctree-checkbox-147" role="switch" type="checkbox"/><label for="toctree-checkbox-147"><div class="visually-hidden">Toggle navigation of menu</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../menu/lv_menu.html">lv_menu.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../menu/lv_menu_private.html">lv_menu_private.h</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../msgbox/index.html">msgbox</a><input class="toctree-checkbox" id="toctree-checkbox-148" name="toctree-checkbox-148" role="switch" type="checkbox"/><label for="toctree-checkbox-148"><div class="visually-hidden">Toggle navigation of msgbox</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../msgbox/lv_msgbox.html">lv_msgbox.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../msgbox/lv_msgbox_private.html">lv_msgbox_private.h</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../objx_templ/index.html">objx_templ</a><input class="toctree-checkbox" id="toctree-checkbox-149" name="toctree-checkbox-149" role="switch" type="checkbox"/><label for="toctree-checkbox-149"><div class="visually-hidden">Toggle navigation of objx_templ</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../objx_templ/lv_objx_templ.html">lv_objx_templ.h</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../property/index.html">property</a><input class="toctree-checkbox" id="toctree-checkbox-150" name="toctree-checkbox-150" role="switch" type="checkbox"/><label for="toctree-checkbox-150"><div class="visually-hidden">Toggle navigation of property</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../property/lv_obj_property_names.html">lv_obj_property_names.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../property/lv_style_properties.html">lv_style_properties.h</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../roller/index.html">roller</a><input class="toctree-checkbox" id="toctree-checkbox-151" name="toctree-checkbox-151" role="switch" type="checkbox"/><label for="toctree-checkbox-151"><div class="visually-hidden">Toggle navigation of roller</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../roller/lv_roller.html">lv_roller.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../roller/lv_roller_private.html">lv_roller_private.h</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../scale/index.html">scale</a><input class="toctree-checkbox" id="toctree-checkbox-152" name="toctree-checkbox-152" role="switch" type="checkbox"/><label for="toctree-checkbox-152"><div class="visually-hidden">Toggle navigation of scale</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../scale/lv_scale.html">lv_scale.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../scale/lv_scale_private.html">lv_scale_private.h</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../slider/index.html">slider</a><input class="toctree-checkbox" id="toctree-checkbox-153" name="toctree-checkbox-153" role="switch" type="checkbox"/><label for="toctree-checkbox-153"><div class="visually-hidden">Toggle navigation of slider</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../slider/lv_slider.html">lv_slider.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../slider/lv_slider_private.html">lv_slider_private.h</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../span/index.html">span</a><input class="toctree-checkbox" id="toctree-checkbox-154" name="toctree-checkbox-154" role="switch" type="checkbox"/><label for="toctree-checkbox-154"><div class="visually-hidden">Toggle navigation of span</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../span/lv_span.html">lv_span.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../span/lv_span_private.html">lv_span_private.h</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../spinbox/index.html">spinbox</a><input class="toctree-checkbox" id="toctree-checkbox-155" name="toctree-checkbox-155" role="switch" type="checkbox"/><label for="toctree-checkbox-155"><div class="visually-hidden">Toggle navigation of spinbox</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../spinbox/lv_spinbox.html">lv_spinbox.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../spinbox/lv_spinbox_private.html">lv_spinbox_private.h</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../spinner/index.html">spinner</a><input class="toctree-checkbox" id="toctree-checkbox-156" name="toctree-checkbox-156" role="switch" type="checkbox"/><label for="toctree-checkbox-156"><div class="visually-hidden">Toggle navigation of spinner</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../spinner/lv_spinner.html">lv_spinner.h</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../switch/index.html">switch</a><input class="toctree-checkbox" id="toctree-checkbox-157" name="toctree-checkbox-157" role="switch" type="checkbox"/><label for="toctree-checkbox-157"><div class="visually-hidden">Toggle navigation of switch</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../switch/lv_switch.html">lv_switch.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../switch/lv_switch_private.html">lv_switch_private.h</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../table/index.html">table</a><input class="toctree-checkbox" id="toctree-checkbox-158" name="toctree-checkbox-158" role="switch" type="checkbox"/><label for="toctree-checkbox-158"><div class="visually-hidden">Toggle navigation of table</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../table/lv_table.html">lv_table.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../table/lv_table_private.html">lv_table_private.h</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../tabview/index.html">tabview</a><input class="toctree-checkbox" id="toctree-checkbox-159" name="toctree-checkbox-159" role="switch" type="checkbox"/><label for="toctree-checkbox-159"><div class="visually-hidden">Toggle navigation of tabview</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../tabview/lv_tabview.html">lv_tabview.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tabview/lv_tabview_private.html">lv_tabview_private.h</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../textarea/index.html">textarea</a><input class="toctree-checkbox" id="toctree-checkbox-160" name="toctree-checkbox-160" role="switch" type="checkbox"/><label for="toctree-checkbox-160"><div class="visually-hidden">Toggle navigation of textarea</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../textarea/lv_textarea.html">lv_textarea.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../textarea/lv_textarea_private.html">lv_textarea_private.h</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../tileview/index.html">tileview</a><input class="toctree-checkbox" id="toctree-checkbox-161" name="toctree-checkbox-161" role="switch" type="checkbox"/><label for="toctree-checkbox-161"><div class="visually-hidden">Toggle navigation of tileview</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../tileview/lv_tileview.html">lv_tileview.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tileview/lv_tileview_private.html">lv_tileview_private.h</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../win/index.html">win</a><input class="toctree-checkbox" id="toctree-checkbox-162" name="toctree-checkbox-162" role="switch" type="checkbox"/><label for="toctree-checkbox-162"><div class="visually-hidden">Toggle navigation of win</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../win/lv_win.html">lv_win.h</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../win/lv_win_private.html">lv_win_private.h</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          <div class="view-this-page">
+  <a class="muted-link" href="https://github.com/lvgl/lvgl/blob/master/docs/src/API/widgets/buttonmatrix/index.rst?plain=true" title="View this page">
+    <svg><use href="#svg-eye"></use></svg>
+    <span class="visually-hidden">View this page</span>
+  </a>
+</div><div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+              <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main" id="furo-main-content">
+          <section id="buttonmatrix">
+<h1>buttonmatrix<a class="headerlink" href="#buttonmatrix" title="Link to this heading">¶</a></h1>
+<div class="toctree-wrapper toctree-1-deep compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="lv_buttonmatrix.html">lv_buttonmatrix.h</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lv_buttonmatrix_private.html">lv_buttonmatrix_private.h</a></li>
+</ul>
+</div>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="lv_buttonmatrix.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">lv_buttonmatrix.h</div>
+              </div>
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="../button/lv_button_private.html">
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">lv_button_private.h</div>
+                
+              </div>
+            </a>
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2021-2025, LVGL Kft
+            </div>
+            Made with 
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            <div class="last-updated">
+              Last updated on Jun 30, 2025</div>
+          </div>
+          <div class="right-details">
+            
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer no-toc">
+      
+      
+      
+    </aside>
+  </div>
+</div><script src="../../../_static/documentation_options.js?v=fd14e781"></script>
+    <script src="../../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/scripts/furo.js?v=5fa4622c"></script>
+    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../_static/design-tabs.js?v=f930bc37"></script>
+    <script src="../../../_static/js/custom.js?v=432945dc"></script>
+    <script src="../../../_static/js/include_html.js?v=9d403d22"></script>
+    </body>
+</html>

@@ -1,0 +1,9 @@
+.. _draw/sw/blend/lv_draw_sw_blend.h:
+
+==================
+lv_draw_sw_blend.h
+==================
+
+.. doxygenfile:: lv_draw_sw_blend.h
+    :project: lvgl
+

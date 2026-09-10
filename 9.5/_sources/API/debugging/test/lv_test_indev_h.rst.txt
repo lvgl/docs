@@ -1,0 +1,9 @@
+.. _debugging/test/lv_test_indev.h:
+
+===============
+lv_test_indev.h
+===============
+
+.. doxygenfile:: lv_test_indev.h
+    :project: lvgl
+

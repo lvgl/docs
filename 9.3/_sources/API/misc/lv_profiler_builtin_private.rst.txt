@@ -1,0 +1,9 @@
+.. _lv_profiler_builtin_private_h:
+
+=============================
+lv_profiler_builtin_private.h
+=============================
+
+.. doxygenfile:: lv_profiler_builtin_private.h
+    :project: lvgl
+

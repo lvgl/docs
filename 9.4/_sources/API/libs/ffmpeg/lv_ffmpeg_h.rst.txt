@@ -1,0 +1,9 @@
+.. _libs/ffmpeg/lv_ffmpeg.h:
+
+===========
+lv_ffmpeg.h
+===========
+
+.. doxygenfile:: lv_ffmpeg.h
+    :project: lvgl
+

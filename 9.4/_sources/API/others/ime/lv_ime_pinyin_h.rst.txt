@@ -1,0 +1,9 @@
+.. _others/ime/lv_ime_pinyin.h:
+
+===============
+lv_ime_pinyin.h
+===============
+
+.. doxygenfile:: lv_ime_pinyin.h
+    :project: lvgl
+

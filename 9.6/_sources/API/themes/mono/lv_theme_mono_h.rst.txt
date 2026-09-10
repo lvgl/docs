@@ -1,0 +1,9 @@
+.. _themes/mono/lv_theme_mono.h:
+
+===============
+lv_theme_mono.h
+===============
+
+.. doxygenfile:: lv_theme_mono.h
+    :project: lvgl
+

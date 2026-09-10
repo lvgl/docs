@@ -1,0 +1,9 @@
+.. _draw/vg_lite/lv_vg_lite_grad.h:
+
+=================
+lv_vg_lite_grad.h
+=================
+
+.. doxygenfile:: lv_vg_lite_grad.h
+    :project: lvgl
+

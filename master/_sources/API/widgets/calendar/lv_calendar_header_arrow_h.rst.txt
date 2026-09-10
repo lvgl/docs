@@ -1,0 +1,9 @@
+.. _widgets/calendar/lv_calendar_header_arrow.h:
+
+==========================
+lv_calendar_header_arrow.h
+==========================
+
+.. doxygenfile:: lv_calendar_header_arrow.h
+    :project: lvgl
+

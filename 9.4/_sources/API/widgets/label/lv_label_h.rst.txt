@@ -1,0 +1,9 @@
+.. _widgets/label/lv_label.h:
+
+==========
+lv_label.h
+==========
+
+.. doxygenfile:: lv_label.h
+    :project: lvgl
+

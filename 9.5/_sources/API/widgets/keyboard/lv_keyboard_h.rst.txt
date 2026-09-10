@@ -1,0 +1,9 @@
+.. _widgets/keyboard/lv_keyboard.h:
+
+=============
+lv_keyboard.h
+=============
+
+.. doxygenfile:: lv_keyboard.h
+    :project: lvgl
+

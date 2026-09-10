@@ -1,0 +1,9 @@
+.. _draw/nxp/pxp/lv_draw_pxp.h:
+
+=============
+lv_draw_pxp.h
+=============
+
+.. doxygenfile:: lv_draw_pxp.h
+    :project: lvgl
+

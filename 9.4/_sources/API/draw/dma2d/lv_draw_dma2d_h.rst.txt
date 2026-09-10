@@ -1,0 +1,9 @@
+.. _draw/dma2d/lv_draw_dma2d.h:
+
+===============
+lv_draw_dma2d.h
+===============
+
+.. doxygenfile:: lv_draw_dma2d.h
+    :project: lvgl
+

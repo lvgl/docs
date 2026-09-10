@@ -1,0 +1,9 @@
+.. _libs/gltf/gltf_view/assets/lv_gltf_view_shader.h:
+
+=====================
+lv_gltf_view_shader.h
+=====================
+
+.. doxygenfile:: lv_gltf_view_shader.h
+    :project: lvgl
+

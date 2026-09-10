@@ -1,0 +1,9 @@
+.. _lv_wl_window_h:
+
+==============
+lv_wl_window.h
+==============
+
+.. doxygenfile:: lv_wl_window.h
+    :project: lvgl
+

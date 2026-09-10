@@ -1,0 +1,9 @@
+.. _misc/lv_assert.h:
+
+===========
+lv_assert.h
+===========
+
+.. doxygenfile:: lv_assert.h
+    :project: lvgl
+

@@ -1,0 +1,9 @@
+.. _lv_cache_private_h:
+
+==================
+lv_cache_private.h
+==================
+
+.. doxygenfile:: lv_cache_private.h
+    :project: lvgl
+

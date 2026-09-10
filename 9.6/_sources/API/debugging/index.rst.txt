@@ -1,0 +1,11 @@
+=========
+debugging
+=========
+
+.. toctree::
+    :maxdepth: 1
+    :class:    toctree-1-deep
+
+    monkey/index
+    sysmon/index
+    test/index

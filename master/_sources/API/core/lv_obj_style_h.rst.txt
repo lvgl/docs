@@ -1,0 +1,9 @@
+.. _core/lv_obj_style.h:
+
+==============
+lv_obj_style.h
+==============
+
+.. doxygenfile:: lv_obj_style.h
+    :project: lvgl
+

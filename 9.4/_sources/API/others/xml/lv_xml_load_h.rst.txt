@@ -1,0 +1,9 @@
+.. _others/xml/lv_xml_load.h:
+
+=============
+lv_xml_load.h
+=============
+
+.. doxygenfile:: lv_xml_load.h
+    :project: lvgl
+

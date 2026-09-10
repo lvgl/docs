@@ -1,0 +1,10 @@
+========
+arclabel
+========
+
+.. toctree::
+    :maxdepth: 1
+    :class:    toctree-1-deep
+
+    lv_arclabel
+    lv_arclabel_private

@@ -1,0 +1,9 @@
+.. _draw/eve/lv_draw_eve_private.h:
+
+=====================
+lv_draw_eve_private.h
+=====================
+
+.. doxygenfile:: lv_draw_eve_private.h
+    :project: lvgl
+

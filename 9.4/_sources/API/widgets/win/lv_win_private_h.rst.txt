@@ -1,0 +1,9 @@
+.. _widgets/win/lv_win_private.h:
+
+================
+lv_win_private.h
+================
+
+.. doxygenfile:: lv_win_private.h
+    :project: lvgl
+

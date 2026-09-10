@@ -1,0 +1,9 @@
+.. _libs/rle/lv_rle.h:
+
+========
+lv_rle.h
+========
+
+.. doxygenfile:: lv_rle.h
+    :project: lvgl
+

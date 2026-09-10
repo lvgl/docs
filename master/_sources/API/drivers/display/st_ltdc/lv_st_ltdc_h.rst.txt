@@ -1,0 +1,9 @@
+.. _drivers/display/st_ltdc/lv_st_ltdc.h:
+
+============
+lv_st_ltdc.h
+============
+
+.. doxygenfile:: lv_st_ltdc.h
+    :project: lvgl
+

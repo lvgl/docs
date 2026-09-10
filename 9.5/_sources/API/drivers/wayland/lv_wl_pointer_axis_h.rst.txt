@@ -1,0 +1,9 @@
+.. _drivers/wayland/lv_wl_pointer_axis.h:
+
+====================
+lv_wl_pointer_axis.h
+====================
+
+.. doxygenfile:: lv_wl_pointer_axis.h
+    :project: lvgl
+

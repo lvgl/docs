@@ -1,0 +1,12 @@
+========
+libinput
+========
+
+.. toctree::
+    :maxdepth: 1
+    :class:    toctree-1-deep
+
+    lv_libinput_h
+    lv_libinput_private_h
+    lv_xkb_h
+    lv_xkb_private_h

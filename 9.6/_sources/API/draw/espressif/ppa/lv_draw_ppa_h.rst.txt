@@ -1,0 +1,9 @@
+.. _draw/espressif/ppa/lv_draw_ppa.h:
+
+=============
+lv_draw_ppa.h
+=============
+
+.. doxygenfile:: lv_draw_ppa.h
+    :project: lvgl
+

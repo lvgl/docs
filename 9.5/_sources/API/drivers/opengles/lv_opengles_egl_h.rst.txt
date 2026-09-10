@@ -1,0 +1,9 @@
+.. _drivers/opengles/lv_opengles_egl.h:
+
+=================
+lv_opengles_egl.h
+=================
+
+.. doxygenfile:: lv_opengles_egl.h
+    :project: lvgl
+

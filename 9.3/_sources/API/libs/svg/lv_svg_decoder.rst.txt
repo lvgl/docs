@@ -1,0 +1,9 @@
+.. _lv_svg_decoder_h:
+
+================
+lv_svg_decoder.h
+================
+
+.. doxygenfile:: lv_svg_decoder.h
+    :project: lvgl
+

@@ -1,0 +1,9 @@
+.. _debugging/monkey/lv_monkey.h:
+
+===========
+lv_monkey.h
+===========
+
+.. doxygenfile:: lv_monkey.h
+    :project: lvgl
+

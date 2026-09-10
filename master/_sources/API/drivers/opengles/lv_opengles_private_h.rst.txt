@@ -1,0 +1,9 @@
+.. _drivers/opengles/lv_opengles_private.h:
+
+=====================
+lv_opengles_private.h
+=====================
+
+.. doxygenfile:: lv_opengles_private.h
+    :project: lvgl
+

@@ -1,0 +1,9 @@
+.. _widgets/dropdown/lv_dropdown.h:
+
+=============
+lv_dropdown.h
+=============
+
+.. doxygenfile:: lv_dropdown.h
+    :project: lvgl
+

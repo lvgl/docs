@@ -1,0 +1,9 @@
+.. _misc/lv_bidi_private.h:
+
+=================
+lv_bidi_private.h
+=================
+
+.. doxygenfile:: lv_bidi_private.h
+    :project: lvgl
+

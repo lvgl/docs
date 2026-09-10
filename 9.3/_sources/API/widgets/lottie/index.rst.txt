@@ -1,0 +1,10 @@
+======
+lottie
+======
+
+.. toctree::
+    :maxdepth: 1
+    :class:    toctree-1-deep
+
+    lv_lottie
+    lv_lottie_private

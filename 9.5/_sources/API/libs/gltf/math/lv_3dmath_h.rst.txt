@@ -1,0 +1,9 @@
+.. _libs/gltf/math/lv_3dmath.h:
+
+===========
+lv_3dmath.h
+===========
+
+.. doxygenfile:: lv_3dmath.h
+    :project: lvgl
+

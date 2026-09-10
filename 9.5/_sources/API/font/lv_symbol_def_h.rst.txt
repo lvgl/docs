@@ -1,0 +1,9 @@
+.. _font/lv_symbol_def.h:
+
+===============
+lv_symbol_def.h
+===============
+
+.. doxygenfile:: lv_symbol_def.h
+    :project: lvgl
+

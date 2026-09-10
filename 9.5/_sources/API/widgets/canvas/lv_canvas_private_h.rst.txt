@@ -1,0 +1,9 @@
+.. _widgets/canvas/lv_canvas_private.h:
+
+===================
+lv_canvas_private.h
+===================
+
+.. doxygenfile:: lv_canvas_private.h
+    :project: lvgl
+

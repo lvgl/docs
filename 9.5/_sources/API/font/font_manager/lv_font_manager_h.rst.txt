@@ -1,0 +1,9 @@
+.. _font/font_manager/lv_font_manager.h:
+
+=================
+lv_font_manager.h
+=================
+
+.. doxygenfile:: lv_font_manager.h
+    :project: lvgl
+

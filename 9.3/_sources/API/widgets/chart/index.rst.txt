@@ -1,0 +1,10 @@
+=====
+chart
+=====
+
+.. toctree::
+    :maxdepth: 1
+    :class:    toctree-1-deep
+
+    lv_chart
+    lv_chart_private

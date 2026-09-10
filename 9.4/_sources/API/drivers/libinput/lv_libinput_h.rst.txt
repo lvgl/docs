@@ -1,0 +1,9 @@
+.. _drivers/libinput/lv_libinput.h:
+
+=============
+lv_libinput.h
+=============
+
+.. doxygenfile:: lv_libinput.h
+    :project: lvgl
+

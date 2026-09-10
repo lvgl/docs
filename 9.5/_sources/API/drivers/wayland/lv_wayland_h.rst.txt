@@ -1,0 +1,9 @@
+.. _drivers/wayland/lv_wayland.h:
+
+============
+lv_wayland.h
+============
+
+.. doxygenfile:: lv_wayland.h
+    :project: lvgl
+

@@ -1,0 +1,9 @@
+.. _draw/nxp/g2d/lv_g2d_utils.h:
+
+==============
+lv_g2d_utils.h
+==============
+
+.. doxygenfile:: lv_g2d_utils.h
+    :project: lvgl
+

@@ -1,0 +1,9 @@
+.. _misc/cache/instance/lv_image_header_cache.h:
+
+=======================
+lv_image_header_cache.h
+=======================
+
+.. doxygenfile:: lv_image_header_cache.h
+    :project: lvgl
+

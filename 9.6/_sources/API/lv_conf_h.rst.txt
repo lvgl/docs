@@ -1,0 +1,9 @@
+.. _lv_conf.h:
+
+=========
+lv_conf.h
+=========
+
+.. doxygenfile:: lv_conf.h
+    :project: lvgl
+

@@ -1,0 +1,9 @@
+.. _widgets/led/lv_led_private.h:
+
+================
+lv_led_private.h
+================
+
+.. doxygenfile:: lv_led_private.h
+    :project: lvgl
+

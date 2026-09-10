@@ -1,0 +1,11 @@
+======
+others
+======
+
+.. toctree::
+    :maxdepth: 1
+    :class:    toctree-1-deep
+
+    file_explorer/index
+    fragment/index
+    translation/index

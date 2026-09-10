@@ -1,0 +1,9 @@
+.. _drivers/opengles/lv_opengles_debug.h:
+
+===================
+lv_opengles_debug.h
+===================
+
+.. doxygenfile:: lv_opengles_debug.h
+    :project: lvgl
+

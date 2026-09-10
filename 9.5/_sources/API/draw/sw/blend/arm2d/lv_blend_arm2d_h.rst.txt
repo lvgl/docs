@@ -1,0 +1,9 @@
+.. _draw/sw/blend/arm2d/lv_blend_arm2d.h:
+
+================
+lv_blend_arm2d.h
+================
+
+.. doxygenfile:: lv_blend_arm2d.h
+    :project: lvgl
+

@@ -1,0 +1,9 @@
+.. _widgets/table/lv_table_private.h:
+
+==================
+lv_table_private.h
+==================
+
+.. doxygenfile:: lv_table_private.h
+    :project: lvgl
+

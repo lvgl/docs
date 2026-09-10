@@ -1,0 +1,15 @@
+====
+test
+====
+
+.. toctree::
+    :maxdepth: 1
+    :class:    toctree-1-deep
+
+    lv_test
+    lv_test_display
+    lv_test_helpers
+    lv_test_indev
+    lv_test_indev_gesture
+    lv_test_private
+    lv_test_screenshot_compare

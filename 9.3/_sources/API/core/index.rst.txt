@@ -1,0 +1,28 @@
+====
+core
+====
+
+.. toctree::
+    :maxdepth: 1
+    :class:    toctree-1-deep
+
+    lv_global
+    lv_group
+    lv_group_private
+    lv_obj
+    lv_obj_class
+    lv_obj_class_private
+    lv_obj_draw
+    lv_obj_draw_private
+    lv_obj_event
+    lv_obj_event_private
+    lv_obj_pos
+    lv_obj_private
+    lv_obj_scroll
+    lv_obj_scroll_private
+    lv_obj_style
+    lv_obj_style_gen
+    lv_obj_style_private
+    lv_obj_tree
+    lv_refr
+    lv_refr_private

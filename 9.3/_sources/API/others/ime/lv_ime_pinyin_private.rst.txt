@@ -1,0 +1,9 @@
+.. _lv_ime_pinyin_private_h:
+
+=======================
+lv_ime_pinyin_private.h
+=======================
+
+.. doxygenfile:: lv_ime_pinyin_private.h
+    :project: lvgl
+

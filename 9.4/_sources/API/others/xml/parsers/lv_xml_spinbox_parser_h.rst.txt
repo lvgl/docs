@@ -1,0 +1,9 @@
+.. _others/xml/parsers/lv_xml_spinbox_parser.h:
+
+=======================
+lv_xml_spinbox_parser.h
+=======================
+
+.. doxygenfile:: lv_xml_spinbox_parser.h
+    :project: lvgl
+

@@ -1,0 +1,9 @@
+.. _misc/lv_math.h:
+
+=========
+lv_math.h
+=========
+
+.. doxygenfile:: lv_math.h
+    :project: lvgl
+

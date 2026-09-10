@@ -1,0 +1,9 @@
+.. _lv_conf_kconfig.h:
+
+=================
+lv_conf_kconfig.h
+=================
+
+.. doxygenfile:: lv_conf_kconfig.h
+    :project: lvgl
+

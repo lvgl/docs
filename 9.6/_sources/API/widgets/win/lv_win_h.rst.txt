@@ -1,0 +1,9 @@
+.. _widgets/win/lv_win.h:
+
+========
+lv_win.h
+========
+
+.. doxygenfile:: lv_win.h
+    :project: lvgl
+

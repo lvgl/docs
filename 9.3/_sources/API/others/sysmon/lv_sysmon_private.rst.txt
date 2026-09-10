@@ -1,0 +1,9 @@
+.. _lv_sysmon_private_h:
+
+===================
+lv_sysmon_private.h
+===================
+
+.. doxygenfile:: lv_sysmon_private.h
+    :project: lvgl
+

@@ -1,0 +1,9 @@
+.. _draw/lv_draw_blur.h:
+
+==============
+lv_draw_blur.h
+==============
+
+.. doxygenfile:: lv_draw_blur.h
+    :project: lvgl
+

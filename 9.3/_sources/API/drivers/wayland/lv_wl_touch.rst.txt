@@ -1,0 +1,9 @@
+.. _lv_wl_touch_h:
+
+=============
+lv_wl_touch.h
+=============
+
+.. doxygenfile:: lv_wl_touch.h
+    :project: lvgl
+

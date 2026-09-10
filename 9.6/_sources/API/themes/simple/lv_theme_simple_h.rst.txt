@@ -1,0 +1,9 @@
+.. _themes/simple/lv_theme_simple.h:
+
+=================
+lv_theme_simple.h
+=================
+
+.. doxygenfile:: lv_theme_simple.h
+    :project: lvgl
+

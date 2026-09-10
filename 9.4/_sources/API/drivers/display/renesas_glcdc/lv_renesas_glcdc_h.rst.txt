@@ -1,0 +1,9 @@
+.. _drivers/display/renesas_glcdc/lv_renesas_glcdc.h:
+
+==================
+lv_renesas_glcdc.h
+==================
+
+.. doxygenfile:: lv_renesas_glcdc.h
+    :project: lvgl
+

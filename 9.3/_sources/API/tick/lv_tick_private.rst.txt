@@ -1,0 +1,9 @@
+.. _lv_tick_private_h:
+
+=================
+lv_tick_private.h
+=================
+
+.. doxygenfile:: lv_tick_private.h
+    :project: lvgl
+

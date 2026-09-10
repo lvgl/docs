@@ -1,0 +1,9 @@
+.. _misc/lv_circle_buf.h:
+
+===============
+lv_circle_buf.h
+===============
+
+.. doxygenfile:: lv_circle_buf.h
+    :project: lvgl
+

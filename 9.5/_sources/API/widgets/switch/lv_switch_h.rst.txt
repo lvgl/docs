@@ -1,0 +1,9 @@
+.. _widgets/switch/lv_switch.h:
+
+===========
+lv_switch.h
+===========
+
+.. doxygenfile:: lv_switch.h
+    :project: lvgl
+

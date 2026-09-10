@@ -1,0 +1,9 @@
+.. _lv_switch_private_h:
+
+===================
+lv_switch_private.h
+===================
+
+.. doxygenfile:: lv_switch_private.h
+    :project: lvgl
+

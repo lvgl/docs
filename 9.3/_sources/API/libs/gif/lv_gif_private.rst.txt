@@ -1,0 +1,9 @@
+.. _lv_gif_private_h:
+
+================
+lv_gif_private.h
+================
+
+.. doxygenfile:: lv_gif_private.h
+    :project: lvgl
+

@@ -1,0 +1,10 @@
+=====
+ft81x
+=====
+
+.. toctree::
+    :maxdepth: 1
+    :class:    toctree-1-deep
+
+    lv_ft81x
+    lv_ft81x_defines

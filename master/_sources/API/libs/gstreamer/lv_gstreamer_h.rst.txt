@@ -1,0 +1,9 @@
+.. _libs/gstreamer/lv_gstreamer.h:
+
+==============
+lv_gstreamer.h
+==============
+
+.. doxygenfile:: lv_gstreamer.h
+    :project: lvgl
+

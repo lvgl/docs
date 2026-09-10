@@ -1,0 +1,9 @@
+.. _libs/libwebp/lv_libwebp.h:
+
+============
+lv_libwebp.h
+============
+
+.. doxygenfile:: lv_libwebp.h
+    :project: lvgl
+

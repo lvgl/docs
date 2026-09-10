@@ -1,0 +1,9 @@
+.. _misc/lv_timer_private.h:
+
+==================
+lv_timer_private.h
+==================
+
+.. doxygenfile:: lv_timer_private.h
+    :project: lvgl
+

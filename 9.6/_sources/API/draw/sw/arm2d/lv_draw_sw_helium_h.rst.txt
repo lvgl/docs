@@ -1,0 +1,9 @@
+.. _draw/sw/arm2d/lv_draw_sw_helium.h:
+
+===================
+lv_draw_sw_helium.h
+===================
+
+.. doxygenfile:: lv_draw_sw_helium.h
+    :project: lvgl
+

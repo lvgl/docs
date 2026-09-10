@@ -1,0 +1,9 @@
+.. _others/file_explorer/lv_file_explorer_private.h:
+
+==========================
+lv_file_explorer_private.h
+==========================
+
+.. doxygenfile:: lv_file_explorer_private.h
+    :project: lvgl
+

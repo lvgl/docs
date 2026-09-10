@@ -1,0 +1,10 @@
+============
+font_manager
+============
+
+.. toctree::
+    :maxdepth: 1
+    :class:    toctree-1-deep
+
+    lv_font_manager
+    lv_font_manager_recycle

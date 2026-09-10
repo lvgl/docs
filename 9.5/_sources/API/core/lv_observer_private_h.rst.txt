@@ -1,0 +1,9 @@
+.. _core/lv_observer_private.h:
+
+=====================
+lv_observer_private.h
+=====================
+
+.. doxygenfile:: lv_observer_private.h
+    :project: lvgl
+

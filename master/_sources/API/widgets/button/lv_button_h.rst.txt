@@ -1,0 +1,9 @@
+.. _widgets/button/lv_button.h:
+
+===========
+lv_button.h
+===========
+
+.. doxygenfile:: lv_button.h
+    :project: lvgl
+

@@ -1,0 +1,9 @@
+.. _lv_group_h:
+
+==========
+lv_group.h
+==========
+
+.. doxygenfile:: lv_group.h
+    :project: lvgl
+

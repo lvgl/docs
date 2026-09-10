@@ -1,0 +1,9 @@
+.. _widgets/chart/lv_chart_private.h:
+
+==================
+lv_chart_private.h
+==================
+
+.. doxygenfile:: lv_chart_private.h
+    :project: lvgl
+

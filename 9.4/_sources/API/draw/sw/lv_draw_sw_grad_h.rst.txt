@@ -1,0 +1,9 @@
+.. _draw/sw/lv_draw_sw_grad.h:
+
+=================
+lv_draw_sw_grad.h
+=================
+
+.. doxygenfile:: lv_draw_sw_grad.h
+    :project: lvgl
+

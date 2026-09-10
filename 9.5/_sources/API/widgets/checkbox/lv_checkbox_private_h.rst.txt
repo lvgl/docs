@@ -1,0 +1,9 @@
+.. _widgets/checkbox/lv_checkbox_private.h:
+
+=====================
+lv_checkbox_private.h
+=====================
+
+.. doxygenfile:: lv_checkbox_private.h
+    :project: lvgl
+

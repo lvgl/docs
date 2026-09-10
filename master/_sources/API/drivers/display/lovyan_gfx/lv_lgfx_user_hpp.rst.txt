@@ -1,0 +1,9 @@
+.. _drivers/display/lovyan_gfx/lv_lgfx_user.hpp:
+
+================
+lv_lgfx_user.hpp
+================
+
+.. doxygenfile:: lv_lgfx_user.hpp
+    :project: lvgl
+

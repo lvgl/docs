@@ -1,0 +1,12 @@
+===
+pxp
+===
+
+.. toctree::
+    :maxdepth: 1
+    :class:    toctree-1-deep
+
+    lv_draw_pxp
+    lv_pxp_cfg
+    lv_pxp_osa
+    lv_pxp_utils

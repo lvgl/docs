@@ -1,0 +1,9 @@
+.. _lv_line_private_h:
+
+=================
+lv_line_private.h
+=================
+
+.. doxygenfile:: lv_line_private.h
+    :project: lvgl
+

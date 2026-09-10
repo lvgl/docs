@@ -1,0 +1,9 @@
+.. _lv_draw_triangle_private_h:
+
+==========================
+lv_draw_triangle_private.h
+==========================
+
+.. doxygenfile:: lv_draw_triangle_private.h
+    :project: lvgl
+

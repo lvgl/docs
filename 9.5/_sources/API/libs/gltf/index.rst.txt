@@ -1,0 +1,12 @@
+====
+gltf
+====
+
+.. toctree::
+    :maxdepth: 1
+    :class:    toctree-1-deep
+
+    gltf_data/index
+    gltf_environment/index
+    gltf_view/index
+    math/index

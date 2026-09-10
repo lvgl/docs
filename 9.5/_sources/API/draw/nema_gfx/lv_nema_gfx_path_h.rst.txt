@@ -1,0 +1,9 @@
+.. _draw/nema_gfx/lv_nema_gfx_path.h:
+
+==================
+lv_nema_gfx_path.h
+==================
+
+.. doxygenfile:: lv_nema_gfx_path.h
+    :project: lvgl
+

@@ -1,0 +1,9 @@
+.. _misc/lv_templ.h:
+
+==========
+lv_templ.h
+==========
+
+.. doxygenfile:: lv_templ.h
+    :project: lvgl
+

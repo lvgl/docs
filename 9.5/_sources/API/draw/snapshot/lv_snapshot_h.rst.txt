@@ -1,0 +1,9 @@
+.. _draw/snapshot/lv_snapshot.h:
+
+=============
+lv_snapshot.h
+=============
+
+.. doxygenfile:: lv_snapshot.h
+    :project: lvgl
+

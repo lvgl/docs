@@ -1,0 +1,12 @@
+=======
+riscv_v
+=======
+
+.. toctree::
+    :maxdepth: 1
+    :class:    toctree-1-deep
+
+    lv_blend_riscv_v_h
+    lv_blend_riscv_v_private_h
+    lv_blend_riscv_vector_emulation_h
+    lv_draw_sw_blend_riscv_v_to_rgb888_h

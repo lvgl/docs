@@ -1,0 +1,9 @@
+.. _others/xml/lv_xml_parser.h:
+
+===============
+lv_xml_parser.h
+===============
+
+.. doxygenfile:: lv_xml_parser.h
+    :project: lvgl
+

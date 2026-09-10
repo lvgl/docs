@@ -1,0 +1,9 @@
+.. _misc/lv_color_op_private.h:
+
+=====================
+lv_color_op_private.h
+=====================
+
+.. doxygenfile:: lv_color_op_private.h
+    :project: lvgl
+

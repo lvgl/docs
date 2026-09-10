@@ -1,0 +1,9 @@
+.. _libs/qrcode/lv_qrcode_private.h:
+
+===================
+lv_qrcode_private.h
+===================
+
+.. doxygenfile:: lv_qrcode_private.h
+    :project: lvgl
+

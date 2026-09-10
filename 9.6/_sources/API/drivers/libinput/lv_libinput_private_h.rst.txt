@@ -1,0 +1,9 @@
+.. _drivers/libinput/lv_libinput_private.h:
+
+=====================
+lv_libinput_private.h
+=====================
+
+.. doxygenfile:: lv_libinput_private.h
+    :project: lvgl
+

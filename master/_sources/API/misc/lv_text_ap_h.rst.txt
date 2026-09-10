@@ -1,0 +1,9 @@
+.. _misc/lv_text_ap.h:
+
+============
+lv_text_ap.h
+============
+
+.. doxygenfile:: lv_text_ap.h
+    :project: lvgl
+

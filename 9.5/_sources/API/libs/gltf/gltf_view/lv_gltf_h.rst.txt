@@ -1,0 +1,9 @@
+.. _libs/gltf/gltf_view/lv_gltf.h:
+
+=========
+lv_gltf.h
+=========
+
+.. doxygenfile:: lv_gltf.h
+    :project: lvgl
+

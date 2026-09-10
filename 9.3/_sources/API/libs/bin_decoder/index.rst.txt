@@ -1,0 +1,9 @@
+===========
+bin_decoder
+===========
+
+.. toctree::
+    :maxdepth: 1
+    :class:    toctree-1-deep
+
+    lv_bin_decoder

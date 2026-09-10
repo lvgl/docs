@@ -1,0 +1,9 @@
+.. _widgets/calendar/lv_calendar_private.h:
+
+=====================
+lv_calendar_private.h
+=====================
+
+.. doxygenfile:: lv_calendar_private.h
+    :project: lvgl
+

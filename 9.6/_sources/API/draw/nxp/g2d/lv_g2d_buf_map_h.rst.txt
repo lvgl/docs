@@ -1,0 +1,9 @@
+.. _draw/nxp/g2d/lv_g2d_buf_map.h:
+
+================
+lv_g2d_buf_map.h
+================
+
+.. doxygenfile:: lv_g2d_buf_map.h
+    :project: lvgl
+

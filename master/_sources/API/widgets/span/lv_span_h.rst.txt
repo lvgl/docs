@@ -1,0 +1,9 @@
+.. _widgets/span/lv_span.h:
+
+=========
+lv_span.h
+=========
+
+.. doxygenfile:: lv_span.h
+    :project: lvgl
+

@@ -1,0 +1,10 @@
+=========
+animimage
+=========
+
+.. toctree::
+    :maxdepth: 1
+    :class:    toctree-1-deep
+
+    lv_animimage
+    lv_animimage_private

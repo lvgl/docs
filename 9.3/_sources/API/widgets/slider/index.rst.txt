@@ -1,0 +1,10 @@
+======
+slider
+======
+
+.. toctree::
+    :maxdepth: 1
+    :class:    toctree-1-deep
+
+    lv_slider
+    lv_slider_private

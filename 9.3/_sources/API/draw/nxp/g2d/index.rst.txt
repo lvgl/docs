@@ -1,0 +1,11 @@
+===
+g2d
+===
+
+.. toctree::
+    :maxdepth: 1
+    :class:    toctree-1-deep
+
+    lv_draw_g2d
+    lv_g2d_buf_map
+    lv_g2d_utils

@@ -1,0 +1,38 @@
+====
+misc
+====
+
+
+.. toctree::
+    :maxdepth: 2
+
+    lv_color
+    lv_templ
+    lv_anim_timeline
+    lv_profiler
+    lv_style_gen
+    lv_anim
+    lv_utils
+    lv_bidi
+    lv_text_ap
+    lv_color_op
+    lv_array
+    lv_assert
+    lv_fs
+    lv_types
+    lv_ll
+    lv_profiler_builtin
+    lv_event
+    lv_palette
+    lv_async
+    lv_matrix
+    lv_timer
+    lv_text
+    lv_rb
+    lv_style
+    lv_log
+    lv_lru
+    lv_math
+    lv_area
+    cache/index
+

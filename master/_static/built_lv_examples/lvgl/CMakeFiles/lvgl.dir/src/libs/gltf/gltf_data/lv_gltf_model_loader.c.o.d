@@ -1,0 +1,6 @@
+lvgl/CMakeFiles/lvgl.dir/src/libs/gltf/gltf_data/lv_gltf_model_loader.c.o: \
+  /home/runner/work/lvgl/emscripten_builder/lvgl/src/libs/gltf/gltf_data/lv_gltf_model_loader.c \
+  /home/runner/work/lvgl/emscripten_builder/lvgl/src/libs/gltf/gltf_data/lv_gltf_model_loader.h \
+  /home/runner/work/lvgl/emscripten_builder/lvgl/src/libs/gltf/gltf_data/../../../lv_conf_internal.h \
+  /home/runner/work/lvgl/emscripten_builder/lv_conf.h \
+  /home/runner/work/lvgl/emscripten_builder/lvgl/configs/ci/docs/lv_conf_docs.h

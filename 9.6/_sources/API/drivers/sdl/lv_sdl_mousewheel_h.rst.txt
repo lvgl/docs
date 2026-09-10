@@ -1,0 +1,9 @@
+.. _drivers/sdl/lv_sdl_mousewheel.h:
+
+===================
+lv_sdl_mousewheel.h
+===================
+
+.. doxygenfile:: lv_sdl_mousewheel.h
+    :project: lvgl
+

@@ -1,0 +1,9 @@
+.. _libs/gltf/gltf_environment/lv_gltf_environment_private.h:
+
+=============================
+lv_gltf_environment_private.h
+=============================
+
+.. doxygenfile:: lv_gltf_environment_private.h
+    :project: lvgl
+

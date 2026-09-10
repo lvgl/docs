@@ -1,0 +1,9 @@
+.. _lv_uefi_private_h:
+
+=================
+lv_uefi_private.h
+=================
+
+.. doxygenfile:: lv_uefi_private.h
+    :project: lvgl
+

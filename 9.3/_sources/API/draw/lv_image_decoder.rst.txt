@@ -1,0 +1,9 @@
+.. _lv_image_decoder_h:
+
+==================
+lv_image_decoder.h
+==================
+
+.. doxygenfile:: lv_image_decoder.h
+    :project: lvgl
+

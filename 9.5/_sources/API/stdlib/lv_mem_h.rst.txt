@@ -1,0 +1,9 @@
+.. _stdlib/lv_mem.h:
+
+========
+lv_mem.h
+========
+
+.. doxygenfile:: lv_mem.h
+    :project: lvgl
+

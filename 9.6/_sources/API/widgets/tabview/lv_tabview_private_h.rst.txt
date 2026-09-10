@@ -1,0 +1,9 @@
+.. _widgets/tabview/lv_tabview_private.h:
+
+====================
+lv_tabview_private.h
+====================
+
+.. doxygenfile:: lv_tabview_private.h
+    :project: lvgl
+

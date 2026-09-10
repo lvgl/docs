@@ -1,0 +1,9 @@
+.. _lv_tlsf_private_h:
+
+=================
+lv_tlsf_private.h
+=================
+
+.. doxygenfile:: lv_tlsf_private.h
+    :project: lvgl
+

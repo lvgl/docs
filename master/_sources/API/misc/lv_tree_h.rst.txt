@@ -1,0 +1,9 @@
+.. _misc/lv_tree.h:
+
+=========
+lv_tree.h
+=========
+
+.. doxygenfile:: lv_tree.h
+    :project: lvgl
+

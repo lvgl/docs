@@ -1,0 +1,9 @@
+.. _drivers/display/drm/lv_linux_drm_egl_private.h:
+
+==========================
+lv_linux_drm_egl_private.h
+==========================
+
+.. doxygenfile:: lv_linux_drm_egl_private.h
+    :project: lvgl
+

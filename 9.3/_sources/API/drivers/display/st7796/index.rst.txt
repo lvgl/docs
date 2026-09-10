@@ -1,0 +1,9 @@
+======
+st7796
+======
+
+.. toctree::
+    :maxdepth: 1
+    :class:    toctree-1-deep
+
+    lv_st7796

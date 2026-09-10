@@ -1,0 +1,20 @@
+=======
+display
+=======
+
+.. toctree::
+    :maxdepth: 1
+    :class:    toctree-1-deep
+
+    drm/index
+    fb/index
+    ft81x/index
+    ili9341/index
+    lcd/index
+    nxp_elcdif/index
+    renesas_glcdc/index
+    st7735/index
+    st7789/index
+    st7796/index
+    st_ltdc/index
+    tft_espi/index

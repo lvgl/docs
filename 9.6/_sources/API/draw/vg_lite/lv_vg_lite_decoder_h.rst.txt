@@ -1,0 +1,9 @@
+.. _draw/vg_lite/lv_vg_lite_decoder.h:
+
+====================
+lv_vg_lite_decoder.h
+====================
+
+.. doxygenfile:: lv_vg_lite_decoder.h
+    :project: lvgl
+

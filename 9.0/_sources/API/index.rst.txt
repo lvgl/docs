@@ -1,0 +1,29 @@
+===
+API
+===
+
+
+.. toctree::
+    :maxdepth: 2
+
+    lvgl
+    lv_conf_kconfig
+    lv_init
+    lv_conf_internal
+    lv_api_map
+    layouts/index
+    stdlib/index
+    widgets/index
+    drivers/index
+    tick/index
+    libs/index
+    misc/index
+    indev/index
+    themes/index
+    core/index
+    osal/index
+    font/index
+    draw/index
+    others/index
+    display/index
+

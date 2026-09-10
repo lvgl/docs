@@ -1,0 +1,9 @@
+.. _core/lv_obj_draw_private.h:
+
+=====================
+lv_obj_draw_private.h
+=====================
+
+.. doxygenfile:: lv_obj_draw_private.h
+    :project: lvgl
+

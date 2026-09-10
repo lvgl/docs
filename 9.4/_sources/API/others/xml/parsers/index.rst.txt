@@ -1,0 +1,31 @@
+=======
+parsers
+=======
+
+.. toctree::
+    :maxdepth: 1
+    :class:    toctree-1-deep
+
+    lv_xml_arc_parser_h
+    lv_xml_bar_parser_h
+    lv_xml_button_parser_h
+    lv_xml_buttonmatrix_parser_h
+    lv_xml_calendar_parser_h
+    lv_xml_canvas_parser_h
+    lv_xml_chart_parser_h
+    lv_xml_checkbox_parser_h
+    lv_xml_dropdown_parser_h
+    lv_xml_image_parser_h
+    lv_xml_keyboard_parser_h
+    lv_xml_label_parser_h
+    lv_xml_obj_parser_h
+    lv_xml_qrcode_parser_h
+    lv_xml_roller_parser_h
+    lv_xml_scale_parser_h
+    lv_xml_slider_parser_h
+    lv_xml_spangroup_parser_h
+    lv_xml_spinbox_parser_h
+    lv_xml_switch_parser_h
+    lv_xml_table_parser_h
+    lv_xml_tabview_parser_h
+    lv_xml_textarea_parser_h

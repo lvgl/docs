@@ -1,0 +1,9 @@
+.. _libs/tjpgd/lv_tjpgd.h:
+
+==========
+lv_tjpgd.h
+==========
+
+.. doxygenfile:: lv_tjpgd.h
+    :project: lvgl
+

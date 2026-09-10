@@ -1,0 +1,16 @@
+==
+sw
+==
+
+.. toctree::
+    :maxdepth: 1
+    :class:    toctree-1-deep
+
+    lv_draw_sw
+    lv_draw_sw_grad
+    lv_draw_sw_mask
+    lv_draw_sw_mask_private
+    lv_draw_sw_private
+    lv_draw_sw_utils
+    arm2d/index
+    blend/index

@@ -1,0 +1,9 @@
+.. _draw/sdl/lv_draw_sdl.h:
+
+=============
+lv_draw_sdl.h
+=============
+
+.. doxygenfile:: lv_draw_sdl.h
+    :project: lvgl
+

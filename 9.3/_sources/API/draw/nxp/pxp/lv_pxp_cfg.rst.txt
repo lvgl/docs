@@ -1,0 +1,9 @@
+.. _lv_pxp_cfg_h:
+
+============
+lv_pxp_cfg.h
+============
+
+.. doxygenfile:: lv_pxp_cfg.h
+    :project: lvgl
+

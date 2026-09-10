@@ -1,0 +1,9 @@
+=======
+ili9341
+=======
+
+.. toctree::
+    :maxdepth: 1
+    :class:    toctree-1-deep
+
+    lv_ili9341

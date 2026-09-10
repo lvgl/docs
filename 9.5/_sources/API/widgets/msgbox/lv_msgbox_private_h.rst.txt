@@ -1,0 +1,9 @@
+.. _widgets/msgbox/lv_msgbox_private.h:
+
+===================
+lv_msgbox_private.h
+===================
+
+.. doxygenfile:: lv_msgbox_private.h
+    :project: lvgl
+

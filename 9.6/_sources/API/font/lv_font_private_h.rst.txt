@@ -1,0 +1,9 @@
+.. _font/lv_font_private.h:
+
+=================
+lv_font_private.h
+=================
+
+.. doxygenfile:: lv_font_private.h
+    :project: lvgl
+

@@ -1,0 +1,9 @@
+.. _others/xml/lv_xml_translation.h:
+
+====================
+lv_xml_translation.h
+====================
+
+.. doxygenfile:: lv_xml_translation.h
+    :project: lvgl
+

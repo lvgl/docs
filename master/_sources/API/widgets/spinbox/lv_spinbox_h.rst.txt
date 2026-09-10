@@ -1,0 +1,9 @@
+.. _widgets/spinbox/lv_spinbox.h:
+
+============
+lv_spinbox.h
+============
+
+.. doxygenfile:: lv_spinbox.h
+    :project: lvgl
+

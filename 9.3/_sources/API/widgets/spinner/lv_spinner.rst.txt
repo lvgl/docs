@@ -1,0 +1,9 @@
+.. _lv_spinner_h:
+
+============
+lv_spinner.h
+============
+
+.. doxygenfile:: lv_spinner.h
+    :project: lvgl
+

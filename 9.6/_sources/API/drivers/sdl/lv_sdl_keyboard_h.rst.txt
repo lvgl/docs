@@ -1,0 +1,9 @@
+.. _drivers/sdl/lv_sdl_keyboard.h:
+
+=================
+lv_sdl_keyboard.h
+=================
+
+.. doxygenfile:: lv_sdl_keyboard.h
+    :project: lvgl
+

@@ -1,0 +1,9 @@
+.. _lv_ft81x_h:
+
+==========
+lv_ft81x.h
+==========
+
+.. doxygenfile:: lv_ft81x.h
+    :project: lvgl
+

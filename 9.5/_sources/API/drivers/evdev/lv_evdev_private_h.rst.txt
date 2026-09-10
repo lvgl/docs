@@ -1,0 +1,9 @@
+.. _drivers/evdev/lv_evdev_private.h:
+
+==================
+lv_evdev_private.h
+==================
+
+.. doxygenfile:: lv_evdev_private.h
+    :project: lvgl
+

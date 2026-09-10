@@ -1,0 +1,9 @@
+.. _drivers/display/st7796/lv_st7796.h:
+
+===========
+lv_st7796.h
+===========
+
+.. doxygenfile:: lv_st7796.h
+    :project: lvgl
+

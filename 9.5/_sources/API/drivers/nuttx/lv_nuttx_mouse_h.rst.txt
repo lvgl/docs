@@ -1,0 +1,9 @@
+.. _drivers/nuttx/lv_nuttx_mouse.h:
+
+================
+lv_nuttx_mouse.h
+================
+
+.. doxygenfile:: lv_nuttx_mouse.h
+    :project: lvgl
+

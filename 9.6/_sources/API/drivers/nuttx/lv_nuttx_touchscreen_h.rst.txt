@@ -1,0 +1,9 @@
+.. _drivers/nuttx/lv_nuttx_touchscreen.h:
+
+======================
+lv_nuttx_touchscreen.h
+======================
+
+.. doxygenfile:: lv_nuttx_touchscreen.h
+    :project: lvgl
+

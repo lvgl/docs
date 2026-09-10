@@ -1,0 +1,9 @@
+.. _drivers/uefi/lv_uefi_std_wrapper.h:
+
+=====================
+lv_uefi_std_wrapper.h
+=====================
+
+.. doxygenfile:: lv_uefi_std_wrapper.h
+    :project: lvgl
+

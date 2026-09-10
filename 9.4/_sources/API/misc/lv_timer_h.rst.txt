@@ -1,0 +1,9 @@
+.. _misc/lv_timer.h:
+
+==========
+lv_timer.h
+==========
+
+.. doxygenfile:: lv_timer.h
+    :project: lvgl
+

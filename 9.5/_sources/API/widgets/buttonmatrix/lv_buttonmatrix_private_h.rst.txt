@@ -1,0 +1,9 @@
+.. _widgets/buttonmatrix/lv_buttonmatrix_private.h:
+
+=========================
+lv_buttonmatrix_private.h
+=========================
+
+.. doxygenfile:: lv_buttonmatrix_private.h
+    :project: lvgl
+

@@ -1,0 +1,9 @@
+.. _lv_arclabel_private_h:
+
+=====================
+lv_arclabel_private.h
+=====================
+
+.. doxygenfile:: lv_arclabel_private.h
+    :project: lvgl
+

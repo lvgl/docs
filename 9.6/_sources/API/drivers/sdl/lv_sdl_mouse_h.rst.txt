@@ -1,0 +1,9 @@
+.. _drivers/sdl/lv_sdl_mouse.h:
+
+==============
+lv_sdl_mouse.h
+==============
+
+.. doxygenfile:: lv_sdl_mouse.h
+    :project: lvgl
+

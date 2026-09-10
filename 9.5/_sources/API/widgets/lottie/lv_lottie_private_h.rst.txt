@@ -1,0 +1,9 @@
+.. _widgets/lottie/lv_lottie_private.h:
+
+===================
+lv_lottie_private.h
+===================
+
+.. doxygenfile:: lv_lottie_private.h
+    :project: lvgl
+

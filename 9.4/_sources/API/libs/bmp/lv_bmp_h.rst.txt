@@ -1,0 +1,9 @@
+.. _libs/bmp/lv_bmp.h:
+
+========
+lv_bmp.h
+========
+
+.. doxygenfile:: lv_bmp.h
+    :project: lvgl
+

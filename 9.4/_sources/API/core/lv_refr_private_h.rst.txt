@@ -1,0 +1,9 @@
+.. _core/lv_refr_private.h:
+
+=================
+lv_refr_private.h
+=================
+
+.. doxygenfile:: lv_refr_private.h
+    :project: lvgl
+

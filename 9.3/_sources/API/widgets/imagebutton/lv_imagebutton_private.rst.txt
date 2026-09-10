@@ -1,0 +1,9 @@
+.. _lv_imagebutton_private_h:
+
+========================
+lv_imagebutton_private.h
+========================
+
+.. doxygenfile:: lv_imagebutton_private.h
+    :project: lvgl
+

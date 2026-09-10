@@ -1,0 +1,9 @@
+.. _widgets/tileview/lv_tileview_private.h:
+
+=====================
+lv_tileview_private.h
+=====================
+
+.. doxygenfile:: lv_tileview_private.h
+    :project: lvgl
+

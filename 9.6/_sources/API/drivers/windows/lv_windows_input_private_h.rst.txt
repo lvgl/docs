@@ -1,0 +1,9 @@
+.. _drivers/windows/lv_windows_input_private.h:
+
+==========================
+lv_windows_input_private.h
+==========================
+
+.. doxygenfile:: lv_windows_input_private.h
+    :project: lvgl
+

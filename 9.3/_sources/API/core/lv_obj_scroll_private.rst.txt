@@ -1,0 +1,9 @@
+.. _lv_obj_scroll_private_h:
+
+=======================
+lv_obj_scroll_private.h
+=======================
+
+.. doxygenfile:: lv_obj_scroll_private.h
+    :project: lvgl
+

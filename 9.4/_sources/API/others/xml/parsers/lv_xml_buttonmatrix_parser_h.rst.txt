@@ -1,0 +1,9 @@
+.. _others/xml/parsers/lv_xml_buttonmatrix_parser.h:
+
+============================
+lv_xml_buttonmatrix_parser.h
+============================
+
+.. doxygenfile:: lv_xml_buttonmatrix_parser.h
+    :project: lvgl
+

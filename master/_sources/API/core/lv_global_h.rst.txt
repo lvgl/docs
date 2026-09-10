@@ -1,0 +1,9 @@
+.. _core/lv_global.h:
+
+===========
+lv_global.h
+===========
+
+.. doxygenfile:: lv_global.h
+    :project: lvgl
+

@@ -1,0 +1,9 @@
+.. _lv_freetype_private_h:
+
+=====================
+lv_freetype_private.h
+=====================
+
+.. doxygenfile:: lv_freetype_private.h
+    :project: lvgl
+
